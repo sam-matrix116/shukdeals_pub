@@ -1,0 +1,104 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{%block css%}
+{% include 'common/datatable_header.html' %}
+{%endblock%}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-3">
+          <h1 class="m-0">{{page_name|default:""}}</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          {% include 'common/table_messages.html' %}
+        </div><!-- /.col -->
+        <div class="col-sm-3">
+          <!--CREATE BTN HERE-->
+          <a href="{% url 'ngo_payout' %}" class="btn btn-info float-right">Go Back</a>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+
+
+      <form method="get" id="search-users-form">
+
+        <div class="row mb-2"> 
+              
+            
+            
+          
+            <div class="col-sm-4">
+              <!--CREATE BTN HERE-->
+           
+            </div><!-- /.col -->
+          
+          </div><!-- /.row -->
+        
+        </form>
+
+
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>User</th>
+                        <th>Payment Detail</th>
+                        <th>NGO</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Payout Date</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in object_list %}
+                
+                <tr>
+                  {% if obj.amount > 0 %}
+                    <td>{{obj.id}}</td>
+                    <td><a href="{% url 'user-details' obj.user.id %}">{{obj.user.get_full_name|default:obj.user.email}}</a></td>
+                    <td>{{obj.payment_detail.get_item_type_display}}</td>
+                    <td><a href="{% url 'user-details' obj.ngo.id %}">{{obj.ngo.get_full_name|default:obj.ngo.email}}</a></td>
+                    <td>$ {{obj.amount}}</td>
+                    <td>
+                      {% if obj.payout %}
+                        <span class="badge badge-success">PAID</span>
+                      {% else %}
+                      <span class="badge badge-danger">NOT PAID</span>
+                      {% endif %}
+                    </td>
+                    <td>{{obj.payout_date|date:"Y-m-d H:i a"}}</td>
+                    <td>{{obj.created_at|date:"Y-m-d H:i a"}}</td>
+                    {%endif%}
+                </tr>
+                
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+{%endblock%}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuk.TV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body  style="background-color: #f8f8f8; margin:0 ; ">
+    <table width="100%" style="margin: 0 auto; max-width:700px">
+        <tr>
+            <td height="20px"></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <img src="https://shukbackend.dignitech.com/static/dist/img/site-logo.png" alt="Logo" title="Logo" style="display:block;width: 40%;margin-left: 30%;" height="60" />
+            </td>
+        </tr> 
+        <tr>
+            <td height="20px"></td>
+        </tr>       
+    </table>
+
+    <table width="100%" style="max-width:640px ; margin: 0 auto; background-color: #ffffff; text-align: center; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,.2); padding: 0 20px;">
+        <tr>
+            <td height="30px"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-family: 'Inter', sans-serif; font-size: 34px; font-weight:500; color: #3B618B;">Deal redeemed by customer!</td>
+        </tr>
+
+        <tr>
+            <td height="30px"></td>
+        </tr>
+
+
+
+        <tr>
+            <td height="30px"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight:500; color: #3B618B;text-align: left;">
+                <p>Customer Details</p>
+                <b>Name:</b> {{user.get_full_name}}<br>
+                <b>Email:</b> {{user.email}}<br>
+                <b>Phone:</b> {{user.phone}}<br>
+                <b>Plan:</b>{{user.plan.name}}
+            </td>
+        </tr>
+
+        <tr>
+            <td height="30px"></td>
+        </tr>
+
+
+
+
+        <tr style="">
+           <td width="190px">
+            {% with deal.deal_images.all|first as first_image %}
+                {% if first_image %}
+                    <img src="https://shukbackend.dignitech.com/media/{{first_image.image}}" alt="" style="max-width: 100%; border-radius: 10px;" height="200px">
+                {% endif %}
+            {% endwith %}
+           </td>
+           <td>
+                <table width="100%" style="text-align: left; padding-left: 10px;">
+                    <tr>
+                        <td style="font-family: 'Inter', sans-serif; font-size: 17px; line-height: 26px; font-weight:400; color: #3B618B;">
+                            <img src="img/building3.svg" alt="" style="vertical-align: middle;">
+                            Use 
+                            {% if deal.deal_type == 'online'%}
+                            Online
+                            {% elif deal.deal_type == 'offline' %}
+                            Offline
+                            {% elif deal.deal_type == 'online_offline' %}
+                            Online + Offline
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="10px"></td>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Inter', sans-serif; font-size: 20px; font-weight:500; color: #000000;">{{deal.title}}</td>
+                    </tr>
+                    <tr>
+                        <td height="10px"></td>
+                    </tr>
+
+
+                    {% if deal.deal_type == 'online' %}
+                    <tr>
+                        <td  style="background-color: #DDE9F8; border-radius: 10px; padding:5px 12px;">
+                            <h6 style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight:500; color: #363637; text-align:left; line-height:24px; margin: 0; padding: 0;">
+                                Deal Link
+                            </h6>
+
+                            <h6 style="font-family: 'Inter', sans-serif; font-size: 19px; font-weight:500; color: #3B618B; text-align:left; line-height:24px; margin: 0; padding: 0;">
+                                <a href="{{deal.redemption_link}}">Click and Enjoy Deal</a>
+                            </h6>
+                        </td>
+                    </tr>
+                    {% elif deal.deal_type == 'offline' %}
+                    <tr>
+                        <td  style="background-color: #DDE9F8; border-radius: 10px; padding:5px 12px;">
+                            <h6 style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight:500; color: #363637; text-align:left; line-height:24px; margin: 0; padding: 0;">
+                                Deal Code
+                            </h6>
+
+                            <h6 style="font-family: 'Inter', sans-serif; font-size: 19px; font-weight:500; color: #3B618B; text-align:left; line-height:24px; margin: 0; padding: 0;">
+                                {% if user.plan.amount > 0 %}
+                                    <b>CODE:</b> {{deal.club_member_code}}
+                                {% else %}
+                                    <b>CODE:</b> {{deal.free_member_code}}
+                                {% endif %}
+                            </h6>
+                        </td>
+                    </tr>
+                    {% elif deal.deal_type == 'online_offline' %}
+                    <tr>
+                        <td  style="background-color: #DDE9F8; border-radius: 10px; padding:5px 12px;">
+                            <h6 style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight:500; color: #363637; text-align:left; line-height:24px; margin: 0; padding: 0;">
+                                Deal Link
+                            </h6>
+
+                            <h6 style="font-family: 'Inter', sans-serif; font-size: 19px; font-weight:500; color: #3B618B; text-align:left; line-height:24px; margin: 0; padding: 0;">
+                                <a href="{{deal.redemption_link}}">Click and Enjoy Deal</a>
+                            </h6>
+                        </td>
+                        <td  style="background-color: #DDE9F8; border-radius: 10px; padding:5px 12px;">
+                            <h6 style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight:500; color: #363637; text-align:left; line-height:24px; margin: 0; padding: 0;">
+                                Deal Code
+                            </h6>
+
+                            <h6 style="font-family: 'Inter', sans-serif; font-size: 19px; font-weight:500; color: #3B618B; text-align:left; line-height:24px; margin: 0; padding: 0;">
+                                {% if user.plan.amount > 0 %}
+                                    <b>CODE:</b> {{deal.club_member_code}}
+                                {% else %}
+                                    <b>CODE:</b> {{deal.free_member_code}}
+                                {% endif %}
+                            </h6>
+                        </td>
+                    </tr>
+                    {%endif%}
+
+                    <tr>
+                        <td height="10px"></td>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Inter', sans-serif; font-size:13px; font-weight:400; color: #434343;">Expiry Date:
+                        <span style="font-size:14px; font-weight:400; color: #00A410;">
+                            <img src="https://shukbackend.dignitech.com/static/dist/img/timer1.png" alt="" style="vertical-align: middle; margin-left: 3px;">
+                            {{deal.expiry_date|date:"d M Y"}}
+                        </span></td>
+                    </tr>
+
+                    {% if deal.deal_type == 'online_offline' or deal.deal_type == 'offline' %}
+
+                    <tr>
+                        <td height="20px"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2" style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight:400; color: #434343; text-align:left; line-height:24px;">
+                            Address Associated<br>
+                            {{deal.get_location}} 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="30px"></td>
+                    </tr>
+                    {%endif%}
+
+                </table>
+           </td>
+        </tr>
+
+        
+
+        <tr>
+            <td height="20px"></td>
+        </tr>
+        
+        
+        <tr>
+            <td height="30px"></td>
+        </tr>
+    
+    
+    </table>
+
+    <table width="100%" style="margin: 0 auto; max-width:700px">
+        <tr>
+            <td height="20px"></td>
+        </tr>
+        <tr>
+            <td style="font-family: 'Inter', sans-serif; font-size: 15px; font-weight:400; color: #434343; text-align:left; line-height:24px; text-align: center;">
+                Call us at <a href="#" style="color: #3B618B; font-weight: 600; text-decoration: none;">123456987</a> or write to us at <a href="#" style="color: #3B618B; font-weight: 600;  text-decoration: none;">help@shuk.com</a>
+            </td>
+        </tr> 
+        <tr>
+            <td height="20px"></td>
+        </tr>
+
+        <tr>
+            <td style="text-align: center;">
+                <a href="#" target="_blank" style="display: inline-block; padding: 0 10px;"> <img src="img/facebook.svg" alt=""></a>
+                <a href="#" target="_blank" style="display: inline-block; padding: 0 10px;"> <img src="img/twitter.svg" alt=""></a>
+                <a href="#" target="_blank" style="display: inline-block; padding: 0 10px;"> <img src="img/instagram.svg" alt=""></a>
+                <a href="#" target="_blank" style="display: inline-block; padding: 0 10px;"> <img src="img/linkedin.svg" alt=""></a>
+            </td>
+        </tr>
+
+       
+        <tr>
+            <td height="10px"><hr style="opacity: .3;"></td>
+        </tr>
+
+       
+
+        <tr>
+            <td style="font-family: 'Inter', sans-serif; font-size: 12px; font-weight:500; color: #3B618B; text-align:left; line-height:24px; text-align: center;">
+                © 2022 Shuk.tv All rights reserved.
+            </td>
+        </tr> 
+
+
+        <tr>
+            <td height="20px"></td>
+        </tr>
+        <tr>
+            <td height="20px"></td>
+        </tr>       
+    </table>
+
+
+</body>
+</html>

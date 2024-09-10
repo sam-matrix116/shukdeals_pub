@@ -1,0 +1,218 @@
+{
+  "api_version": "2019-12-03",
+  "created": 1697453495,
+  "data": {
+    "object": {
+      "amount": 380,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {}
+      },
+      "amount_received": 380,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": {
+        "allow_redirects": "always",
+        "enabled": true
+      },
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "charges": {
+        "data": [
+          {
+            "amount": 380,
+            "amount_captured": 380,
+            "amount_refunded": 0,
+            "application": null,
+            "application_fee": null,
+            "application_fee_amount": null,
+            "balance_transaction": "txn_1O1oOZLQAYB7O7UfSWXeWv8O",
+            "billing_details": {
+              "address": {
+                "city": "Los Angeles",
+                "country": "US",
+                "line1": "111 North Hill Street",
+                "line2": null,
+                "postal_code": "90012",
+                "state": "CA"
+              },
+              "email": null,
+              "name": "Prem Nisha",
+              "phone": null
+            },
+            "calculated_statement_descriptor": "DIGNITECH",
+            "captured": true,
+            "created": 1697453495,
+            "currency": "usd",
+            "customer": "cus_OijxqRxEL2htqI",
+            "description": "Customer:None, ID: 361",
+            "destination": null,
+            "dispute": null,
+            "disputed": false,
+            "failure_balance_transaction": null,
+            "failure_code": null,
+            "failure_message": null,
+            "fraud_details": {},
+            "id": "ch_1O1oOZLQAYB7O7UftwHswOvQ",
+            "invoice": null,
+            "livemode": false,
+            "metadata": {},
+            "object": "charge",
+            "on_behalf_of": null,
+            "order": null,
+            "outcome": {
+              "network_status": "approved_by_network",
+              "reason": null,
+              "risk_level": "normal",
+              "risk_score": 33,
+              "seller_message": "Payment complete.",
+              "type": "authorized"
+            },
+            "paid": true,
+            "payment_intent": "pi_1O1oO4LQAYB7O7Ufw6X9lSDV",
+            "payment_method": "pm_1O1oOYLQAYB7O7UfMRBIBwTn",
+            "payment_method_details": {
+              "card": {
+                "amount_authorized": 380,
+                "brand": "visa",
+                "checks": {
+                  "address_line1_check": "pass",
+                  "address_postal_code_check": "pass",
+                  "cvc_check": "pass"
+                },
+                "country": "US",
+                "exp_month": 1,
+                "exp_year": 2024,
+                "extended_authorization": {
+                  "status": "disabled"
+                },
+                "fingerprint": "Q3wSvR4RCidaEk3R",
+                "funding": "credit",
+                "incremental_authorization": {
+                  "status": "unavailable"
+                },
+                "installments": null,
+                "last4": "4242",
+                "mandate": null,
+                "multicapture": {
+                  "status": "unavailable"
+                },
+                "network": "visa",
+                "network_token": null,
+                "overcapture": {
+                  "maximum_amount_capturable": 380,
+                  "status": "unavailable"
+                },
+                "three_d_secure": null,
+                "wallet": null
+              },
+              "type": "card"
+            },
+            "receipt_email": null,
+            "receipt_number": null,
+            "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xRnlNU2hMUUFZQjdPN1VmKLirtKkGMgaQaQr9g_Q6LBZb0UrEgj7Y-BVs3qXKPzZbyoeXhMophHN1vFmG9pMm2erbP8Ze-D21JVbk",
+            "refunded": false,
+            "refunds": {
+              "data": [],
+              "has_more": false,
+              "object": "list",
+              "total_count": 0,
+              "url": "/v1/charges/ch_1O1oOZLQAYB7O7UftwHswOvQ/refunds"
+            },
+            "review": null,
+            "shipping": {
+              "address": {
+                "city": "Los Angeles",
+                "country": "US",
+                "line1": "111 North Hill Street",
+                "line2": null,
+                "postal_code": "90012",
+                "state": "CA"
+              },
+              "carrier": null,
+              "name": "Prem Nisha",
+              "phone": "",
+              "tracking_number": null
+            },
+            "source": null,
+            "source_transfer": null,
+            "statement_descriptor": null,
+            "statement_descriptor_suffix": null,
+            "status": "succeeded",
+            "transfer_data": null,
+            "transfer_group": null
+          }
+        ],
+        "has_more": false,
+        "object": "list",
+        "total_count": 1,
+        "url": "/v1/charges?payment_intent=pi_1O1oO4LQAYB7O7Ufw6X9lSDV"
+      },
+      "client_secret": "pi_1O1oO4LQAYB7O7Ufw6X9lSDV_secret_EThxaMCuiwaKfAFIm8tPu5cvN",
+      "confirmation_method": "automatic",
+      "created": 1697453464,
+      "currency": "usd",
+      "customer": "cus_OijxqRxEL2htqI",
+      "description": "Customer:None, ID: 361",
+      "id": "pi_1O1oO4LQAYB7O7Ufw6X9lSDV",
+      "invoice": null,
+      "last_payment_error": null,
+      "latest_charge": "ch_1O1oOZLQAYB7O7UftwHswOvQ",
+      "livemode": false,
+      "metadata": {},
+      "next_action": null,
+      "object": "payment_intent",
+      "on_behalf_of": null,
+      "payment_method": "pm_1O1oOYLQAYB7O7UfMRBIBwTn",
+      "payment_method_configuration_details": {
+        "id": "pmc_1Ls2agLQAYB7O7UfiJT6Q2oc",
+        "parent": null
+      },
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": "off_session",
+      "shipping": {
+        "address": {
+          "city": "Los Angeles",
+          "country": "US",
+          "line1": "111 North Hill Street",
+          "line2": null,
+          "postal_code": "90012",
+          "state": "CA"
+        },
+        "carrier": null,
+        "name": "Prem Nisha",
+        "phone": "",
+        "tracking_number": null
+      },
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    }
+  },
+  "id": "evt_1O1oOaLQAYB7O7UfTdZNnyEE",
+  "livemode": false,
+  "object": "event",
+  "pending_webhooks": 1,
+  "request": {
+    "id": "req_5NitLb26iy0SqI",
+    "idempotency_key": "903c03d8-4377-4882-b769-6a333cce22aa"
+  },
+  "type": "payment_intent.succeeded"
+}

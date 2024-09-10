@@ -1,0 +1,18 @@
+INSERT INTO `classifieds_classifiedcategory` (`id`, `name`, `name_ar`, `name_de`, `name_es`, `name_fr`, `name_he`, `name_pt`, `name_ru`) VALUES
+(1, 'Vehicles /Transportation', 'المركبات /النقل', 'Fahrzeuge /Transport', 'Vehículos /transporte', 'Véhicules / transport', 'כלי רכב /הובלה', 'Veículos /transporte', 'Транспортные средства /транспорт'),
+(2, 'Roommate / Room', 'المركبات /النقل', 'Mitbewohner / Zimmer', 'Compañero de cuarto / habitación', 'Colocataire / chambre', 'שותף לחדר / חדר', 'Companheiro de quarto / quarto', 'Сосед по комнате / комната'),
+(3, 'Clothing', 'رفيق الغرفة / الغرفة', 'Kleidung', 'Ropa', 'Vêtements', 'הַלבָּשָׁה', 'Roupas', 'Одежда'),
+(4, 'Furniture', 'ملابس', 'Möbel', 'Muebles', 'Meubles', 'רְהִיטִים', 'Mobília', 'Мебель'),
+(5, 'Electronics', 'أثاث', 'Elektronik', 'Electrónica', 'Électronique', 'מכשירי חשמל', 'Eletrônicos', 'Электроника'),
+(6, 'Antiques & Collectibles', 'الإلكترونيات', 'Antiquitäten & Sammlerstücke', 'Antigüedades y coleccionables', 'Antiquités et objets de collection', 'עתיקות ואספנות', 'Antiguidades e colecionáveis', 'Антиквариат и предметы коллекционирования'),
+(7, 'Appliances', 'التحف والمقتنيات', 'Haushaltsgeräte', 'Accesorios', 'appareils électroménagers', 'מכשירים', 'Aparelhos', 'Техника'),
+(8, 'Books, Films & Music', 'الأجهزة', 'Bücher, Filme und Musik', 'Libros, películas y música', 'Livres, films et musique', 'ספרים, סרטים ומוזיקה', 'Livros, filmes e música', 'Книги, фильмы и музыка'),
+(9, 'Tools', 'الكتب والأفلام والموسيقى', 'Werkzeuge', 'Herramientas', 'Outils', 'כלים', 'Ferramentas', 'Инструменты'),
+(10, 'FREE', 'أدوات', 'FREI', 'GRATIS', 'GRATUIT', 'חינם', 'LIVRE', 'БЕСПЛАТНО'),
+(11, 'Heath & Beauty', 'حر', 'Heath & Beauty', 'Heath & Beauty', 'Heath et beauté', 'הית ויופי', 'Heath & Beauty', 'Хит и красота'),
+(12, 'Jewellery & Watches', 'هيث والجمال', 'Schmuck & Uhren', 'Joyas y relojes', 'Bijoux et montres', 'תכשיטים ושעונים', 'Jóias e relógios', 'Ювелирные изделия и часы'),
+(13, 'Home Goods & Decor', 'مجوهرات وساعات', 'Haushaltswaren und Dekoration', 'Artículos para el hogar y decoración', 'Goods à domicile et décoration', 'מוצרי בית ועיצוב', 'Artigos e decoração domésticos', 'Домашние товары и декор'),
+(14, 'Luggage & Bags', 'السلع المنزلية والديكور', 'Gepäck und Taschen', 'Equipaje y bolsos', 'Valises et sacs', 'מזוודות ותיקים', 'Bagagem e bolsas', 'Багаж и сумки'),
+(15, 'Musical Instruments', 'أمتعة و حقائب', 'Musikinstrumente', 'Instrumentos musicales', 'Instruments de musique', 'כלי נגינה', 'Instrumentos musicais', 'Музыкальные инструменты'),
+(16, 'Patio & Garden', 'الات موسيقية', 'Terrasse & Garten', 'Patio y jardín', 'Patio et jardin', 'פטיו וגן', 'Pátio e jardim', 'Патио и сад'),
+(17, 'Pets & Supplies', 'الفناء والحديقة', 'Haustiere & Vorräte', 'Mascotas y suministros', 'Animaux et fournitures', 'חיות מחמד ואספקה', 'Animais de estimação e suprimentos', 'Домашние животные и расходные материалы');

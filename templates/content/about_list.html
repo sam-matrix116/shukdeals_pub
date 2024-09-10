@@ -1,0 +1,75 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{%block css%}
+{% include 'common/datatable_header.html' %}
+{%endblock%}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-3">
+          <h1 class="m-0">{{page_name|default:""}}</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          {% include 'common/table_messages.html' %}
+        </div><!-- /.col -->
+        <div class="col-sm-3">
+          <!--CREATE BTN HERE-->
+          {%if not object_list%}
+          <a href="{% url 'about_us_add' %}" class="btn btn-info float-right">Create About Us</a>
+          {%endif%}
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Heading</th>
+                        <th>Sub Heading</th>
+                        <th>Journeys</th>
+                        <th>Teammates</th>
+                        <th class="action-th nosort">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in object_list %}
+                <tr>
+                    <td>{{obj.id}}</td>
+                    <td>{{obj.heading}}</td>
+                    <td>{{obj.sub_heading}}</td>
+                    <td><a href="{% url 'about_us_journeys' %}">Journeys</a></td>
+                    <td><a href="{% url 'about_us_teams' %}">Teams</a></td>
+                    <td class="text-center">
+                        <a href="{% url 'about_us_update' obj.id %}"><i class="fas fa-pencil-alt"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+{%endblock%}

@@ -1,0 +1,81 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{%block css%}
+{% include 'common/datatable_header.html' %}
+{%endblock%}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-3">
+          <h1 class="m-0">{{page_name|default:""}}</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          {% include 'common/table_messages.html' %}
+        </div><!-- /.col -->
+        <div class="col-sm-3">
+          <!--CREATE BTN HERE-->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>User</th>
+                        <th>Intent Id</th>
+                        <th>Status</th>
+                        <th>Created At</th>
+                        <th>Amount</th>
+                        <th>Currency</th>
+                        <th>Customer Id</th>
+                        <th>Payment Method</th>
+                        <th>Cancellation Reason</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in object_list %}
+                <tr>
+                    <td>{{obj.id}}</td>
+                    <td><a href="{% url 'user-details' obj.user.id %}">{{obj.user.get_full_name|default:obj.user.email}}</a></td>
+                    <td>{{obj.intent}}</td>
+                    <td>{{obj.get_status_display}}</td>
+                    <td>{{obj.created_at|date:"Y-m-d H:i a"}}</td>
+                    <td>{{obj.amount}}</td>
+                    <td>{{obj.currency|default:""|title}}</td>
+                    <td>{{obj.user.stripe_customer_id}}</td>
+                    <td>{{obj.payment_method}}</td>
+                    <td>{{obj.cancellation_reason|default:""}}</td>
+                    <td>{{obj.description|default:""}}</td>
+                    
+                </tr>
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+{%endblock%}

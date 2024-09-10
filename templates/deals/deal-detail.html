@@ -1,0 +1,209 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+
+    <div class="row mb-2">
+
+      <div class="col-sm-6">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header p-2">
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a class="nav-link active" href="#details" data-toggle="tab">Details</a></li>
+              <li class="nav-item"><a class="nav-link" href="#reviews" data-toggle="tab">Reviews</a></li>
+              <li class="nav-item"><a class="nav-link" href="#flags" data-toggle="tab">Flags</a></li>
+              <li class="nav-item"><a class="nav-link" href="#redeem" data-toggle="tab">Redeem</a></li>
+              <li class="nav-item"><a class="nav-link" href="#clicks" data-toggle="tab">Clicks</a></li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="tab-content">
+             
+              <div class="tab-pane active" id="details">
+                <div class="row">
+                  <div class="col-md-6">
+                    <table class="table no-border-table">
+                      <tr><td>Deal Type</td><td class="text-success text-bold">{{object.get_deal_type_display}}</td></tr>
+                      <tr><td>Title</td><td>{{object.title}}</td></tr>
+                      <tr><td>Actual Price</td><td>{{object.actual_price}}</td></tr>
+                      <tr><td>Free Member Discount Type</td><td>{{object.free_member_discount_type|default:0}}</td></tr>
+                      <tr><td>Free Member Discount Value</td><td>{{object.free_member_discount_value|default:0}}</td></tr>
+                      <tr><td>Free Member Code</td><td>{{object.free_member_code|default:"NA"}}</td></tr>
+                      <tr><td>Club Member Discount Type</td><td>{{object.club_member_discount_type|default:0}}</td></tr>
+                      <tr><td>Club Member Discount Value</td><td>{{object.club_member_discount_value|default:0}}</td></tr>
+                      <tr><td>Club Member Code</td><td>{{object.club_member_code|default:"NA"}}</td></tr>
+                    </table>
+                  </div>
+                  <div class="col-md-6">
+                    <table class="table no-border-table">
+                      <tr><td>Deal Type</td><td>{{object.deal_type|title}}</td></tr>
+                      <tr><td>Description</td><td>{{object.description}}</td></tr>
+                      <tr>
+                        <td>Weekly</td>
+                        <td>
+                          {% if object.weekly %}
+                          YES
+                          {%else%}
+                          NO
+                          {%endif%}
+                        </td>
+                      </tr>
+                      <tr><td>Location</td><td>{{object.location.location|default:"NA"}}</td></tr>
+                      <tr><td>Expiry Date</td><td>{{object.expiry_date|date:"Y-m-d"}}</td></tr>
+                      <tr><td>Created At</td><td>{{object.created_at|date:"Y-m-d H:i a"}}</td></tr>
+                      <tr><td>Updated At</td><td>{{object.updated_at|date:"Y-m-d H:i a"}}</td></tr>
+                      <tr><td>Member Clicks</td><td>{{deal_member_clicks}}</td></tr>
+                      <tr><td>Description</td><td>{{object.description}}</td></tr>
+                    </table>
+                  </div>
+                  <div class="col-md-12">
+                    {%if object.deal_images%}
+                    {%for image in object.deal_images.all%}
+                    <div class="image-box">
+                      <img src="{{image.image.url}}" width="100">
+                    </div>
+                    {%endfor%}
+                    {%endif%}
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane" id="reviews">
+                
+                <table id="weekly-deal-datatable" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Deal</th>
+                      <th>Reviewed By</th>
+                      <th>Rating</th>
+                      <th>Comment</th>
+                      <th>Created Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in deal_reviews %}
+                    <tr>
+                      <td>{{obj.id}}</td>
+                      <td>{{obj.deal.title}}</td>
+                      <td>
+                        <a href="{% url 'user-details' obj.reviewed_by.id %}">
+                        {{obj.reviewed_by.get_full_name|default:obj.reviewed_by.email}}
+                        </a>
+                      </td>
+                      <td>{{obj.rating}}</td>
+                      <td>{{obj.comment}}</td>
+                      <td>{{obj.created_at|date:"Y-m-d H:i a"}}</td>
+                    </tr>
+                    {% endfor %}
+                    
+                  </tfoot>
+                </table>
+
+              </div>
+
+              <div class="tab-pane" id="flags">
+
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Flagged Deal</th>
+                          <th>Flagged By</th>
+                          <th>Reason</th>
+                          <th>Created At</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in deal_flags %}
+                    <tr>
+                        <td>{{obj.id}}</td>
+                        <td>{{obj.deal.title}}</td>
+                        <td><a href="{% url 'user-details' obj.flagged_by.id %}">{{obj.flagged_by.get_full_name|default:obj.flagged_by.email|truncatechars:"10"}}</a></td>
+                        <td>{{obj.reason}}</td>
+                        <td>{{obj.created_at|date:"Y-m-d H:i a"}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+              </div>
+
+              <div class="tab-pane" id="redeem">
+
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Deal</th>
+                          <th>Redeemed By</th>
+                          <th>Created At</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in deal_redeems %}
+                    <tr>
+                        <td>{{obj.id}}</td>
+                        <td>{{obj.deal.title}}</td>
+                        <td><a href="{% url 'user-details' obj.user.id %}">{{obj.user.get_full_name|default:obj.user.email|truncatechars:"10"}}</a></td>
+                        <td>{{obj.created_at|date:"Y-m-d H:i a"}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+              </div>
+
+
+              <div class="tab-pane" id="clicks">
+
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Deal</th>
+                          <th>Clicked By</th>
+                          <th>Created At</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in deal_clicks %}
+                    <tr>
+                        <td>{{obj.id}}</td>
+                        <td>{{obj.deal.title}}</td>
+                        <td><a href="{% url 'user-details' obj.user.id %}">{{obj.user.get_full_name|default:obj.user.email|truncatechars:"10"}}</a></td>
+                        <td>{{obj.created_at|date:"Y-m-d H:i a"}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock section %}

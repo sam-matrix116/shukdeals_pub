@@ -1,0 +1,187 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+   
+    <div class="row mb-2">
+      
+      <div class="col-sm-6">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+      
+    </div><!-- /.row -->
+  
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-8">
+                {%  if stripe_detail %}
+                <table id="weekly-deal-datatable" class="table table-bordered table-striped">
+                  <tbody>
+                    <tr>
+                      <td class="heading-column"><strong>Payment Gateway Used:</strong></td>
+                      <td>Stripe</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Payment Method</strong></td>
+                      <td>{{stripe_detail.payment_method}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Intent</strong></td>
+                      <td>{{stripe_detail.intent}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Amount</strong></td>
+                      <td>
+                        {% widthratio stripe_detail.amount 100 1 %}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Currency</strong></td>
+                      <td>{{stripe_detail.currency|default:""}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Status:</strong></td>
+                      <td>{{stripe_detail.status}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Cancellation Reason</strong></td>
+                      <td>{{stripe_detail.cancellation_reason|default:""}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Description</strong></td>
+                      <td>{{stripe_detail.description|default:""}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Created At</strong></td>
+                      <td>{{stripe_detail.created_at|date:"Y-m-d H:i a"}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong></strong></td>
+                      <td></td>
+                    </tr>
+                      
+                  </tbody>
+                </table>
+                {% elif tranzila_detail %}
+                <table id="weekly-deal-datatable" class="table table-bordered table-striped">
+                  <tbody>
+                    <tr>
+                      <td class="heading-column"><strong>Payment Gateway Used:</strong></td>
+                      <td>Tranzila</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Message:</strong></td>
+                      <td>{{tranzila_detail.message}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Processor Response Code:</strong></td>
+                      <td>{{tranzila_detail.processor_response_code}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Transaction Id:</strong></td>
+                      <td>{{tranzila_detail.transaction_id}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Currency Code:</strong></td>
+                      <td>{{tranzila_detail.currency_code}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Expiry Month:</strong></td>
+                      <td>{{tranzila_detail.expiry_month}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Expiry Year:</strong></td>
+                      <td>{{tranzila_detail.expiry_year}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Payment Plan:</strong></td>
+                      <td>{{tranzila_detail.payment_plan}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Credit Card Owner Id:</strong></td>
+                      <td>{{tranzila_detail.credit_card_owner_id}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Token:</strong></td>
+                      <td>{{tranzila_detail.token}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Card Last Four:</strong></td>
+                      <td>{{tranzila_detail.card_last_four}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Card Mask:</strong></td>
+                      <td>{{tranzila_detail.card_mask}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Card Locality:</strong></td>
+                      <td>{{tranzila_detail.card_locality}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Amount:</strong></td>
+                      <td>{{tranzila_detail.amount}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Transaction Type:</strong></td>
+                      <td>{{tranzila_detail.txn_type}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Tranmode:</strong></td>
+                      <td>{{tranzila_detail.tranmode}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Error Code:</strong></td>
+                      <td>{{tranzila_detail.error_code}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Error Info:</strong></td>
+                      <td>{{tranzila_detail.error_info}}</td>
+                    </tr>
+                    <tr>
+                      <td class="heading-column"><strong>Created At:</strong></td>
+                      <td>{{tranzila_detail.created_at|date:"Y-m-d H:i a"}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                {% else %}
+                  <p>No Payment Details Found</p>
+                  
+                {% endif %}
+                <a href="{% url 'all_orders' %}" class="btn btn-success">Go Back</a>
+              </div>
+              
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+<script>
+
+</script>
+{%endblock%}

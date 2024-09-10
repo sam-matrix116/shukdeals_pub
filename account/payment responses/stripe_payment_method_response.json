@@ -1,0 +1,171 @@
+{
+  "amount": 1000,
+  "amount_capturable": 0,
+  "amount_details": {
+    "tip": {}
+  },
+  "amount_received": 1000,
+  "application": null,
+  "application_fee_amount": null,
+  "automatic_payment_methods": null,
+  "canceled_at": null,
+  "cancellation_reason": null,
+  "capture_method": "automatic",
+  "charges": {
+    "data": [
+      {
+        "amount": 1000,
+        "amount_captured": 1000,
+        "amount_refunded": 0,
+        "application": null,
+        "application_fee": null,
+        "application_fee_amount": null,
+        "balance_transaction": "txn_1NwIjFLQAYB7O7UfxhDuK0DX",
+        "billing_details": {
+          "address": {
+            "city": "gurgoan",
+            "country": "BE",
+            "line1": "test",
+            "line2": "cyber city",
+            "postal_code": "4564",
+            "state": ""
+          },
+          "email": null,
+          "name": "Surjeet kumar",
+          "phone": null
+        },
+        "calculated_statement_descriptor": "DIGNITECH",
+        "captured": true,
+        "created": 1696140129,
+        "currency": "usd",
+        "customer": "cus_Ock8upIUmIRSN0",
+        "description": "Customer:None, ID: 44",
+        "destination": null,
+        "dispute": null,
+        "disputed": false,
+        "failure_balance_transaction": null,
+        "failure_code": null,
+        "failure_message": null,
+        "fraud_details": {},
+        "id": "ch_1NwIjFLQAYB7O7UfxkefdvS0",
+        "invoice": null,
+        "livemode": false,
+        "metadata": {},
+        "object": "charge",
+        "on_behalf_of": null,
+        "order": null,
+        "outcome": {
+          "network_status": "approved_by_network",
+          "reason": null,
+          "risk_level": "normal",
+          "risk_score": 0,
+          "seller_message": "Payment complete.",
+          "type": "authorized"
+        },
+        "paid": true,
+        "payment_intent": "pi_1NwIjELQAYB7O7UfWhJdRp2X",
+        "payment_method": "pm_1NpUeoLQAYB7O7UfrbzUqR1g",
+        "payment_method_details": {
+          "card": {
+            "amount_authorized": 1000,
+            "brand": "visa",
+            "checks": {
+              "address_line1_check": "pass",
+              "address_postal_code_check": "pass",
+              "cvc_check": null
+            },
+            "country": "US",
+            "exp_month": 12,
+            "exp_year": 2032,
+            "extended_authorization": {
+              "status": "disabled"
+            },
+            "fingerprint": "Q3wSvR4RCidaEk3R",
+            "funding": "credit",
+            "incremental_authorization": {
+              "status": "unavailable"
+            },
+            "installments": null,
+            "last4": "4242",
+            "mandate": null,
+            "multicapture": {
+              "status": "unavailable"
+            },
+            "network": "visa",
+            "network_token": null,
+            "overcapture": {
+              "maximum_amount_capturable": 1000,
+              "status": "unavailable"
+            },
+            "three_d_secure": null,
+            "wallet": null
+          },
+          "type": "card"
+        },
+        "receipt_email": null,
+        "receipt_number": null,
+        "receipt_url": "https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xRnlNU2hMUUFZQjdPN1VmKOGW5KgGMga8FvEF7-s6LBYhcy3JZgK1rm7FoGY84ysg0sSXT8vJejKoXcN60-RbxlswfJ5l1ommHVkK",
+        "refunded": false,
+        "refunds": {
+          "data": [],
+          "has_more": false,
+          "object": "list",
+          "total_count": 0,
+          "url": "/v1/charges/ch_1NwIjFLQAYB7O7UfxkefdvS0/refunds"
+        },
+        "review": null,
+        "shipping": null,
+        "source": null,
+        "source_transfer": null,
+        "statement_descriptor": null,
+        "statement_descriptor_suffix": null,
+        "status": "succeeded",
+        "transfer_data": null,
+        "transfer_group": null
+      }
+    ],
+    "has_more": false,
+    "object": "list",
+    "total_count": 1,
+    "url": "/v1/charges?payment_intent=pi_1NwIjELQAYB7O7UfWhJdRp2X"
+  },
+  "client_secret": "pi_1NwIjELQAYB7O7UfWhJdRp2X_secret_rTn33mYJLDlzqzgXZKDLal5j3",
+  "confirmation_method": "automatic",
+  "created": 1696140128,
+  "currency": "usd",
+  "customer": "cus_Ock8upIUmIRSN0",
+  "description": "Customer:None, ID: 44",
+  "id": "pi_1NwIjELQAYB7O7UfWhJdRp2X",
+  "invoice": null,
+  "last_payment_error": null,
+  "latest_charge": "ch_1NwIjFLQAYB7O7UfxkefdvS0",
+  "livemode": false,
+  "metadata": {},
+  "next_action": null,
+  "object": "payment_intent",
+  "on_behalf_of": null,
+  "payment_method": "pm_1NpUeoLQAYB7O7UfrbzUqR1g",
+  "payment_method_configuration_details": null,
+  "payment_method_options": {
+    "card": {
+      "installments": null,
+      "mandate_options": null,
+      "network": null,
+      "request_three_d_secure": "automatic"
+    }
+  },
+  "payment_method_types": [
+    "card"
+  ],
+  "processing": null,
+  "receipt_email": null,
+  "review": null,
+  "setup_future_usage": null,
+  "shipping": null,
+  "source": null,
+  "statement_descriptor": null,
+  "statement_descriptor_suffix": null,
+  "status": "succeeded",
+  "transfer_data": null,
+  "transfer_group": null
+}

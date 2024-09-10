@@ -1,0 +1,190 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <form method="get" id="search-users-form">
+    <div class="row mb-2">
+      
+      <div class="col-sm-2">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        {% include 'common/table_messages.html' %}
+      </div><!-- /.col -->
+    </div> 
+    <div class="row mb-2"> 
+      <div class="col-sm-2">
+         <select name="user_type" class="form-control" id="user-types">
+          <option value="">Select User Type</option>
+          {% for key,value in user_types.items %}
+            <option {% if request.GET.user_type == key %}selected{% endif %} value="{{key}}">{{value}}</option>
+          {% endfor %}
+         </select>
+      </div>
+
+      <div class="col-sm-2 mt-2">
+        <div class="form-group clearfix">
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="paid"  id="radioPrimary1" value="yes" {%if request.GET.paid and request.GET.paid == 'yes'%}checked{%endif%}>
+            <label for="radioPrimary1">Paid</label>
+          </div>
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="paid" id="radioPrimary2" value="no" {%if request.GET.paid and request.GET.paid == 'no'%}checked{%endif%}>
+            <label for="radioPrimary2">Non Paid</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 mt-2">
+        <div class="form-group clearfix">
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="verified"  id="radioPrimary3" value="yes" {%if request.GET.verified and request.GET.verified == 'yes'%}checked{%endif%}>
+            <label for="radioPrimary3">Verified</label>
+          </div>
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="verified" id="radioPrimary4" value="no" {%if request.GET.verified and request.GET.verified == 'no'%}checked{%endif%}>
+            <label for="radioPrimary4">Not Verified</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 mt-2">
+        <div class="form-group clearfix">
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="approved"  id="radioPrimary5" value="yes" {%if request.GET.approved and request.GET.approved == 'yes'%}checked{%endif%}>
+            <label for="radioPrimary5">Approved</label>
+          </div>
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="approved" id="radioPrimary6" value="no" {%if request.GET.approved and request.GET.approved == 'no'%}checked{%endif%}>
+            <label for="radioPrimary6">Rejected</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-2">
+        <input type="submit" value="Search" class="btn btn-success">
+        <a href="{% url 'users' %}" class="btn btn-success"><i class="fa fa-sync-alt"></i><a>
+      </div>
+    
+      <div class="col-sm-4">
+        <!--CREATE BTN HERE-->
+     
+      </div><!-- /.col -->
+    
+    </div><!-- /.row -->
+  </form>
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Email</th>
+                  <th>Family Member</th>
+                  <th>User Type</th>
+                  <th>Last Login</th>
+                  <th>Paid/Plan</th>
+                  <th>Verified</th>
+                  <th>Approval</th>
+                  <th>Action</th>
+                  <th>Phone</th>
+                  <th>Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in object_list %}
+                <tr>
+                  <td>{{user.id}}</td>
+                  <td>{{user.email}}</td>
+                  <td>
+                    {% if user.family_member %}
+                    {{user.family_member.fullname}}<br>
+                    <small class="text-info">{{user.family_member.relation|title}}</small>
+                    {%else%}
+                    NA
+                    {%endif%}
+                  </td>
+                  <td>
+                    {% if user.is_admin %}
+                    <button class="btn btn-danger btn-sm">Admin</button>
+                    {% elif user.user_type %}
+                    <button class="btn btn-success btn-sm">{{user.user_type|title}}</button>
+                    {% else %}
+                    <button class="btn btn-warning btn-sm">NA</button>
+                    {% endif %}
+                  </td>
+                  <td>
+                    {{user.last_login|date:"Y-m-d H:i a"}}
+                  </td>
+                  <td>
+                    {%if user.plan and user.plan.amount > 0%}
+                      {{user.plan.name}}
+                    {%else%}
+                      Not Paid
+                    {%endif%}
+                  </td>
+                  <td>
+                    {% if user.is_verified %}
+                    <a title="This user is verified. Click to mark as not verified" href="{% url 'activate_deactivate_user' user.id %}" class="btn btn-success btn-sm alert-before-proceede" alert-msg="Are you sure to mark this user not verified?">Remove</a>
+                    {% else %}
+                    <a title="This user is not verified. Click to Verify" href="{% url 'activate_deactivate_user' user.id %}" class="btn btn-warning btn-sm alert-before-proceede" alert-msg="Are you sure to verify this user?">Verify</a>
+                    {% endif %}
+                  </td>
+                  <td>
+                    {% if user.is_approved %}
+                    <a title="This user is approved. Click to Reject" href="{% url 'approve_reject_user' user.id %}" class="btn btn-success btn-sm alert-before-proceede" alert-msg="Are you sure to reject this user?">Reject</a>
+                    {% else %}
+                    <a title="This user is not approved. Click to Approve" href="{% url 'approve_reject_user' user.id %}" class="btn btn-warning btn-sm alert-before-proceede" alert-msg="Are you sure to approve this user?">Approve</a>
+                    {% endif %}
+                  </td>
+                  <td><a title="Details" href="{% url 'user-details' user.id %}"><i class="fa fa-info-circle"></i></a></td>
+                  <td>{{user.phone}}</td>
+                  <td>{{user.name|default:"NA"}}</td>
+                </tr>
+                {% endfor %}
+                
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+<script>
+  $("#user-types").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  $("#customCheckbox2").on("change", function(e){
+    $("#search-users-form").submit();
+  })
+
+  $("#customCheckbox3").on("change", function(e){
+    $("#search-users-form").submit();
+  })
+</script>
+{%endblock%}

@@ -1,0 +1,88 @@
+<form method="get" id="search-users-form">
+
+<div class="row mb-2"> 
+      
+    <div class="col-sm-2 mt-2">
+      <div class="form-group clearfix">
+        <div class="icheck-primary d-inline">
+          <input type="radio" name="paid"  id="radioPrimary1" value="yes" {%if request.GET.paid and request.GET.paid == 'yes'%}checked{%endif%}>
+          <label for="radioPrimary1">Paid</label>
+        </div>
+        <div class="icheck-primary d-inline">
+          <input type="radio" name="paid" id="radioPrimary2" value="no" {%if request.GET.paid and request.GET.paid == 'no'%}checked{%endif%}>
+          <label for="radioPrimary2">Free</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 mt-2">
+      <div class="form-group clearfix">
+        <div class="icheck-primary d-inline">
+          <input type="radio" name="verified"  id="radioPrimary3" value="yes" {%if request.GET.verified and request.GET.verified == 'yes'%}checked{%endif%}>
+          <label for="radioPrimary3">Verified</label>
+        </div>
+        <div class="icheck-primary d-inline">
+          <input type="radio" name="verified" id="radioPrimary4" value="no" {%if request.GET.verified and request.GET.verified == 'no'%}checked{%endif%}>
+          <label for="radioPrimary4">Not Verified</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <input type="text" name="location" class="form-control" placeholder="Search By Location,address,city,state,zipcode" value="{{ request.GET.location }}">
+    </div>
+
+    <div class="col-sm-3">
+      <input type="text" id="date-range" name="signup_date_range" class="form-control" placeholder="Filter By Sign Up Date" value="{{request.GET.signup_date_range}}" autocomplete="off" readonly>
+    </div>
+
+    <div class="col-sm-3">
+      <input type="text" id="date-range" name="lastlogin_date_range" class="form-control" placeholder="Filter By Last Login Date" value="{{request.GET.lastlogin_date_range}}" autocomplete="off" readonly>
+    </div>
+
+    <div class="col-sm-3">
+      <select name="currency" class="form-control">
+        <option value="">Search By Currency</option>
+        {% for currency in currencies %}
+          <option value="{{currency.id}}" {%if request.GET.currency == currency.id|slugify %}selected{%endif%}>{{currency.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="col-sm-3">
+      <select name="language" class="form-control">
+        <option value="">Search By Language</option>
+        {% for key,value in languages.items %}
+          <option value="{{key}}" {%if request.GET.language == key %}selected{%endif%}>{{value}}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    {% if 'business-accounts' in request.path %}
+    <div class="col-sm-3">
+      <select name="business_category" class="form-control" id="business-category">
+       <option value="" selected>Select Business Category</option>
+       {% for category in business_categories %}
+         <option {% if request.GET.business_category == category.id|slugify %}selected{% endif %} value="{{category.id}}">{{category.name}}</option>
+       {% endfor %}
+      </select>
+   </div>
+   {%endif%}
+
+    <div class="col-sm-2 {% if 'business-accounts' in request.path %}mt-2{% endif %}">
+      <input type="submit" value="Search" class="btn btn-success">
+      {% if 'member-accounts' in request.path %}
+      <a href="{% url 'member_accounts' %}" class="btn btn-success"><i class="fa fa-sync-alt"></i><a>
+      {% elif 'business-accounts' in request.path %}
+      <a href="{% url 'business_accounts' %}" class="btn btn-success"><i class="fa fa-sync-alt"></i><a>
+      {%endif%}
+    </div>
+  
+    <div class="col-sm-4">
+      <!--CREATE BTN HERE-->
+   
+    </div><!-- /.col -->
+  
+  </div><!-- /.row -->
+
+</form>

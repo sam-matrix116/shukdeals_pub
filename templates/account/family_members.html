@@ -1,0 +1,62 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{%block css%}
+{% include 'common/datatable_header.html' %}
+{%endblock%}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">{{page_name|default:""}}</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <!--CREATE BTN HERE-->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Full Name</th>
+                        <th>Relation</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for family_member in object_list %}
+                <tr>
+                    <td>{{family_member.id}}</td>
+                    <td>{{family_member.fullname}}</td>
+                    <td>{{family_member.relation}}</td>
+                    <td><img src="{{family_member.image.url}}" width="100" length="100"></td>
+                </tr>
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+{%endblock%}

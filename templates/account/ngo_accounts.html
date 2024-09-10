@@ -1,0 +1,114 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <form method="get" id="search-users-form">
+    <div class="row mb-2">
+      
+      <div class="col-sm-3">
+        <p class="m-0 head-3md-p">{{page_name|default:""}}</p>
+      </div><!-- /.col -->
+
+      <div class="col-sm-9">
+        {% include 'common/table_messages.html' %}
+      </div><!-- /.col -->
+    </div> 
+    
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example2" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Website</th>
+                  <th>Location</th>
+                  <th class="text-center">Default</th>
+                  <th>Contact Info</th>
+                  <th class="text-center">Approved</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in object_list %}
+                <tr id="user-detail-row-{{user.id}}">
+                  <td>{{user.id}}</td>
+                  <td>
+                    {%if user.online_user.first %}
+                      <i class="fa fa-dot-circle online-dot"></i>
+                    {% else %}
+                      <i class="fa fa-dot-circle offline-dot"></i>
+                    {% endif %}
+                    {{user.name|default:user.email}}
+                  </td>
+                  <td>{{user.website_url|default:""|truncatechars:"20"}}</td>
+                  <td>
+                    {% for location in user.locations.all %}
+                      {%if location.is_primary %}
+                        {{location.get_location_detail|truncatechars:"20"}}
+                      {% endif %}
+                    {% endfor %}
+                  </td>
+                  <td>
+                      {%if user.is_default_ngo%}
+                      <span class="badge badge-success">DEFAULT NGO</span>
+                      {%else%}
+                      <a href="{% url 'make_ngo_default' user.id %}"><span class="badge badge-warning text-white">Make This Ngo as default</span></a>
+                      {%endif%}
+                  </td>
+                  <td>{{user.phone|default:""}}</td>
+                  <td class="text-center">
+                    {% if user.is_approved %}
+                    <span class="badge badge-success">Approved</span>
+                    {% else %}
+                    <a title="This NGO is not approved. Click to Approve" href="{% url 'approve_ngo' user.id %}" class="alert-before-proceede" alert-msg="Are you sure to approve this NGO?"><span class="badge badge-danger">Not Approved</span></a>
+                    {% endif %}
+                  </td>
+                  <td class="text-center">
+                    {% include 'account/user_action_dropdown.html' %}
+                  </td>
+
+                </tr>
+                {% endfor %}
+                
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+<script>
+  $("#business-category").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  $("#customCheckbox2").on("change", function(e){
+    $("#search-users-form").submit();
+  })
+</script>
+{%endblock%}

@@ -1,0 +1,68 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{%block css%}
+{% include 'common/datatable_header.html' %}
+{%endblock%}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-3">
+          <h1 class="m-0">Flagged Deals</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          {% include 'common/table_messages.html' %}
+        </div><!-- /.col -->
+        <div class="col-sm-3">
+          <!--CREATE BTN HERE-->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Flagged Deal</th>
+                        <th>Flagged By</th>
+                        <th>Reason</th>
+                        <th>Created At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in object_list %}
+                <tr>
+                    <td>{{obj.id}}</td>
+                    <td>{{obj.deal.title}}</td>
+                    <td><a href="{% url 'user-details' obj.flagged_by.id %}">{{obj.flagged_by.get_full_name|default:obj.flagged_by.email|truncatechars:"10"}}</a></td>
+                    <td>{{obj.reason}}</td>
+                    <td>{{obj.created_at|date:"Y-m-d H:i a"}}</td>
+                </tr>
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+{%endblock%}

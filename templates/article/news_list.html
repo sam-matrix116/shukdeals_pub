@@ -1,0 +1,143 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    
+    <div class="row mb-2">
+      
+      <div class="col-sm-2">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+      
+      <div class="col-sm-10">
+      </div>
+    
+    </div><!-- /.row -->
+  </form>
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div id="response-div" class="text-success"></div>
+            <table id="example2" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Created By</th>
+                  <th>Category</th>
+                  <th>Title</th>
+                  <th>Image</th>
+                  <th class="option-td">Status</th>
+                  <th>Deleted</th>
+                  <th>Delete Requested</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for obj in object_list %}
+                <tr>
+                  <td>{{obj.id}}</td>
+                  <td><a href="{% url 'user-details' obj.user.id %}">{{obj.user.get_full_name|default:obj.user.email}}</a></td>
+                  <td>{{obj.category.name}}</td>
+                  <td>{{obj.title}}</td>
+                  <td><img src="{{obj.image.url}}" width=50 /></td>
+                  <td>
+                    <select class="form-control news-status" newsid="{{obj.id}}">
+                        {% for key, value in status_options.items %}
+                            <option value="{{key}}" {%if obj.status == key%}selected{%endif%}>{{value}}</option>
+                        {% endfor %}
+                    </select>
+                  </td>
+                  <td>
+                    <select class="form-control news-deleted" newsid="{{obj.id}}">
+                      <option value="1" {%if obj.deleted == 1%}selected{%endif%}>YES</option>
+                      <option value="0" {%if obj.deleted == 0%}selected{%endif%}>NO</option>
+                    </select>
+                   </td>
+                  <td>
+                    {%if obj.delete_requested %}
+                        <span class="btn btn-success small-text">YES</span>
+                    {%else%}
+                        <span class="btn btn-sm btn-danger small-text">NO</span>
+                    {%endif%}
+                  </td>
+                  
+                </tr>
+                {% endfor %}
+                
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+<script>
+
+    $("#example2").DataTable({
+        order: [[0, 'desc']],
+        "responsive": true,
+        columnDefs: [
+          { orderable: false, targets: -1 }
+        ], 
+        "lengthChange": false, 
+        "autoWidth": false,
+        
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+
+  $(".news-status").on("change", function(e){
+    $("#response-div").text("");
+    var payload = {
+        news_id:  $(this).attr("newsid"),
+        new_status: $(this).val(),
+        csrfmiddlewaretoken: '{{ csrf_token }}'
+    }
+    url = "{% url 'update_news_status' %}"
+    $.post(url,payload, function(resp){
+        if(resp.status){
+            $("#response-div").text(resp.msg);
+        }else{
+            alert(resp.msg)
+        }
+    })
+  });
+
+  $(".news-deleted").on("change", function(e){
+    $("#response-div").text("");
+    var payload = {
+        news_id:  $(this).attr("newsid"),
+        csrfmiddlewaretoken: '{{ csrf_token }}'
+    }
+    url = "{% url 'update_news_deleted' %}"
+    $.post(url,payload, function(resp){
+        if(resp.status){
+            $("#response-div").text(resp.msg);
+        }else{
+            alert(resp.msg)
+        }
+    })
+  });
+</script>
+{%endblock%}

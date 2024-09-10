@@ -1,0 +1,76 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{%block css%}
+{% include 'common/datatable_header.html' %}
+{%endblock%}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-3">
+          <h1 class="m-0">{{page_name|default:""}}</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          {% include 'common/table_messages.html' %}
+        </div><!-- /.col -->
+        <div class="col-sm-3">
+          <!--CREATE BTN HERE-->
+          
+          <a href="{% url 'about_us_journey_add' %}" class="btn btn-info float-right">Create Journey</a>
+          
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Icon</th>
+                        <th>Counter</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th class="action-th nosort">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in object_list %}
+                <tr>
+                    <td>{{obj.id}}</td>
+                    <td><img src="{{obj.icon.url}}" width="100px"/></td>
+                    <td>{{obj.counter}}</td>
+                    <td>{{obj.title}}</td>
+                    <td>{{obj.description}}</td>
+                    <td class="text-center">
+                        <a href="{% url 'about_us_journey_update' obj.id %}"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="{% url 'about_us_journey_delete' obj.id %}"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+{%endblock%}

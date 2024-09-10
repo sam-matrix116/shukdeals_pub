@@ -1,0 +1,189 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shuktv | {{ page_name|default:"" }}</title>
+        <!-- Google Font: Source Sans Pro -->
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+              href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+        <!-- Ionicons -->
+        <link rel="stylesheet"
+              href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Tempusdominus Bootstrap 4 -->
+        <link rel="stylesheet"
+              href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+        <!-- iCheck -->
+        <link rel="stylesheet"
+              href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+        <!-- JQVMap -->
+        <link rel="stylesheet" href="{% static 'plugins/jqvmap/jqvmap.min.css' %}">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+        <!-- overlayScrollbars -->
+        <link rel="stylesheet"
+              href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
+        <!-- Daterange picker -->
+        <link rel="stylesheet"
+              href="{% static 'plugins/daterangepicker/daterangepicker.css' %}">
+        <!-- summernote -->
+        <link rel="stylesheet"
+              href="{% static 'plugins/summernote/summernote-bs4.min.css' %}">
+        <link rel="stylesheet" href="{% static 'dist/css/custom.css' %}">
+        {% block css %}{% endblock %}
+    </head>
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+            <!-- Preloader -->
+            <div class="preloader flex-column justify-content-center align-items-center">
+                <img class="animation__shake"
+                     src="{% static 'dist/img/AdminLTELogo.png' %}"
+                     alt="AdminLTELogo"
+                     height="60"
+                     width="60">
+            </div>
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a>
+                    </li>
+                </ul>
+                <!-- Right navbar links -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Notifications Dropdown Menu -->
+                    <li class="nav-item">
+                        <a class="nav-link"  href="{% url 'logout' %}" role="button">
+                            Logout &nbsp;<i class="fas fa-sign-out-alt"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.navbar -->
+            <!-- Main Sidebar Container -->
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <!-- Brand Logo -->
+                <a href="{% url 'dashboard' %}" class="brand-link">
+                    <img src="{% static 'dist/img/logo-white.png' %}"
+                         alt="ShukDeals Logo"
+                         class="brand-image" />
+                    <span class="brand-text font-weight-light">&nbsp;</span>
+                </a>
+                <!-- Sidebar -->
+                {% include "common/sidebar.html" %}
+                <!-- /.sidebar -->
+            </aside>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Main content -->
+                {% block section %}
+                {% endblock section %}
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <strong>Copyright &copy; 2017-2023 <a href="https://www.dignitech.com" target="_blank">https://www.dignitech.com</a>.</strong>
+                All rights reserved.
+            </footer>
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+        </div>
+        <div class="modal fade" id="myModal" role="dialog"> 
+        </div>
+        <!-- ./wrapper -->
+        <!-- jQuery -->
+        <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="{% static 'plugins/jquery-ui/jquery-ui.min.js' %}"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>$.widget.bridge('uibutton', $.ui.button)</script>
+        <!-- Bootstrap 4 -->
+        <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <!-- ChartJS -->
+        <script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+        <!-- Sparkline -->
+        <script src="{% static 'plugins/sparklines/sparkline.js' %}"></script>
+        <!-- JQVMap -->
+        <script src="{% static 'plugins/jqvmap/jquery.vmap.min.js' %}"></script>
+        <script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js' %}"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="{% static 'plugins/jquery-knob/jquery.knob.min.js' %}"></script>
+        <!-- daterangepicker -->
+        <script src="{% static 'plugins/moment/moment.min.js' %}"></script>
+        <script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
+        <!-- Tempusdominus Bootstrap 4 -->
+        <script src="{% static 'plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+        <!-- Summernote -->
+        <script src="{% static 'plugins/summernote/summernote-bs4.min.js' %}"></script>
+        <!-- overlayScrollbars -->
+        <script src="{% static 'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
+        <!-- AdminLTE App -->
+        <script src="{% static 'dist/js/adminlte.js' %}"></script>
+        <!-- AdminLTE for demo purposes -->
+        {% comment %} <script src="{% static 'dist/js/demo.js' %}"></script> {% endcomment %}
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        {% comment %} {% if 'dashboard' in request.path %}
+<script src="{% static 'dist/js/pages/dashboard-custom.js' %}"></script>
+        {%endif%} {% endcomment %}
+        <script>
+            $(".alert-before-proceede").on("click", function(e){
+            alert_msg = $(this).attr("alert-msg");
+            if(alert_msg == ''){
+                alert_msg = 'Are you sure?';
+            }
+            if(!confirm(alert_msg)){
+                return false;
+            }
+            ;
+            });
+
+
+            $('.openModal').on('click',function(e){
+                e.preventDefault();
+                url = $(this).prop("href");
+                $('#myModal').load(url,function(){
+                    $('#myModal').modal({show:true});
+                });
+            
+            $(document).on("submit", "#user-delete-form", function(e){
+                e.preventDefault()
+                
+                var form = $(this);
+                var actionUrl = form.attr('action');
+                var user_id = form.attr('user-id')
+                
+                $.ajax({
+                    type: "POST",
+                    url: actionUrl,
+                    data: form.serialize(), // serializes the form's elements.
+                    success: function(data){
+                        if(data.status){
+                            $("#server-response-msg").text(data.msg)
+                            setTimeout(function(){
+                                $('#myModal').modal('hide');
+                                $("#user-detail-row-"+user_id).hide();
+                            }, 1000);
+                        }else{
+                            $("#server-response-error-msg").text(data.msg);
+                        }
+                    }
+                });
+                
+              });
+            });
+        </script>
+        {% block script %}
+        {% endblock script %}
+    </body>
+</html>

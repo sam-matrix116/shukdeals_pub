@@ -1,0 +1,21 @@
+
+INSERT INTO `account_usertypecategory` (`id`, `name`, `user_type`, `name_ar`, `name_de`, `name_es`, `name_fr`, `name_he`, `name_pt`, `name_ru`) VALUES
+(1, 'Museums /Cultural Centres', 'ngo', 'المتاحف /المراكز الثقافية', 'Museen /Kulturzentren', 'Museos /centros culturales', 'Musées / centres culturels', 'מוזיאונים /מרכזי תרבות', 'Museus /centros culturais', 'Музеи /культурные центры'),
+(2, 'Environment / Climate', 'ngo', 'البيئة / المناخ', 'Umwelt / Klima', 'Medio ambiente / clima', 'Environnement / climat', 'סביבה / אקלים', 'Meio ambiente / clima', 'Окружающая среда / климат'),
+(3, 'Health / Medical', 'ngo', 'الصحة / الطبي', 'Gesundheit / medizinisch', 'Salud y Medicina', 'Santé / médical', 'בריאות / רפואה', 'Saúde / médico', 'Здоровье / медицинское'),
+(4, 'Education', 'ngo', 'تعليم', 'Ausbildung', 'Educación', 'Éducation', 'חינוך', 'Educação', 'Образование'),
+(5, 'Disabilities', 'ngo', 'الإعاقات', 'Behinderungen', 'Discapacidad', 'Handicapées', 'מוגבלות', 'Deficiências', 'Инвалидность'),
+(6, 'Religion Institutions', 'ngo', 'مؤسسات الدين', 'Religionsinstitutionen', 'Instituciones religiosas', 'Institutions de religion', 'מוסדות דת', 'Instituições religiosas', 'Религиозные учреждения'),
+(7, 'Sports', 'ngo', 'رياضات', 'Sport', 'Deportes', 'Des sports', 'ספורט', 'Esportes', 'Виды спорта'),
+(8, 'Woman', 'ngo', 'امرأة', 'Frau', 'Mujer', 'Femme', 'אִשָׁה', 'Mulher', 'Женщина'),
+(9, 'Children', 'ngo', 'أطفال', 'Kinder', 'Niños', 'Enfants', 'יְלָדִים', 'Crianças', 'Дети'),
+(10, 'Community Based', 'ngo', 'المجتمع على أساس', 'Gemeinschaftsbasiert', 'Basado en la comunidad', 'Basé sur la communauté', 'מבוסס על הקהילה', 'Baseada na comunidade', 'Сообщество'),
+(11, 'Poverty / Hunger', 'ngo', 'الفقر / الجوع', 'Armut / Hunger', 'Pobreza / hambre', 'Pauvreté / faim', 'עוני / רעב', 'Pobreza / fome', 'Бедность / голод'),
+(12, 'Animals', 'ngo', 'الحيوانات', 'Tiere', 'Animales', 'Animaux', 'בעלי חיים', 'Animais', 'Животные'),
+(13, 'Innovation', 'ngo', 'ابتكار', 'Innovation', 'Innovación', 'Innovation', 'חדשנות', 'Inovação', 'Инновации'),
+(14, 'Empowerment', 'ngo', 'التمكين', 'Ermächtigung', 'Empoderamiento', 'Autonomisation', 'העצמה', 'Fortalecimento', 'Расширение прав и возможностей'),
+(15, 'City Wide Programs', 'ngo', 'برامج المدينة واسعة', 'Stadtweite Programme', 'Programas de la ciudad', 'Programmes à l\'échelle de la ville', 'תוכניות רחבות עירוניות', 'Programas da cidade', 'Городские программы'),
+(16, 'Israeli Orgs', 'ngo', 'orgs الإسرائيلية', 'Israelische Orgs', 'Orgs israelíes', 'Orgs israéliens', 'אורגים ישראליים', 'Orgs israelenses', 'Израильские организации'),
+(17, 'International Orgs', 'ngo', 'Orgs الدولية', 'Internationale Orgs', 'Orgs internacionales', 'Orgs internationaux', 'אורגים בינלאומיים', 'Orgs internacionais', 'Международные организации'),
+(18, 'IDF', 'ngo', 'IDF', 'Idf', 'IDF', 'FDI', 'IDF', 'IDF', 'ИДФ'),
+(19, 'Antisemitism', 'ngo', 'معاداة السامية', 'Antisemitismus', 'Antisemitismo', 'Antisémitisme', 'אנטישמיות', 'Anti -semitismo', 'Антисемитизм');

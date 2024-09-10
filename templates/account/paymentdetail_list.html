@@ -1,0 +1,182 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{%block css%}
+{% include 'common/datatable_header.html' %}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+{%endblock%}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-3">
+          <h1 class="m-0">{{page_name|default:""}}</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          {% include 'common/table_messages.html' %}
+        </div><!-- /.col -->
+        <div class="col-sm-3">
+          <!--CREATE BTN HERE-->
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+
+
+      <form method="get" id="search-users-form">
+
+        <div class="row mb-2"> 
+              
+            
+            <div class="col-sm-2">
+              <select name="user_type" class="form-control" id="user-types">
+                <option value="">Filter By User Type</option>
+                {% for key,value in user_types.items %}
+                  <option {% if request.GET.user_type == key %}selected{% endif %} value="{{key}}">{{value}}</option>
+                {% endfor %}
+               </select>
+            </div>
+        
+            <div class="col-sm-2">
+              <select name="item_type" class="form-control">
+                <option value="">Payment For</option>
+                <option value="plan" {%if request.GET.language == "plan" %}selected{%endif%}>Plan</option>
+                <option value="deal" {%if request.GET.language == "deal" %}selected{%endif%}>Deal</option>
+                <option value="weekly_deal" {%if request.GET.language == "weekly_deal" %}selected{%endif%}>Weekly Deal</option>
+                <option value="location" {%if request.GET.language == "location" %}selected{%endif%}>Location</option>
+                <option value="classified" {%if request.GET.language == "classified" %}selected{%endif%}>Classified</option>
+              </select>
+            </div>
+
+            <div class="col-sm-4">
+              <select name="ngo" class="form-control">
+                <option value="">Filter By Non Profitable Organization</option>
+                {% for ngo in ngos %}
+                  <option {% if request.GET.ngo == ngo.id|slugify %}selected{% endif %} value="{{ngo.id}}">{{ngo.get_full_name}}</option>
+                {% endfor %}
+               </select>
+            </div>
+
+            <div class="col-sm-2">
+              <select name="status" class="form-control">
+                <option value="">Status</option>
+                <option {% if request.GET.status == 'pending' %}selected{% endif %} value="pending">Pending</option>
+                <option {% if request.GET.status == 'complete' %}selected{% endif %} value="complete">Complete</option>
+              </select>
+            </div>
+
+            <div class="col-sm-4">
+              <input type="text" id="date-range" name="date_range" class="form-control mt-2" placeholder="Filter By Date" value="{{request.GET.date_range}}" autocomplete="off" readonly>
+            </div>
+        
+            
+            <div class="col-sm-2 mt-2">
+              <input type="submit" value="Search" class="btn btn-success">
+              <a href="{% url 'all_orders' %}" class="btn btn-success"><i class="fa fa-sync-alt"></i><a>
+            </div>
+          
+            <div class="col-sm-4">
+              <!--CREATE BTN HERE-->
+           
+            </div><!-- /.col -->
+          
+          </div><!-- /.row -->
+        
+        </form>
+
+
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>User</th>
+                        <th>Payment For</th>
+                        <th>Amount</th>
+                        <th>Currency</th>
+                        <th>Gateway</th>
+                        <th>Status</th>
+                        <th>Payment Details</th>
+                        <th>Payment Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in object_list %}
+                
+                <tr>
+                    <td>{{obj.id}}</td>
+                    <td><a href="{% url 'user-details' obj.user.id %}">{{obj.user.get_full_name|default:obj.user.email}}</a></td>
+                    <td>{{obj.get_item_type_display}}</td>
+                    <td>{{obj.amount|floatformat:2}}</td>
+                    <td>{{obj.currency|default:""}}</td>
+                    <td>
+                      {% if obj.stripe_payment_detail.first %}
+                        <span class="badge badge-warning">STRIPE</span>
+                      {% elif obj.tranzila_payment_detail.first %}
+                        <span class="badge badge-secondary">TRANZILA</span>
+                      {% else %}
+                        <span class="badge badge-danger">NOT PAID</span>
+                      {% endif %}
+                    </td>
+                    <td>
+                      {% if obj.status == 'pending' %}
+                        <span class="badge badge-danger">{{obj.get_status_display}}</span>
+                      {% elif obj.status == 'complete' %}
+                        <span class="badge badge-success">{{obj.get_status_display}}</span>
+                      {% endif %}
+                      
+                    </td>
+                    <td>
+                      {% if obj.status == 'complete' %}
+                      <a class="badge badge-info" href="{% url 'order_payment_details' obj.id %}">GET DETAILS</a>
+                      {%endif%}
+                    </td>
+                    <td>{{obj.created_at|date:"Y-m-d H:i a"}}</td>
+                </tr>
+                
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+{% include 'common/datatable_footer.html' %}
+<script>
+
+  $('input[name="date_range"]').daterangepicker({
+    autoUpdateInput: false,
+    locale: {
+        cancelLabel: 'Clear'
+    }
+});
+
+  $('input[name="date_range"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' / ' + picker.endDate.format('YYYY-MM-DD'));
+  });
+
+  $('input[name="date_range"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+
+</script>
+{%endblock%}

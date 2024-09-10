@@ -1,0 +1,14 @@
+<div class="dropdown">
+    <button class="badge badge-info dropdown-toggle no-border" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Actions
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="{% url 'user-details' user.id %}">Detail</a>
+      {%if user.active %}
+      <a class="dropdown-item" title="Deactivate" href="{% url 'activate_deactivate_user' user.id %}">Deactivate</a>
+      {%else%}
+      <a class="dropdown-item" title="Activate" href="{% url 'activate_deactivate_user' user.id %}">Activate</a>
+      {%endif%}
+      <a class="dropdown-item openModal" href="{% url 'user-delete' user.id %}">Delete</a>
+    </div>
+  </div>

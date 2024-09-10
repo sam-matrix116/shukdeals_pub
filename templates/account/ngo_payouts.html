@@ -1,0 +1,94 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{%block css%}
+{% include 'common/datatable_header.html' %}
+{%endblock%}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-5">
+          <h1 class="m-0">{{page_name|default:""}}</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-7">
+          {% include 'common/table_messages.html' %}
+        </div><!-- /.col -->
+        
+      </div><!-- /.row -->
+
+
+      <form method="get" id="search-users-form">
+
+        <div class="row mb-2"> 
+              
+            
+            
+          
+            <div class="col-sm-4">
+              <!--CREATE BTN HERE-->
+           
+            </div><!-- /.col -->
+          
+          </div><!-- /.row -->
+        
+        </form>
+
+
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Non Profitable Organization</th>
+                        <th>Total Amount</th>
+                        <th>Amount Paid</th>
+                        <th>Outstanding Amount</th>
+                        <th>Mark Paid</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in object_list %}
+                <tr>
+                    <td>{{obj.get_full_name}}</td>
+                    <td>$ {{obj.get_ngo_total_amount|floatformat:2}}</td>
+                    <td>$ {{obj.get_ngo_paid_amount|floatformat:2}}</td>
+                    <td>$ {{obj.get_ngo_outstanding_amount|floatformat:2}}</td>
+                    <td>
+                      {% if obj.get_ngo_outstanding_amount and obj.get_ngo_outstanding_amount > 0 %}
+                      <a title="Click to change status" href="{% url 'mark_payout_paid' obj.id %}" class="alert-before-proceede" alert-msg="Are you sure to mark this payout paid?"><span class="badge badge-danger">CLICK TO MARK PAID</span></a>
+                      {% else %}
+                      <span class="badge badge-success">PAID</span>
+                      {% endif %}
+                    </td>
+                    <td><a href="{% url 'ngo_payout_details' %}?ngo={{obj.id}}" class="badge badge-info">Details</a></td>
+                </tr>
+                
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+{%endblock%}

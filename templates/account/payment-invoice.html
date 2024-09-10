@@ -1,0 +1,44 @@
+{% load static %}
+<div class="row">
+    <div class="col=md-4"></div>
+    <div class="col=md-12">
+        <div class="card">
+            <div class="card-body mx-4">
+              <div class="container">
+                <div class="my-5 mx-5" style=" text-align: center;">
+                <img src="https://shukbackend.dignitech.com/static/dist/img/site-logo.png" alt="Logo" title="Logo" style="display:block;width: 40%;margin-left: 30%;" height="60" /><br>
+                <span style="font-size: 15px;"><b>Address:</b> Malcha Technology Park, Bldg. 31 Agudat Sport 3 - 9699901</span>
+                </div>
+                <p class="my-5 mx-5" style="font-size: 30px; text-align: center;">Thank for your purchase</p>
+                <div class="row">
+                  <p>{{payment.user.get_full_name}}</p>
+                  <p>Invoice # {{payment.id}}</p>
+                  <p>Date: {{payment.created_at|date:"Y-m-d H:i a"}}</p>
+                  <hr>
+                </div>
+                <div class="row">
+                  <table>
+                    <tr >
+                        <td style="padding:10px;">Item Name</td>
+                        <td style="align-text: right; padding:10px;">
+                            {{payment.get_item_type_display}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td style="padding:10px;"><b>Total Amount With Tax:</b></td>
+                        <td style="align-text: right; padding:10px;">
+                            {{payment.amount}}
+                            ({{payment_currency_sign}})
+                        </td>
+                    </tr>
+                  </table>
+                  <hr>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col=md-4"></div>
+</div>

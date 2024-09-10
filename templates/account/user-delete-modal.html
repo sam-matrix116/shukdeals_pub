@@ -1,0 +1,30 @@
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+    <form class="form-group" method="post" action="{% url 'user-delete-confirm' pk %}" id="user-delete-form" user-id="{{pk}}">
+        {% csrf_token %}
+        <div class="modal-header">
+            <h4 class="modal-title">Delete User</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+
+                <small class="text text-warning">Please select the reason to delete this user.</small>
+            
+                <select name="delete_reason" class="form-control" required>
+                    <option value="">Select Reason</option>
+                    {% for key,value in delete_reasons.items %}
+                    <option value="{{key}}">{{value}}</option>
+                    {% endfor %}
+                </select>
+            
+        </div>
+        <div class="modal-footer">
+            <span id="server-response-msg" class="text-success"></span>
+            <span id="server-response-error-msg" class="text-danger"></span>
+            <input type="submit" value="Delete" class="btn btn-danger">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </form> 
+</div>
+</div>

@@ -1,0 +1,101 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+   
+    <div class="row mb-2">
+      
+      <div class="col-sm-6">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <a href="{% url 'classifieds' %}" class="btn btn-success btn-sm float-right">Go Back</a>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <table class="table no-border-table">
+                  <tr><td>Title</td><td>{{object.title}}</td></tr>
+                  <tr><td>Description</td><td>{{object.description}}</td></tr>
+                  <tr><td>Price Type</td><td>{{object.get_price_type_display}}</td></tr>
+                  <tr><td>Price</td><td>{{object.price}}</td></tr>
+                  <tr><td>Contact Phone</td><td>{{object.contact_phone}}</td></tr>
+                  <tr><td>Contact Email</td><td>{{object.contact_email}}</td></tr>
+                  <tr><td>Expiry Date</td><td>{{object.expiry_date|date:"Y-m-d"}}</td></tr>
+                  <tr><td>Active</td>
+                    <td>
+                      {%if object.active%}
+                      YES
+                      {%else%}
+                      NO
+                      {%endif%}
+                    </td>
+                  </tr>
+                  <tr><td>Created At</td><td>{{object.created_at|date:"Y-m-d H:i a"}}</td></tr>
+                  <tr><td>Updated At</td><td>{{object.updated_at|date:"Y-m-d H:i a"}}</td></tr>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <table class="table no-border-table">
+                  <tr><td>Location</td><td>{{object.location.location}}</td></tr>
+                  <tr><td>Latitude</td><td>{{object.location.latitude}}</td></tr>
+                  <tr><td>Longitude</td><td>{{object.location.longitude}}</td></tr>
+                  <tr><td>Address</td><td>{{object.location.address}}</td></tr>
+                  <tr><td>City</td><td>{{object.location.city}}</td></tr>
+                  <tr><td>State</td><td>{{object.location.state}}</td></tr>
+                  <tr><td>Country</td><td>{{object.location.country}}</td></tr>
+                  <tr><td>Zipcode</td><td>{{object.location.zipcode}}</td></tr>
+                </table>
+              </div>
+              <div class="col-md-12">
+                {%if object.classified_images%}
+                {%for image in object.classified_images.all%}
+                <div class="image-box">
+                  <img src="{{image.image.url}}" width="100">
+                </div>
+                {%endfor%}
+                {%endif%}
+              </div>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+<script>
+  $("#user-types").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  $("#customCheckbox2").on("change", function(e){
+    $("#search-users-form").submit();
+  })
+</script>
+{%endblock%}

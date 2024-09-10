@@ -1,0 +1,129 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <form method="get" id="search-users-form">
+    <div class="row mb-2">
+      
+      <div class="col-sm-12">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+
+      <div class="col-sm-6">
+        {% include 'common/table_messages.html' %}
+      </div><!-- /.col -->
+    </div> 
+    <div class="row mb-2"> 
+      <div class="col-sm-3">
+        <select name="business_category" class="form-control" id="business-category">
+         <option value="">Select Business Category</option>
+         {% for category in business_categories %}
+           <option {% if request.GET.business_category == category.keyword %}selected{% endif %} value="{{category.keyword}}">{{category.name}}</option>
+         {% endfor %}
+        </select>
+     </div>
+
+     <div class="col-sm-3 mt-2">
+       <div class="form-group clearfix">
+         <div class="icheck-primary d-inline">
+           <input type="radio" name="paid"  id="radioPrimary1" value="yes" {%if request.GET.paid and request.GET.paid == 'yes'%}checked{%endif%}>
+           <label for="radioPrimary1">Paid</label>
+         </div>
+         <div class="icheck-primary d-inline">
+           <input type="radio" name="paid" id="radioPrimary2" value="no" {%if request.GET.paid and request.GET.paid == 'no'%}checked{%endif%}>
+           <label for="radioPrimary2">Non Paid</label>
+         </div>
+       </div>
+     </div>
+
+     <div class="col-sm-4">
+      <input type="text" name="location" class="form-control" placeholder="Search By Location,address,city,state,zipcode" value="{{ request.GET.location }}">
+     </div>
+
+     <div class="col-sm-2">
+      <input type="submit" value="Search" class="btn btn-success">
+      <a href="{% url 'business_accounts' %}" class="btn btn-success"><i class="fa fa-sync-alt"></i><a>
+    </div>
+
+    </div><!-- /.row -->
+  
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example2" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Name</th>
+                  <th class="text-center">Verified</th>
+                  <th class="text-center">Approved</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in object_list %}
+                <tr>
+                  <td>{{user.id}}</td>
+                  <td>{{user.email}}</td>
+                  <td>{{user.phone}}</td>
+                  <td>{{user.name|default:"NA"}}</td>
+                  <td class="text-center">
+                    {% if user.is_verified %}
+                    <span class="badge badge-success">Verified</span>
+                    {% else %}
+                    <span class="badge badge-danger">Not Verified</span>
+                    {% endif %}
+                  </td>
+                  <td class="text-center">
+                    {% if user.is_approved %}
+                    <span class="badge badge-success">Approved</span>
+                    {% else %}
+                    <a title="This business is not approved. Click to Approve" href="{% url 'approve_business' user.id %}" class="alert-before-proceede" alert-msg="Are you sure to approve this business?"><span class="badge badge-danger">Not Approved</span></a>
+                    {% endif %}
+                  </td>
+                  <td class="text-center"><a title="Details" href="{% url 'user-details' user.id %}"><i class="fa fa-eye"></i></a></td>
+                </tr>
+                {% endfor %}
+                
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+<script>
+  $("#business-category").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  $("#customCheckbox2").on("change", function(e){
+    $("#search-users-form").submit();
+  })
+</script>
+{%endblock%}

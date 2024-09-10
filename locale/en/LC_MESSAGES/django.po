@@ -1,0 +1,1709 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-12 11:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: account/api/api_views.py:57 account/api/api_views.py:2836
+msgid "Password is required"
+msgstr ""
+
+#: account/api/api_views.py:63
+msgid "Confirm Password is required"
+msgstr ""
+
+#: account/api/api_views.py:70
+msgid "Password and Confirm password do not match"
+msgstr ""
+
+#: account/api/api_views.py:77 account/api/api_views.py:911
+msgid "Password must be atleast 8 characters"
+msgstr ""
+
+#: account/api/api_views.py:102
+msgid "This email is already registered with us."
+msgstr ""
+
+#: account/api/api_views.py:114
+msgid "This phone is already registered with us."
+msgstr ""
+
+#: account/api/api_views.py:141 account/api/api_views.py:2887
+msgid "Please use below OTP to verify your email."
+msgstr ""
+
+#: account/api/api_views.py:149
+msgid ""
+"You are registered successfully. We have sent a code on your email address "
+"for verification."
+msgstr ""
+
+#: account/api/api_views.py:154 account/api/api_views.py:637
+#: account/api/api_views.py:688 account/api/api_views.py:727
+#: account/api/api_views.py:776 account/api/api_views.py:2900
+msgid "Something Went Wrong while sending OTP to {}, Please Try Again Later!"
+msgstr ""
+
+#: account/api/api_views.py:185
+msgid "Phone is required."
+msgstr ""
+
+#: account/api/api_views.py:193 account/api/api_views.py:273
+msgid "This phone is not registered"
+msgstr ""
+
+#: account/api/api_views.py:201 account/api/api_views.py:1777
+msgid ""
+"Your account is pending for approval from the backend team. Please wait "
+"until it's verified."
+msgstr ""
+
+#: account/api/api_views.py:209
+msgid "This phone is already verified.Redirecting to landing page."
+msgstr ""
+
+#: account/api/api_views.py:217 account/api/api_views.py:322
+msgid "Invalid New Phone."
+msgstr ""
+
+#: account/api/api_views.py:228 account/api/api_views.py:333
+msgid "This phone already exist."
+msgstr ""
+
+#: account/api/api_views.py:236 account/api/api_views.py:349
+msgid "Some error in sending sms."
+msgstr ""
+
+#: account/api/api_views.py:247
+msgid "OTP sent to your phone {}. Please verify."
+msgstr ""
+
+#: account/api/api_views.py:264 account/api/api_views.py:372
+msgid "OTP and Phone is required"
+msgstr ""
+
+#: account/api/api_views.py:284 account/api/api_views.py:383
+#: account/api/api_views.py:434
+msgid "Not Valid Code or Expired, Request a New One"
+msgstr ""
+
+#: account/api/api_views.py:299 account/api/api_views.py:402
+msgid "Phone Verified Successfully."
+msgstr ""
+
+#: account/api/api_views.py:313
+msgid ""
+"This is your already registered and verified number. Enter a different "
+"number to update."
+msgstr ""
+
+#: account/api/api_views.py:359
+msgid "OTP sent to your phone. Please verify."
+msgstr ""
+
+#: account/api/api_views.py:416
+msgid "OTP and Email is required"
+msgstr ""
+
+#: account/api/api_views.py:425
+msgid "Invalid Email"
+msgstr ""
+
+#: account/api/api_views.py:453
+msgid "Email verified successfully."
+msgstr ""
+
+#: account/api/api_views.py:474 account/api/api_views.py:656
+msgid "This email does not exists."
+msgstr ""
+
+#: account/api/api_views.py:482 account/api/api_views.py:663
+msgid "This phone does not exists."
+msgstr ""
+
+#: account/api/api_views.py:489
+msgid "Email is not verified."
+msgstr ""
+
+#: account/api/api_views.py:499
+msgid "Phone is not verified."
+msgstr ""
+
+#: account/api/api_views.py:514
+msgid "Please select plan to proceed."
+msgstr ""
+
+#: account/api/api_views.py:523
+msgid "Account not Approved by admin. Please contact administrator."
+msgstr ""
+
+#: account/api/api_views.py:525
+msgid "Your account is deactivated by the admin. Please contact administrator."
+msgstr ""
+
+#: account/api/api_views.py:527
+msgid "Account is deleted. Please contact administrator."
+msgstr ""
+
+#: account/api/api_views.py:529 account/api/serializers.py:200
+#: account/api/serializers.py:211
+msgid "Wrong Credentials!"
+msgstr ""
+
+#: account/api/api_views.py:533
+msgid "Email/Phone is required"
+msgstr ""
+
+#: account/api/api_views.py:575
+msgid "refresh_token field is required!"
+msgstr ""
+
+#: account/api/api_views.py:584 account/api/api_views.py:590
+msgid "Token is invalid or expired"
+msgstr ""
+
+#: account/api/api_views.py:605
+msgid "You have successfully logged out!"
+msgstr ""
+
+#: account/api/api_views.py:615 account/api/api_views.py:700
+#: account/api/api_views.py:797
+msgid "Email is Required!"
+msgstr ""
+
+#: account/api/api_views.py:619 account/api/api_views.py:711
+msgid "No Account Found!"
+msgstr ""
+
+#: account/api/api_views.py:622
+msgid "User is Not Active, Activate your account first!"
+msgstr ""
+
+#: account/api/api_views.py:635 account/api/api_views.py:686
+#: account/api/api_views.py:725 account/api/api_views.py:773
+msgid "Check your email for confirmation Code!"
+msgstr ""
+
+#: account/api/api_views.py:650
+msgid "Email/Phone is Required!"
+msgstr ""
+
+#: account/api/api_views.py:666
+msgid "Email is not verified, verify your email first!"
+msgstr ""
+
+#: account/api/api_views.py:669
+msgid "Phone is not verified, verify your phone first!"
+msgstr ""
+
+#: account/api/api_views.py:703
+msgid "Usage is Required. Register/Forgot"
+msgstr ""
+
+#: account/api/api_views.py:706 account/api/api_views.py:744
+msgid "Invalid Usage"
+msgstr ""
+
+#: account/api/api_views.py:721 account/api/api_views.py:766
+msgid "Please use below OTP to verify your account"
+msgstr ""
+
+#: account/api/api_views.py:738
+msgid "New email is Required!"
+msgstr ""
+
+#: account/api/api_views.py:741
+msgid "Usage is Required. Change Email"
+msgstr ""
+
+#: account/api/api_views.py:754
+msgid "This email already exist."
+msgstr ""
+
+#: account/api/api_views.py:789
+msgid "Code is Required!"
+msgstr ""
+
+#: account/api/api_views.py:804
+msgid "Email not Found!"
+msgstr ""
+
+#: account/api/api_views.py:809 account/api/api_views.py:2937
+msgid "Invalid Code"
+msgstr ""
+
+#: account/api/api_views.py:815 account/api/api_views.py:877
+#: account/api/api_views.py:894
+msgid "Code Expired, Request a New One!"
+msgstr ""
+
+#: account/api/api_views.py:828
+msgid "Account has been verified successfully"
+msgstr ""
+
+#: account/api/api_views.py:836
+msgid "Wrong Confirmation Code!"
+msgstr ""
+
+#: account/api/api_views.py:859
+msgid "code and email is not there."
+msgstr ""
+
+#: account/api/api_views.py:868
+msgid "Email is Invalid."
+msgstr ""
+
+#: account/api/api_views.py:884
+msgid "Wrong confirmation code"
+msgstr ""
+
+#: account/api/api_views.py:904
+msgid "Both Fields are required!"
+msgstr ""
+
+#: account/api/api_views.py:915
+msgid "Passwords do not match"
+msgstr ""
+
+#: account/api/api_views.py:921
+msgid "Password has been set!"
+msgstr ""
+
+#: account/api/api_views.py:936
+msgid "Wrong old Password"
+msgstr ""
+
+#: account/api/api_views.py:942
+msgid "Password has been successfully changed!"
+msgstr ""
+
+#: account/api/api_views.py:988
+msgid "Invalid business category"
+msgstr ""
+
+#: account/api/api_views.py:996
+msgid "Your business category is already set to '{}'. You cannot change it."
+msgstr ""
+
+#: account/api/api_views.py:1055
+msgid "Profile Updated Successfully"
+msgstr ""
+
+#: account/api/api_views.py:1060
+msgid "Some error"
+msgstr ""
+
+#: account/api/api_views.py:1127
+msgid "You cannot create family member"
+msgstr ""
+
+#: account/api/api_views.py:1163
+msgid "Family Member Added Successfully"
+msgstr ""
+
+#: account/api/api_views.py:1173
+msgid "Family Member Updated Successfully"
+msgstr ""
+
+#: account/api/api_views.py:1191
+msgid "Invalid Family Member"
+msgstr ""
+
+#: account/api/api_views.py:1200
+msgid "Family Member deleted Successfully"
+msgstr ""
+
+#: account/api/api_views.py:1224
+msgid "User is already deleted"
+msgstr ""
+
+#: account/api/api_views.py:1231
+msgid "Please send delete reason"
+msgstr ""
+
+#: account/api/api_views.py:1240
+msgid "Invalid Reason"
+msgstr ""
+
+#: account/api/api_views.py:1248
+msgid ""
+"You cannot delete your account for the moment as it is used as default Non "
+"Profitable Organization. Please contact admin for deleting your account."
+msgstr ""
+
+#: account/api/api_views.py:1254
+msgid "You cannot delete your account at the moment. Please contact admin."
+msgstr ""
+
+#: account/api/api_views.py:1265
+msgid "Account deleted Successfully."
+msgstr ""
+
+#: account/api/api_views.py:1377
+msgid "Plan is required"
+msgstr ""
+
+#: account/api/api_views.py:1387 account/api/api_views.py:1456
+#: account/api/api_views.py:1521 account/api/api_views.py:1553
+#: account/api/api_views.py:1585 account/api/api_views.py:1627
+#: account/api/api_views.py:1807 account/api/api_views.py:1842
+#: account/api/api_views.py:2109
+msgid "You cannot access this module."
+msgstr ""
+
+#: account/api/api_views.py:1395 account/api/api_views.py:1464
+#: account/api/api_views.py:1529 account/api/api_views.py:1561
+#: account/api/api_views.py:1593 account/api/api_views.py:1635
+#: account/api/api_views.py:1768 account/api/api_views.py:1815
+#: account/api/api_views.py:1850 account/api/api_views.py:2117
+msgid "You cannot access this module"
+msgstr ""
+
+#: account/api/api_views.py:1404
+msgid "Invalid Plan"
+msgstr ""
+
+#: account/api/api_views.py:1411
+msgid "This plan is not for current user type"
+msgstr ""
+
+#: account/api/api_views.py:1430
+msgid "Plan activated successfully"
+msgstr ""
+
+#: account/api/api_views.py:1470
+msgid "Payment Detail is missing"
+msgstr ""
+
+#: account/api/api_views.py:1479
+msgid "Payment Detail is Invalid"
+msgstr ""
+
+#: account/api/api_views.py:1505
+msgid "Payment gateway issue in stripe"
+msgstr ""
+
+#: account/api/api_views.py:1658 account/api/api_views.py:2061
+msgid "Invalid payment method."
+msgstr ""
+
+#: account/api/api_views.py:1670 account/api/api_views.py:2073
+msgid "This payment method is marked default successfully."
+msgstr ""
+
+#: account/api/api_views.py:1681
+msgid "Please send payment method to delete"
+msgstr ""
+
+#: account/api/api_views.py:1692 account/api/api_views.py:2200
+msgid "Invalid payment method"
+msgstr ""
+
+#: account/api/api_views.py:1698
+msgid "You cannot delete the default payment method."
+msgstr ""
+
+#: account/api/api_views.py:1711 account/api/api_views.py:2093
+msgid "Payment method deleted successfully."
+msgstr ""
+
+#: account/api/api_views.py:1735
+msgid "Checkout session id is missing"
+msgstr ""
+
+#: account/api/api_views.py:1745
+msgid "Payment method added successfully"
+msgstr ""
+
+#: account/api/api_views.py:1759
+msgid "Please send temp token"
+msgstr ""
+
+#: account/api/api_views.py:1856 account/api/api_views.py:2123
+msgid "Please send payment detail"
+msgstr ""
+
+#: account/api/api_views.py:1867 account/api/api_views.py:2134
+msgid "Invalid payment details"
+msgstr ""
+
+#: account/api/api_views.py:1883 account/api/api_views.py:1954
+#: account/api/api_views.py:2033 account/api/api_views.py:2242
+msgid "Some problem in payment"
+msgstr ""
+
+#: account/api/api_views.py:1895 account/api/api_views.py:1967
+#: account/api/api_views.py:2151 account/api/api_views.py:2189
+#: account/api/api_views.py:2255
+msgid "Payment Failed"
+msgstr ""
+
+#: account/api/api_views.py:1900
+msgid "Invalid Token"
+msgstr ""
+
+#: account/api/api_views.py:1908 account/api/api_views.py:1980
+#: account/api/api_views.py:2208
+msgid "For using tranzila, make sure your currency is Israeli Shekels"
+msgstr ""
+
+#: account/api/api_views.py:1914 account/api/api_views.py:1986
+#: account/api/api_views.py:2214
+msgid "Please enter card number"
+msgstr ""
+
+#: account/api/api_views.py:1921 account/api/api_views.py:1993
+#: account/api/api_views.py:2221
+msgid "Please enter expiry month"
+msgstr ""
+
+#: account/api/api_views.py:1928 account/api/api_views.py:2000
+#: account/api/api_views.py:2228
+msgid "Please enter expiry year"
+msgstr ""
+
+#: account/api/api_views.py:1946 account/api/api_views.py:2016
+msgid "This card already exist."
+msgstr ""
+
+#: account/api/api_views.py:2046
+msgid "Some problem in adding the new payment method."
+msgstr ""
+
+#: account/api/api_views.py:2086
+msgid "This payment method does not exist"
+msgstr ""
+
+#: account/api/api_views.py:2176
+msgid "Payment Successful"
+msgstr ""
+
+#: account/api/api_views.py:2398
+msgid "Please send location to add"
+msgstr ""
+
+#: account/api/api_views.py:2408
+msgid "Please make payments for adding more locations."
+msgstr ""
+
+#: account/api/api_views.py:2498 account/api/api_views.py:2645
+msgid "This location does not exist."
+msgstr ""
+
+#: account/api/api_views.py:2515
+msgid "This store manager email already exist."
+msgstr ""
+
+#: account/api/api_views.py:2530
+msgid "This store manager phone already exist."
+msgstr ""
+
+#: account/api/api_views.py:2567
+msgid "Please send number of location to add"
+msgstr ""
+
+#: account/api/api_views.py:2668
+msgid "Location deleted successfully"
+msgstr ""
+
+#: account/api/api_views.py:2715 account/api/api_views.py:2999
+#: account/api/api_views.py:3063
+msgid "This user does not exist."
+msgstr ""
+
+#: account/api/api_views.py:2737
+msgid "Ngo video added successfully"
+msgstr ""
+
+#: account/api/api_views.py:2766 account/api/api_views.py:2788
+#: account/api/api_views.py:2815 account/api/api_views.py:3031
+#: account/api/api_views.py:3353
+msgid "This video does not exist."
+msgstr ""
+
+#: account/api/api_views.py:2800
+msgid "Ngo video updated successfully"
+msgstr ""
+
+#: account/api/api_views.py:2822
+msgid "Ngo video deleted successfully"
+msgstr ""
+
+#: account/api/api_views.py:2846
+msgid "Password is correct"
+msgstr ""
+
+#: account/api/api_views.py:2851
+msgid "Password incorrect"
+msgstr ""
+
+#: account/api/api_views.py:2865 account/api/api_views.py:2931
+msgid "New Email is required"
+msgstr ""
+
+#: account/api/api_views.py:2878 account/api/api_views.py:2947
+msgid "This new email is already in use. Send another email"
+msgstr ""
+
+#: account/api/api_views.py:2895
+msgid ""
+"We have sent a verification code on your new email {}. Check Your Email For "
+"Verification Code!"
+msgstr ""
+
+#: account/api/api_views.py:2905 account/api/api_views.py:2961
+msgid "Please send a valid email"
+msgstr ""
+
+#: account/api/api_views.py:2922
+msgid "OTP is required"
+msgstr ""
+
+#: account/api/api_views.py:2955
+msgid "Email changed successfully"
+msgstr ""
+
+#: account/api/api_views.py:2983
+msgid "{} for news letter"
+msgstr ""
+
+#: account/api/api_views.py:3073 deals/api/api_views.py:871
+msgid "Review added successfully."
+msgstr ""
+
+#: account/api/api_views.py:3080 deals/api/api_views.py:877
+msgid "Already reviewed"
+msgstr ""
+
+#: account/api/api_views.py:3098 account/api/api_views.py:3516
+#: classifieds/api/api_views.py:321 classifieds/api/api_views.py:350
+#: deals/api/api_views.py:232 deals/api/api_views.py:1052
+msgid "Invalid User"
+msgstr ""
+
+#: account/api/api_views.py:3151 account/api/api_views.py:3184
+#: deals/api/api_views.py:948 deals/api/api_views.py:983
+msgid "Invalid Review"
+msgstr ""
+
+#: account/api/api_views.py:3163 deals/api/api_views.py:962
+msgid "Review marked successfully."
+msgstr ""
+
+#: account/api/api_views.py:3169 deals/api/api_views.py:968
+msgid "Already marked"
+msgstr ""
+
+#: account/api/api_views.py:3196 deals/api/api_views.py:997
+msgid "Review flagged successfully."
+msgstr ""
+
+#: account/api/api_views.py:3202 deals/api/api_views.py:1003
+msgid "Already flagged"
+msgstr ""
+
+#: account/api/api_views.py:3526 classifieds/api/api_views.py:419
+#: deals/api/api_views.py:1516
+msgid "Flagged successfully."
+msgstr ""
+
+#: account/api/api_views.py:3532 classifieds/api/api_views.py:425
+#: deals/api/api_views.py:1522
+msgid "Already flagged."
+msgstr ""
+
+#: account/api/api_views.py:3570 account/api/api_views.py:3643
+#: account/api/api_views.py:3685 deals/api/api_views.py:1468
+msgid "The date format seems wrong. Please send date as: 2024-02-01"
+msgstr ""
+
+#: account/api/api_views.py:3595
+msgid "Invalid payment."
+msgstr ""
+
+#: account/api/api_views.py:3773
+msgid ""
+"Non profitable organizations cannot choose another Non profitable "
+"organizations."
+msgstr ""
+
+#: account/api/api_views.py:3779
+msgid "Please select ngo to update"
+msgstr ""
+
+#: account/api/api_views.py:3788
+msgid "Invalid Non Profitable Organization"
+msgstr ""
+
+#: account/api/api_views.py:3796
+msgid "Non Profitable Organization updated successfully"
+msgstr ""
+
+#: account/api/serializers.py:47
+msgid "Please enter proper phone number."
+msgstr ""
+
+#: account/api/serializers.py:57
+msgid "NGO is required."
+msgstr ""
+
+#: account/api/serializers.py:66
+msgid "Please send valid ngo."
+msgstr ""
+
+#: account/api/serializers.py:76
+msgid "Name is required."
+msgstr ""
+
+#: account/api/serializers.py:83 account/api/serializers.py:99
+msgid "Administrator name is required."
+msgstr ""
+
+#: account/api/serializers.py:92
+msgid "Business name is required."
+msgstr ""
+
+#: account/api/serializers.py:108
+msgid "First Name is required."
+msgstr ""
+
+#: account/api/serializers.py:115
+msgid "Last Name is required."
+msgstr ""
+
+#: account/api/serializers.py:123
+msgid "Country is required."
+msgstr ""
+
+#: account/api/serializers.py:131
+msgid "Language is required."
+msgstr ""
+
+#: account/api/serializers.py:139
+msgid "Currency is required."
+msgstr ""
+
+#: account/api/serializers.py:208
+msgid "Account is not verified, Verify it first!"
+msgstr ""
+
+#: account/api/serializers.py:214
+msgid "Both fields are required!"
+msgstr ""
+
+#: account/api/serializers.py:282
+msgid "current_password is required"
+msgstr ""
+
+#: account/api/serializers.py:285
+msgid "new_password is required"
+msgstr ""
+
+#: account/api/serializers.py:288
+msgid "confirm_new_password is required"
+msgstr ""
+
+#: account/api/serializers.py:291
+msgid "Passwords do not match!"
+msgstr ""
+
+#: account/api/serializers.py:294
+msgid "Password must be more then 8 digits long"
+msgstr ""
+
+#: account/api/serializers.py:745 account/api/serializers.py:753
+msgid "This field is required"
+msgstr ""
+
+#: account/api/serializers.py:771
+msgid ""
+"This email {} is already registered with our system. Please enter a new "
+"email."
+msgstr ""
+
+#: account/api/serializers.py:779
+msgid ""
+"This phone {} is already registered with our system. Please enter a new "
+"phone."
+msgstr ""
+
+#: account/api/serializers.py:1192
+msgid "Monthly Subscription"
+msgstr ""
+
+#: account/api/serializers.py:1194
+msgid "Listing"
+msgstr ""
+
+#: account/api/serializers.py:1196 deals/models.py:60
+msgid "Weekly Deal"
+msgstr ""
+
+#: account/api/serializers.py:1198 account/models.py:67
+msgid "Classified"
+msgstr ""
+
+#: account/api/serializers.py:1200
+msgid "New Payment Method"
+msgstr ""
+
+#: account/api/serializers.py:1202 account/models.py:70
+msgid "Location"
+msgstr ""
+
+#: account/managetranzila.py:144
+msgid "Transaction successful"
+msgstr ""
+
+#: account/models.py:35 account/models.py:158
+msgid "Category Name"
+msgstr ""
+
+#: account/models.py:66
+msgid "Deal"
+msgstr ""
+
+#: account/models.py:68
+msgid "News"
+msgstr ""
+
+#: account/models.py:69
+msgid "Job"
+msgstr ""
+
+#: account/models.py:88 account/models.py:221
+msgid "Name"
+msgstr ""
+
+#: account/models.py:166
+msgid "Category Keyword"
+msgstr ""
+
+#: account/models.py:177
+msgid "Friends"
+msgstr ""
+
+#: account/models.py:178
+msgid "Family"
+msgstr ""
+
+#: account/models.py:182
+msgid "Didn't meet expectations"
+msgstr ""
+
+#: account/models.py:183
+msgid "Too difficult to navigate, download, upload"
+msgstr ""
+
+#: account/models.py:184
+msgid "Too expensive"
+msgstr ""
+
+#: account/models.py:185
+msgid "Not enough choices"
+msgstr ""
+
+#: account/models.py:186
+msgid "Rather Not Say"
+msgstr ""
+
+#: account/models.py:202 account/models.py:477
+msgid "Email Address"
+msgstr ""
+
+#: account/models.py:203 account/models.py:478 deals/models.py:113
+msgid "Phone Number"
+msgstr ""
+
+#: account/models.py:209
+msgid "Language"
+msgstr ""
+
+#: account/models.py:212
+msgid "Profile Pic"
+msgstr ""
+
+#: account/models.py:213
+msgid "Cover Picture"
+msgstr ""
+
+#: account/models.py:215
+msgid "Paid Account"
+msgstr ""
+
+#: account/models.py:217 account/models.py:475
+msgid "Relation"
+msgstr ""
+
+#: account/models.py:220
+msgid "About"
+msgstr ""
+
+#: account/models.py:222
+msgid "Administrator Name"
+msgstr ""
+
+#: account/models.py:223
+msgid "Business Category"
+msgstr ""
+
+#: account/models.py:224
+msgid "Business Contact"
+msgstr ""
+
+#: account/models.py:225
+msgid "Business Email"
+msgstr ""
+
+#: account/models.py:226
+msgid "Website Url"
+msgstr ""
+
+#: account/models.py:227
+msgid "Facebook"
+msgstr ""
+
+#: account/models.py:228
+msgid "Twitter"
+msgstr ""
+
+#: account/models.py:229
+msgid "Instagram"
+msgstr ""
+
+#: account/models.py:230
+msgid "Youtube"
+msgstr ""
+
+#: account/models.py:238
+msgid "Newsletter Subscribed"
+msgstr ""
+
+#: account/models.py:359
+msgid "Pending"
+msgstr ""
+
+#: account/models.py:360
+msgid "Complete"
+msgstr ""
+
+#: account/models.py:361
+msgid "Cancelled"
+msgstr ""
+
+#: account/models.py:474
+msgid "Full Name"
+msgstr ""
+
+#: account/models.py:476
+msgid "Member Pic"
+msgstr ""
+
+#: account/models.py:492
+msgid "Menu"
+msgstr ""
+
+#: account/models.py:520
+msgid "Video Title"
+msgstr ""
+
+#: account/models.py:521
+msgid "Video Link"
+msgstr ""
+
+#: account/models.py:528
+msgid "Store Managed Email Address"
+msgstr ""
+
+#: account/models.py:529
+msgid "Store Managed Phone Number"
+msgstr ""
+
+#: account/models.py:530
+msgid "Location Name"
+msgstr ""
+
+#: account/models.py:533
+msgid "Address"
+msgstr ""
+
+#: account/models.py:534
+msgid "City"
+msgstr ""
+
+#: account/models.py:535
+msgid "State"
+msgstr ""
+
+#: account/models.py:536
+msgid "Country"
+msgstr ""
+
+#: account/models.py:537
+msgid "Zipcode"
+msgstr ""
+
+#: account/views.py:543
+msgid "Plan created successfully"
+msgstr ""
+
+#: account/views.py:557
+msgid "Plan updated successfully"
+msgstr ""
+
+#: account/views.py:569
+msgid "Plan deleted successfully"
+msgstr ""
+
+#: account/views.py:600
+msgid "Product Price updated successfully"
+msgstr ""
+
+#: account/views.py:624
+msgid "Delivery partner created successfully"
+msgstr ""
+
+#: account/views.py:638
+msgid "Delivery partner updated successfully"
+msgstr ""
+
+#: account/views.py:822
+msgid "Faq created successfully"
+msgstr ""
+
+#: account/views.py:846
+msgid "Faq updated successfully"
+msgstr ""
+
+#: account/views.py:858
+msgid "Faq deleted successfully"
+msgstr ""
+
+#: account/views.py:875
+msgid "About us created successfully"
+msgstr ""
+
+#: account/views.py:889
+msgid "About updated successfully"
+msgstr ""
+
+#: account/views.py:912
+msgid "About Journey created successfully"
+msgstr ""
+
+#: account/views.py:926
+msgid "Journey updated successfully"
+msgstr ""
+
+#: account/views.py:938
+msgid "Journey deleted successfully"
+msgstr ""
+
+#: account/views.py:956
+msgid "Team created successfully"
+msgstr ""
+
+#: account/views.py:970
+msgid "Team updated successfully"
+msgstr ""
+
+#: account/views.py:982
+msgid "Team deleted successfully"
+msgstr ""
+
+#: account/views.py:999
+msgid "Terms and conditions created successfully"
+msgstr ""
+
+#: account/views.py:1013
+msgid "Terms and conditions updated successfully"
+msgstr ""
+
+#: account/views.py:1042 account/views.py:1060 article/api/api_views.py:83
+#: article/api/api_views.py:108 article/api/api_views.py:130
+msgid "Invalid News"
+msgstr ""
+
+#: account/views.py:1048
+msgid "Status Updated Successfully"
+msgstr ""
+
+#: account/views.py:1066
+msgid "News removed from deleted."
+msgstr ""
+
+#: account/views.py:1069
+msgid "News deleted successfully"
+msgstr ""
+
+#: account/views.py:1237
+msgid "Privacy policy created successfully"
+msgstr ""
+
+#: account/views.py:1251
+msgid "Privacy Policy updated successfully"
+msgstr ""
+
+#: account/views.py:1321
+msgid "Vendor created successfully"
+msgstr ""
+
+#: account/views.py:1335
+msgid "Vendor updated successfully"
+msgstr ""
+
+#: account/views.py:1347
+msgid "Vendor deleted successfully"
+msgstr ""
+
+#: account/views.py:1366
+msgid "Expense created successfully"
+msgstr ""
+
+#: account/views.py:1380
+msgid "Expense updated successfully"
+msgstr ""
+
+#: account/views.py:1392
+msgid "Expense deleted successfully"
+msgstr ""
+
+#: article/api/api_views.py:24
+msgid "News article created successfully"
+msgstr ""
+
+#: article/api/api_views.py:93
+msgid "News updated successfully"
+msgstr ""
+
+#: article/api/api_views.py:138
+msgid "News delete requested successfully"
+msgstr ""
+
+#: blogs/models.py:23 classifieds/models.py:33 deals/models.py:38
+msgid "Title"
+msgstr ""
+
+#: blogs/models.py:24
+msgid "Write news and article"
+msgstr ""
+
+#: blogs/models.py:25
+msgid "Feature Picture"
+msgstr ""
+
+#: classifieds/api/api_views.py:45
+msgid "Please upgrade your plan"
+msgstr ""
+
+#: classifieds/api/api_views.py:83 deals/api/api_views.py:102
+#: deals/api/api_views.py:475
+msgid "Image is required"
+msgstr ""
+
+#: classifieds/api/api_views.py:116
+msgid "Classified created successfully"
+msgstr ""
+
+#: classifieds/api/api_views.py:159 classifieds/api/api_views.py:208
+#: classifieds/api/api_views.py:232
+msgid "Invalid classified"
+msgstr ""
+
+#: classifieds/api/api_views.py:193 classifieds/api/api_views.py:249
+msgid "Classified updated successfully"
+msgstr ""
+
+#: classifieds/api/api_views.py:215
+msgid "Classified deleted successfully"
+msgstr ""
+
+#: classifieds/api/api_views.py:376 classifieds/api/api_views.py:405
+msgid "This classified does not exist."
+msgstr ""
+
+#: classifieds/api/serializers.py:25 deals/api/serializers.py:227
+#: deals/api/serializers.py:315 jobs/api/serializers.py:30
+msgid "Expiry date should be greater than today"
+msgstr ""
+
+#: classifieds/models.py:9 deals/models.py:103
+msgid "Monthly"
+msgstr ""
+
+#: classifieds/models.py:10
+msgid "Quarterly"
+msgstr ""
+
+#: classifieds/models.py:11 deals/models.py:104
+msgid "Yearly"
+msgstr ""
+
+#: classifieds/models.py:34 deals/models.py:39
+msgid "Description"
+msgstr ""
+
+#: classifieds/models.py:36
+msgid "Price"
+msgstr ""
+
+#: classifieds/models.py:40
+msgid "Contact Phone"
+msgstr ""
+
+#: classifieds/models.py:41
+msgid "Contact Email"
+msgstr ""
+
+#: content/api/api_views.py:86
+msgid "Thank you for the message. We will contact soon."
+msgstr ""
+
+#: content/models.py:9
+msgid "Question"
+msgstr ""
+
+#: deals/api/api_views.py:34
+msgid "You have not activated any plan.Please activate plan to add deal."
+msgstr ""
+
+#: deals/api/api_views.py:180 deals/api/api_views.py:621
+msgid "Deal created successfully"
+msgstr ""
+
+#: deals/api/api_views.py:303
+msgid "Invalid deal"
+msgstr ""
+
+#: deals/api/api_views.py:315
+msgid "Invalid Location"
+msgstr ""
+
+#: deals/api/api_views.py:340
+msgid "Deal updated successfully"
+msgstr ""
+
+#: deals/api/api_views.py:357 deals/api/api_views.py:394
+#: deals/api/api_views.py:895
+msgid "Invalid Deal"
+msgstr ""
+
+#: deals/api/api_views.py:407
+msgid "Deal deleted successfully"
+msgstr ""
+
+#: deals/api/api_views.py:483 deals/api/api_views.py:645
+msgid "Business Sub Category is required"
+msgstr ""
+
+#: deals/api/api_views.py:497 deals/api/api_views.py:659
+msgid ""
+"For creating Real Estate deal, the business category can be rent,sale or "
+"vacational rental only"
+msgstr ""
+
+#: deals/api/api_views.py:507 deals/api/api_views.py:518
+#: deals/api/api_views.py:669 deals/api/api_views.py:680
+#: deals/api/serializers.py:191
+msgid "Free member discount type is required"
+msgstr ""
+
+#: deals/api/api_views.py:524 deals/api/api_views.py:686
+msgid "Free member discount value is required"
+msgstr ""
+
+#: deals/api/api_views.py:530 deals/api/api_views.py:692
+#: deals/api/serializers.py:201
+msgid "Free member code is required"
+msgstr ""
+
+#: deals/api/api_views.py:536 deals/api/api_views.py:698
+#: deals/api/serializers.py:211
+msgid "Club member discount type is required"
+msgstr ""
+
+#: deals/api/api_views.py:542 deals/api/api_views.py:704
+#: deals/api/serializers.py:215
+msgid "Club member discount value is required"
+msgstr ""
+
+#: deals/api/api_views.py:548 deals/api/api_views.py:710
+#: deals/api/serializers.py:219
+msgid "Club member code is required"
+msgstr ""
+
+#: deals/api/api_views.py:554 deals/api/api_views.py:716
+msgid "Offer text is required"
+msgstr ""
+
+#: deals/api/api_views.py:560 deals/api/api_views.py:722
+msgid "Price type is required"
+msgstr ""
+
+#: deals/api/api_views.py:637
+msgid "Invalid property deal"
+msgstr ""
+
+#: deals/api/api_views.py:751
+msgid "Property deal updated successfully"
+msgstr ""
+
+#: deals/api/api_views.py:1340 deals/api/api_views.py:1398
+#: deals/api/api_views.py:1428 deals/api/api_views.py:1501
+msgid "This deal does not exist."
+msgstr ""
+
+#: deals/api/api_views.py:1411
+msgid ""
+"Deal redeemed successfully. The redemption details have been sent to your "
+"registered email."
+msgstr ""
+
+#: deals/api/api_views.py:1540
+msgid "NGO Category"
+msgstr ""
+
+#: deals/api/api_views.py:1542 deals/api/api_views.py:1556
+#: deals/api/api_views.py:1566 deals/api/api_views.py:1578
+#: deals/api/api_views.py:1595 deals/api/api_views.py:1610
+#: deals/api/api_views.py:1627 deals/api/api_views.py:1665
+#: deals/api/api_views.py:1680 deals/api/api_views.py:1699
+#: deals/api/api_views.py:1720 deals/api/api_views.py:1735
+#: deals/api/api_views.py:1750
+msgid "Distance(Near To Far)"
+msgstr ""
+
+#: deals/api/api_views.py:1544 deals/api/api_views.py:1558
+#: deals/api/api_views.py:1568
+msgid "Date Joined(Newest To Oldest)"
+msgstr ""
+
+#: deals/api/api_views.py:1547
+msgid "Number of Club Members Associated"
+msgstr ""
+
+#: deals/api/api_views.py:1549
+msgid "Number of Businesses Associated"
+msgstr ""
+
+#: deals/api/api_views.py:1560 deals/api/api_views.py:1570
+#: deals/api/api_views.py:1603 deals/api/api_views.py:1618
+#: deals/api/api_views.py:1631 deals/api/api_views.py:1654
+#: deals/api/api_views.py:1726 deals/api/api_views.py:1741
+#: deals/api/api_views.py:1756
+msgid "Star Rating"
+msgstr ""
+
+#: deals/api/api_views.py:1576
+msgid "Classified Category"
+msgstr ""
+
+#: deals/api/api_views.py:1580 deals/api/api_views.py:1597
+#: deals/api/api_views.py:1612 deals/api/api_views.py:1667
+#: deals/api/api_views.py:1682 deals/api/api_views.py:1701
+#: deals/api/api_views.py:1722 deals/api/api_views.py:1737
+#: deals/api/api_views.py:1752
+msgid "Date Listed (Newest to Oldest)"
+msgstr ""
+
+#: deals/api/api_views.py:1582
+msgid "Hamsa Members"
+msgstr ""
+
+#: deals/api/api_views.py:1584 deals/api/api_views.py:1601
+#: deals/api/api_views.py:1616 deals/api/api_views.py:1648
+#: deals/api/api_views.py:1705
+msgid "Price Range (Minimum / Maximum)"
+msgstr ""
+
+#: deals/api/api_views.py:1586
+msgid "Condition (New - Used)"
+msgstr ""
+
+#: deals/api/api_views.py:1593
+msgid "Product Category"
+msgstr ""
+
+#: deals/api/api_views.py:1599 deals/api/api_views.py:1614
+#: deals/api/api_views.py:1629 deals/api/api_views.py:1646
+#: deals/api/api_views.py:1669 deals/api/api_views.py:1684
+#: deals/api/api_views.py:1703 deals/api/api_views.py:1724
+#: deals/api/api_views.py:1739 deals/api/api_views.py:1754
+msgid "Hamsa Business"
+msgstr ""
+
+#: deals/api/api_views.py:1608
+msgid "Service Category"
+msgstr ""
+
+#: deals/api/api_views.py:1619
+msgid "Provider Type"
+msgstr ""
+
+#: deals/api/api_views.py:1625 deals/api/api_views.py:1642
+msgid "Restaurant Category"
+msgstr ""
+
+#: deals/api/api_views.py:1632
+msgid "Delivery Service"
+msgstr ""
+
+#: deals/api/api_views.py:1634
+msgid "Reservation/Walkin"
+msgstr ""
+
+#: deals/api/api_views.py:1636 deals/api/api_views.py:1657
+#: deals/api/api_views.py:1727 deals/api/api_views.py:1742
+#: deals/api/api_views.py:1757
+msgid "Deal by Discount"
+msgstr ""
+
+#: deals/api/api_views.py:1644
+msgid "Name Of Business"
+msgstr ""
+
+#: deals/api/api_views.py:1650 deals/api/api_views.py:1691
+#: deals/api/api_views.py:1712
+msgid "Expiration Date"
+msgstr ""
+
+#: deals/api/api_views.py:1652
+msgid "Number Of Travellers"
+msgstr ""
+
+#: deals/api/api_views.py:1655
+msgid "Property Class"
+msgstr ""
+
+#: deals/api/api_views.py:1663
+msgid "Rent Category"
+msgstr ""
+
+#: deals/api/api_views.py:1671 deals/api/api_views.py:1686
+#: deals/api/api_views.py:1707
+msgid "Number Of Bedrooms"
+msgstr ""
+
+#: deals/api/api_views.py:1673 deals/api/api_views.py:1688
+#: deals/api/api_views.py:1709
+msgid "No Of Bathroom"
+msgstr ""
+
+#: deals/api/api_views.py:1675 deals/api/api_views.py:1690
+#: deals/api/api_views.py:1711
+msgid "SQ FT"
+msgstr ""
+
+#: deals/api/api_views.py:1697
+msgid "Sale Category"
+msgstr ""
+
+#: deals/api/api_views.py:1718
+msgid "Venue Category"
+msgstr ""
+
+#: deals/api/api_views.py:1733
+msgid "Sports Category"
+msgstr ""
+
+#: deals/api/api_views.py:1748
+msgid "Movie Category"
+msgstr ""
+
+#: deals/api/serializers.py:186
+msgid "Actual price is required"
+msgstr ""
+
+#: deals/api/serializers.py:196
+msgid "free_member_discount_value is required"
+msgstr ""
+
+#: deals/api/serializers.py:207 deals/api/serializers.py:307
+#: jobs/api/serializers.py:22
+msgid "Expiry date is required"
+msgstr ""
+
+#: deals/api/serializers.py:233
+msgid ""
+"Online deal not supported. Please select online supported to add online "
+"deals."
+msgstr ""
+
+#: deals/api/serializers.py:239
+msgid "Redemption link is required."
+msgstr ""
+
+#: deals/models.py:13
+msgid "Fixed Amount"
+msgstr ""
+
+#: deals/models.py:14
+msgid "Percentage Off"
+msgstr ""
+
+#: deals/models.py:18
+msgid "Online"
+msgstr ""
+
+#: deals/models.py:19
+msgid "Offline"
+msgstr ""
+
+#: deals/models.py:20
+msgid "Online Offline"
+msgstr ""
+
+#: deals/models.py:40
+msgid "Actual Price"
+msgstr ""
+
+#: deals/models.py:46
+msgid "Deal Type"
+msgstr ""
+
+#: deals/models.py:52 deals/models.py:56
+msgid "Discount Type"
+msgstr ""
+
+#: deals/models.py:53 deals/models.py:57
+msgid "Off Value"
+msgstr ""
+
+#: deals/models.py:54 deals/models.py:58
+msgid "Coupon/Deal Code"
+msgstr ""
+
+#: deals/models.py:93
+msgid "Apartment"
+msgstr ""
+
+#: deals/models.py:94
+msgid "House"
+msgstr ""
+
+#: deals/models.py:95
+msgid "Hotel"
+msgstr ""
+
+#: deals/models.py:96
+msgid "Guest House"
+msgstr ""
+
+#: deals/models.py:97
+msgid "Hostel/PG"
+msgstr ""
+
+#: deals/models.py:98
+msgid "Farmhouse"
+msgstr ""
+
+#: deals/models.py:99
+msgid "Houseboat"
+msgstr ""
+
+#: deals/models.py:114
+msgid "Email"
+msgstr ""
+
+#: deals/models.py:128
+msgid "Paid"
+msgstr ""
+
+#: deals/models.py:129
+msgid "Failed"
+msgstr ""
+
+#: dictionary.py:3
+msgid "Member added to favourites."
+msgstr ""
+
+#: dictionary.py:4
+msgid "Business added to favourites."
+msgstr ""
+
+#: dictionary.py:5
+msgid "Non Profitable Organization added to favourites."
+msgstr ""
+
+#: dictionary.py:6
+msgid "News Agency added to favourites."
+msgstr ""
+
+#: dictionary.py:7
+msgid "Member removed from favourites."
+msgstr ""
+
+#: dictionary.py:8
+msgid "Business removed from favourites."
+msgstr ""
+
+#: dictionary.py:9
+msgid "Non Profitable Organization removed from favourites."
+msgstr ""
+
+#: dictionary.py:10
+msgid "News Agency removed from favourites."
+msgstr ""
+
+#: dictionary.py:11
+msgid "Deal added to favourite deals"
+msgstr ""
+
+#: dictionary.py:12
+msgid "Deal removed from favourite deals"
+msgstr ""
+
+#: dictionary.py:13
+msgid "Classified added to favourite classifieds"
+msgstr ""
+
+#: dictionary.py:14
+msgid "Classified removed from favourite classifieds"
+msgstr ""
+
+#: dictionary.py:15
+msgid "Video added to favourite videos"
+msgstr ""
+
+#: dictionary.py:16
+msgid "Video removed from favourite videos"
+msgstr ""
+
+#: dictionary.py:17
+msgid "Video liked successfully"
+msgstr ""
+
+#: dictionary.py:18
+msgid "Video unliked successfully"
+msgstr ""
+
+#: jobs/api/api_views.py:25
+msgid "Job posting created successfully"
+msgstr ""
+
+#: jobs/api/api_views.py:81 jobs/api/api_views.py:106 jobs/api/api_views.py:133
+#: jobs/api/api_views.py:170 jobs/api/api_views.py:249
+#: jobs/api/api_views.py:302 jobs/api/api_views.py:328
+msgid "Invalid Job"
+msgstr ""
+
+#: jobs/api/api_views.py:91
+msgid "Job updated successfully"
+msgstr ""
+
+#: jobs/api/api_views.py:140
+msgid "Job deleted successfully"
+msgstr ""
+
+#: jobs/api/api_views.py:181
+msgid "You have already applied to this job"
+msgstr ""
+
+#: jobs/api/api_views.py:187
+msgid "Please send resume"
+msgstr ""
+
+#: jobs/api/api_views.py:203
+msgid "Invalid resume"
+msgstr ""
+
+#: jobs/api/api_views.py:220
+msgid "Your job application is saved successfully"
+msgstr ""
+
+#: jobs/api/api_views.py:234
+msgid "Month is required"
+msgstr ""
+
+#: jobs/api/api_views.py:241
+msgid "Year is required"
+msgstr ""
+
+#: jobs/api/api_views.py:336
+msgid "Invalid Application"
+msgstr ""
+
+#: jobs/api/api_views.py:344
+msgid "Application deleted successfully"
+msgstr ""
+
+#: jobs/api/api_views.py:359
+msgid "This Job does not exist."
+msgstr ""
+
+#: jobs/api/api_views.py:371
+msgid "Job {} favourite."
+msgstr ""
+
+#: jobs/models.py:29
+msgid "Job Title"
+msgstr ""
+
+#: jobs/models.py:30
+msgid "Job Description"
+msgstr ""
+
+#: jobs/models.py:31
+msgid "Roles and Responsibilities"
+msgstr ""
+
+#: jobs/models.py:32
+msgid "Job Type"
+msgstr ""
+
+#: jobs/models.py:35
+msgid "Salary Type"
+msgstr ""
+
+#: shuktv/settings.py:135
+msgid "English"
+msgstr ""
+
+#: shuktv/settings.py:136
+msgid "Spanish"
+msgstr ""
+
+#: shuktv/settings.py:137
+msgid "French"
+msgstr ""
+
+#: shuktv/settings.py:138
+msgid "Hebrew"
+msgstr ""
+
+#: shuktv/settings.py:139
+msgid "Russian"
+msgstr ""
+
+#: shuktv/settings.py:140
+msgid "Arabic"
+msgstr ""
+
+#: shuktv/settings.py:141
+msgid "Portuguese"
+msgstr ""
+
+#: shuktv/settings.py:142
+msgid "German"
+msgstr ""
+
+#: shuktv/utils/customPermissionClass.py:39
+msgid "Please activate your plan to access this module"
+msgstr ""
+
+#: templates/account/hello.html:16
+msgid "hello"
+msgstr ""

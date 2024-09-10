@@ -1,0 +1,537 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+
+    <div class="row mb-2">
+
+      <div class="col-sm-6">
+        <h1 class="m-0">
+          
+        </h1>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+
+        <div class="card card-primary card-outline">
+          <div class="card-body box-profile">
+            <div class="d-flex">
+              <div class="mx-auto">
+                <div class="ud-profile-img">
+                  {%if object.image%}
+                  <img class="profile-user-img img-fluid img-circle" src="{{object.image.url}}" alt="User profile picture">
+                  {%else%}
+                  <img class="profile-user-img img-fluid img-circle" src="/static/default_profile_pic.jpeg"
+                    alt="User profile picture">
+                  {%endif%}
+                </div>
+                
+              </div>
+            </div>
+            <h3 class="profile-username text-center">{{object.get_full_name|default:"NA"}}</h3>
+            <p class="text-muted"><i class="fa fa-envelope"></i> {{object.email}}</p>
+            <p class="text-muted"><i class="fa fa-phone"></i> {{object.phone}}</p>
+            <ul class="list-group list-group-unbordered mb-3">
+              {% if object.user_type == 'business' %}
+              <li class="list-group-item">
+                <b>Deals</b> <a class="float-right">{{user_deals.count}}</a>
+              </li>
+              <li class="list-group-item">
+                <b>Weekly Deals</b> <a class="float-right">{{weekly_user_deals.count}}</a>
+              </li>
+              <li class="list-group-item">
+                <b>Referral Clicks</b> <a class="float-right">{{total_referral_clicks}}</a>
+              </li>
+              <li class="list-group-item">
+                <b>Locations</b> <a class="float-right">{{total_business_locations}}</a>
+              </li>
+              {% endif %}
+
+              {% if object.user_type == 'member' %}
+              <li class="list-group-item">
+                <b>Classifieds</b> <a class="float-right">{{user_classifieds.count}}</a>
+              </li>
+              <li class="list-group-item">
+                <b>Free Account Referal Clicks</b> <a class="float-right">{{free_account_referral_clicks}}</a>
+              </li>
+              <li class="list-group-item">
+                <b>Paid Account Referal Clicks</b> <a class="float-right">{{paid_account_referral_clicks}}</a>
+              </li>
+              {%endif%}
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Profile Details</h3>
+          </div>
+
+          <div class="card-body">
+            {% if object.user_type != 'ngo' %}
+            <strong><i class="fas fa-user mr-1"></i> Associated Non Profitable Organization</strong>
+            <p class="text-muted">
+              {{object.ngo.name|default:"NA"}}
+            </p>
+            <hr>
+            {%endif%}
+
+            {% if object.user_type == 'member' or object.user_type == 'business' %}
+            <strong><i class="fas fa-dollar-sign mr-1"></i> Plan</strong>
+            <p class="text-muted">
+              {{object.plan.name|default:"No Plan"}}
+            </p>
+            {%endif%}
+
+            {% if object.user_type != 'ngo' %}
+            <strong><i class="fas fa-user mr-1"></i> User Type</strong>
+            <p class="text-muted">
+              {{object.user_type|title}}
+            </p>
+            <hr>
+            {%endif%}
+
+            {% if object.user_type == 'business' %}
+              <strong><i class="fas fa-user mr-1"></i> Business Details</strong><br><br>
+              <p class="text-muted"><b>Category:</b> {{object.business_category.name|default:"NA"}}</p>
+              {% if object.business_contact%}
+              <p class="text-muted"><b>Business Contact:</b> {{object.business_contact|default:"NA"}}</p>
+              {% endif %}
+              {% if object.business_email %}
+              <p class="text-muted"><b>Business Email:</b> {{object.business_email|default:"NA"}}</p>
+              {% endif %}
+              <p class="text-muted"><b>Website:</b> {{object.website_url|default:"NA"}}</p>
+              <hr>
+            {%endif%}
+
+            <strong><i class="fas fa-globe mr-1"></i> Language</strong>
+            <p class="text-muted">{{object.get_language_display}}</p>
+            <hr>
+            <strong><i class="fas fa-money-bill mr-1"></i> Currency</strong>
+            <p class="text-muted">{{object.currency.name}}</p>
+            <hr>
+            {%if object.get_primary_location%}
+            <strong><i class="fas fa-map-marker-alt mr-1"></i> Address</strong>
+            <p class="text-muted">{{object.get_primary_location|default:"NA"}}</p>
+            <hr>
+            {%endif%}
+            <strong><i class="fas fa-map-marker-alt mr-1"></i> Country</strong>
+            <p class="text-muted">{{object.country.name}}</p>
+            <hr>
+            <strong><i class="fas fa-newspaper mr-1"></i> Newsletter Subscribed</strong>
+            <p class="text-muted">
+              {%if object.newsletter_subscribed%}
+              YES
+              {%else%}
+              NO
+              {%endif%}
+            </p>
+            <hr>
+            <p><strong><i class="fas fa-users mr-1"></i> Social Media</strong></p>
+            
+            {%if object.facebook_url%}
+            <a href="{{object.facebook_url}}" target="_blank" class="mx-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+            </a>
+            {%endif%}
+
+            {%if object.twitter_url%}
+            <a href="{{object.twitter_url}}" target="_blank" class="mx-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+            </a>
+            {%endif%}
+
+            {%if object.instagram_url%}
+            <a href="{{object.instagram_url}}" target="_blank" class="mx-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a>
+            {%endif%}
+
+            {%if object.youtube_url%}
+            <a href="{{object.youtube_url}}" target="_blank" class="mx-2">
+              <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+            </a>
+            {%endif%}
+            
+            <hr>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header p-2">
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Activity Log</a></li>
+
+              {% if object.user_type == 'business' %}
+              <li class="nav-item"><a class="nav-link" href="#deals" data-toggle="tab">Deals</a></li>
+              <li class="nav-item"><a class="nav-link" href="#weekly-deals" data-toggle="tab">Weekly Deals</a></li>
+              <li class="nav-item"><a class="nav-link" href="#locations" data-toggle="tab">Locations</a></li>
+              {% endif %}
+
+              {% if object.user_type == 'ngo' %}
+              <li class="nav-item"><a class="nav-link" href="#ngo-business" data-toggle="tab">Businesses Affiliated</a></li>
+              <li class="nav-item"><a class="nav-link" href="#ngo-members" data-toggle="tab">Members Affiliated</a></li>
+              {% endif %}
+
+              {% if object.user_type == 'member' %}
+              <li class="nav-item"><a class="nav-link" href="#classifieds" data-toggle="tab">Classifieds</a></li>
+              <li class="nav-item"><a class="nav-link" href="#family-member" data-toggle="tab">Family Member</a></li>
+              {% endif %}
+              <li class="nav-item"><a class="nav-link" href="#cover" data-toggle="tab">Cover Pic</a></li>
+              <li class="nav-item"><a class="nav-link" href="#flags" data-toggle="tab">Flags</a></li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="tab-content">
+
+              <div class="tab-pane active" id="activity">
+
+                <table id="activity-datatable" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Type</th>
+                      <th>Date</th>
+                      <th>Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in user_activity_logs %}
+                    <tr>
+                      <td>{{obj.id}}</td>
+                      <td>{{obj.type}}</td>
+                       <td>{{obj.created_date|date:"Y-m-d"}}</td>
+                      <td>{{obj.created_time}}</td>
+                    </tr>
+                    {% endfor %}
+                    
+                  </tfoot>
+                </table>
+                
+              </div>
+
+              {% if object.user_type == 'business'%}
+              <div class="tab-pane" id="deals">
+                <table id="weekly-deal-datatable" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Title</th>
+                      <th>Actual Price</th>
+                      <th>Deal Type</th>
+                      <th>Expiry Date</th>
+                      <th>Paid/Free</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in user_deals %}
+                    <tr>
+                      <td>{{obj.id}}</td>
+                      <td>{{obj.title}}</td>
+                      <td>{{obj.actual_price}}</td>
+                      <td>{{obj.deal_type|title}}</td>
+                      <td>{{obj.expiry_date|date:"Y-m-d"}}</td>
+                      <td>
+                        {%if obj.paid %}
+                        <span class="badge badge-success">PAID</span>
+                        {%else%}
+                        <span class="badge badge-warning">FREE</span>
+                        {%endif%}
+                      </td>
+                    </tr>
+                    {% endfor %}
+                    
+                  </tfoot>
+                </table>
+              </div>
+              
+              <div class="tab-pane" id="weekly-deals">
+                <table id="deal-datatable" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Title</th>
+                      <th>Actual Price</th>
+                      <th>Deal Type</th>
+                      <th>Expiry Date</th>
+                      <th>Paid/Free</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in weekly_user_deals %}
+                    <tr>
+                      <td>{{obj.id}}</td>
+                      <td>{{obj.title}}</td>
+                      <td>{{obj.actual_price}}</td>
+                      <td>{{obj.deal_type|title}}</td>
+                      <td>{{obj.expiry_date|date:"Y-m-d"}}</td>
+                      <td>
+                        {%if obj.paid %}
+                        <span class="badge badge-success">PAID</span>
+                        {%else%}
+                        <span class="badge badge-warning">FREE</span>
+                        {%endif%}
+                      </td>
+                    </tr>
+                    {% endfor %}
+                    
+                  </tfoot>
+                </table>
+              </div>
+              {% endif %}
+
+              <div class="tab-pane" id="locations">
+
+                <table id="locations-datatable" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Location</th>
+                      <th>Address</th>
+                      <th>City</th>
+                      <th>State</th>
+                      <th>Country</th>
+                      <th>Zipcode</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in business_locations %}
+                    <tr>
+                      <td>{{obj.id}}</td>
+                      <td>{{obj.location}}</td>
+                      <td>{{obj.address}}</td>
+                      <td>{{obj.city}}</td>
+                      <td>{{obj.state}}</td>
+                      <td>{{obj.country}}</td>
+                      <td>{{obj.zipcode}}</td>
+                    </tr>
+                    {% endfor %}
+                    
+                  </tfoot>
+                </table>
+                
+              </div>
+
+              {% if object.user_type == 'ngo' %}
+                <div class="tab-pane" id="ngo-business">
+                  <table id="example2" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Name</th>
+                        <th>Paid/Free</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for user in ngo_businesses %}
+                      <tr id="user-detail-row-{{user.id}}">
+                        <td>{{user.id}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.name|default:""}}</td>
+                        <td>
+                          {% if user.plan.amount > 0  %}
+                          <span class="badge badge-success">PAID</span>
+                          {%else%}
+                          <span class="badge badge-warning">FREE</span>
+                          {%endif%}
+                        </td>
+                      </tr>
+                      {% endfor %}
+                      
+                    </tfoot>
+                  </table>
+                </div>
+                <div class="tab-pane" id="ngo-members">
+                  <table id="example2" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Name</th>
+                        <th>Paid/Free</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for user in ngo_members %}
+                      <tr id="user-detail-row-{{user.id}}">
+                        <td>{{user.id}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.name|default:""}}</td>
+                        <td>
+                          {% if user.plan.amount > 0  %}
+                          <span class="badge badge-success">PAID</span>
+                          {%else%}
+                          <span class="badge badge-warning">FREE</span>
+                          {%endif%}
+                        </td>
+                      </tr>
+                      {% endfor %}
+                      
+                    </tfoot>
+                  </table>
+                </div>
+              {% endif %}
+
+              {% if object.user_type == 'member' %}
+              <div class="tab-pane" id="classifieds">
+                <table id="classified-datatable" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Title</th>
+                      <th>Contact Phone</th>
+                      <th>Contact Email</th>
+                      <th>Expiry Date</th>
+                      <th>Paid/Free</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for obj in user_classifieds %}
+                    <tr>
+                      <td>{{obj.id}}</td>
+                      <td>{{obj.title}}</td>
+                       <td>{{obj.contact_phone}}</td>
+                      <td>{{obj.contact_email}}</td>
+                      <td>{{obj.expiry_date|date:"Y-m-d"}}</td>
+                      <td>
+                        {%if obj.paid %}
+                        <span class="badge badge-success">PAID</span>
+                        {%else%}
+                        <span class="badge badge-warning">FREE</span>
+                        {%endif%}
+                      </td>
+                    </tr>
+                    {% endfor %}
+                    
+                  </tfoot>
+                </table>
+              </div>
+
+              <div class="tab-pane" id="family-member">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Full Name</th>
+                          <th>Relation</th>
+                          <th>Image</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>{{family_member.id}}</td>
+                        <td>{{family_member.get_full_name}}</td>
+                        <td>{{family_member.relation}}</td>
+                        <td>
+                          {% if family_member.image %}
+                            <img src="{{family_member.image.url}}" width="100" length="100">
+                          {% else %}
+                            <img src="/static/default_profile_pic.jpeg" width="100" length="100">
+                          {%endif%}
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              {%endif%}
+
+              <div class="tab-pane" id="cover">
+                {%if object.cover_pic%}
+                <img src="{{object.cover_pic.url}}" width="100%" height="300px;">
+                {%else%}
+                <img src="/media/default_images/default_cover_pic.png" width="100%" height="300px;">
+                {%endif%}
+              </div>
+
+              <div class="tab-pane" id="flags">
+                <table id="example" class="table table-bordered table-striped">
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Flagged By</th>
+                          <th>Reason</th>
+                          <th>Created At</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    {% for flag in user_flags %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{flag.flagged_by.get_full_name}}</td>
+                        <td>{{flag.reason}}</td>
+                        <td>{{flag.created_at|date:"Y-m-d H-i a"}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+<script>
+  $("#deal-datatable").DataTable({
+    order: [[0, 'desc']],
+    "responsive": true, 
+    "autoWidth": false,
+  });
+
+  $("#weekly-deal-datatable").DataTable({
+    order: [[0, 'desc']],
+    "responsive": true, 
+    "autoWidth": false,
+  });
+
+  $("#classified-datatable").DataTable({
+    order: [[0, 'desc']],
+    "responsive": true, 
+    "autoWidth": false,
+  });
+
+  $("#activity-datatable").DataTable({
+    order: [[0, 'desc']],
+    "responsive": true, 
+    "autoWidth": false,
+  });
+
+  $("#locations-datatable").DataTable({
+    order: [[0, 'desc']],
+    "responsive": true, 
+    "autoWidth": false,
+  });
+</script>
+{%endblock%}

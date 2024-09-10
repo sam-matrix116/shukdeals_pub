@@ -1,0 +1,87 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-3">
+          <h1 class="m-0">{{page_name|default:""}}</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          {% include 'common/table_messages.html' %}
+        </div><!-- /.col -->
+        <div class="col-sm-3">
+          <!--CREATE BTN HERE-->
+          <a href="{% url 'expense_add' %}" class="btn btn-info float-right">Create Expense</a>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+<section class="content">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+        
+        <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Vendor</th>
+                        <th>Invoice Number</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Remarks</th>
+                        <th>File</th>
+                        <th>Status</th>
+                        <th class="action-th nosort">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for obj in object_list %}
+                <tr>
+                    <td>{{obj.id}}</td>
+                    <td>{{obj.vendor.name}}</td>
+                    <td>{{obj.invoice_number}}</td>
+                    <td>$ {{obj.amount}}</td>
+                    <td>{{obj.date|date:"Y-m-d"}}</td>
+                    <td>{{obj.remarks}}</td>
+                    <td><a target="blank" href="/media/{{obj.file}}">View File</a></td>
+                    <td class="text-center">
+                      {% if obj.paid %}
+                      <span class="badge badge-success">PAID</span>
+                      {% else %}
+                      <a title="This expense is not paid. Click to mark as Paid" href="{% url 'mark_expense_paid' obj.id %}" class="alert-before-proceede" alert-msg="Are you sure to mark this expense as paid?"><span class="badge badge-danger">Click To Mark Paid</span></a>
+                      {% endif %}
+                    </td>
+                    
+                    <td class="text-center">
+                        <a href="{% url 'expense_update' obj.id %}"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="{% url 'expense_delete' obj.id %}"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+{%endblock%}

@@ -1,0 +1,170 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <form method="get" id="search-users-form">
+    <div class="row mb-2">
+      
+      <div class="col-sm-2">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+
+      <div class="col-sm-6">
+        {% include 'common/table_messages.html' %}
+      </div><!-- /.col -->
+    </div> 
+    <div class="row mb-2"> 
+      
+      {% comment %} <div class="col-sm-4">
+        <input type="text" id="date-range" name="date_range" class="form-control" placeholder="Expiry Date">
+      </div> {% endcomment %}
+
+      <div class="col-sm-4">
+        <select name="ngo" class="form-control">
+          <option value="">Select Non Profitable Organization</option>
+          {% for ngo in ngos %}
+            <option {% if request.GET.ngo == ngo.id|slugify %}selected{% endif %} value="{{ngo.id}}">{{ngo.get_full_name}}</option>
+          {% endfor %}
+         </select>
+      </div>
+
+      <div class="col-sm-3">
+        <select name="business" class="form-control">
+          <option value="">Select Business</option>
+          {% for business in businesses %}
+            <option {% if request.GET.business == business.id|slugify %}selected{% endif %} value="{{business.id}}">{{business.get_full_name}}</option>
+          {% endfor %}
+         </select>
+      </div>
+
+      <div class="col-sm-2">
+        <input type="submit" value="Search" class="btn btn-success">
+        <a href="{% url 'deals' %}" class="btn btn-success"><i class="fa fa-sync-alt"></i><a>
+      </div>
+    
+    </div><!-- /.row -->
+  </form>
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Shuk Fee</th>
+                  <th>Actual Price</th>
+                  <th>Contact Phone and Email</th>
+                  <th>Expiry Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for obj in object_list %}
+                <tr>
+                  <td>{{obj.id}}</td>
+                  <td>{{obj.title}}</td>
+                  <td>{{obj.description|truncatechars:"20"}}</td>
+                  <td>{{obj.shuk_fee}}</td>
+                  <td>{{obj.actual_price}}</td>
+                  <td>
+                    {% if obj.user.phone %}
+                    <div class="text-small">
+                    <i class="fas fa-phone"></i> {{obj.user.phone}}
+                    </div>
+                    {% endif %}
+                    {% if obj.user.email %}
+                    <div class="text-small">
+                    <i class="fas fa-envelope"></i> {{obj.user.email}}
+                    </div>
+                    {% endif %}
+                  </td>
+
+                  <td>{{obj.expiry_date|date:"Y-m-d"}}</td>
+                  <td>
+                    {% if obj.active %}
+                      <span class="badge badge-success">Active</span>
+                    {% else %}
+                      <span class="badge badge-danger">In-Active</span>
+                    {% endif %}
+                  </td>
+                  
+                  <td class="text-center">
+                    <div class="dropdown">
+                      <button class="badge badge-info dropdown-toggle no-border" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Actions
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="{% url 'deal_details' obj.id %}">Detail</a>
+                        
+                        <a alert-msg="Are you sure?" class="dropdown-item alert-before-proceede" href="{% url 'deal_delete' obj.id %}">Delete</a>
+                      </div>
+                    </div>
+                  </td>
+                    
+                  
+                </tr>
+                {% endfor %}
+                
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+{% include 'common/datatable_footer.html' %}
+<script>
+  $("#user-types").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  $("#customCheckbox2").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  
+
+  $('input[name="date_range"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+          cancelLabel: 'Clear'
+      }
+  });
+
+  $('input[name="date_range"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+  });
+
+  $('input[name="date_range"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+</script>
+{%endblock%}

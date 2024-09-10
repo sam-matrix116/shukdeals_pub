@@ -1,0 +1,140 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+
+    <div class="row mb-2">
+      
+      <div class="col-sm-3">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        {% include 'common/table_messages.html' %}
+      </div><!-- /.col -->
+    </div> 
+    {% include 'account/account-filters.html' %}
+
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Name</th>
+                  <th class="text-center">Verified</th>
+                  <th class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for user in object_list %}
+                <tr id="user-detail-row-{{user.id}}">
+                  <td>{{user.id}}</td>
+                  <td>
+                    {%if user.online_user.first %}
+                      <i class="fa fa-dot-circle online-dot"></i>
+                    {% else %}
+                      <i class="fa fa-dot-circle offline-dot"></i>
+                    {% endif %}
+                    {{user.email}}
+                  </td>
+                  <td>{{user.phone}}</td>
+                  <td>{{user.get_full_name|default:"NA"}}</td>
+                  
+                  <td class="text-center">
+                    {% if user.is_verified %}
+                    <span class="badge badge-success">Verified</span>
+                    {% else %}
+                    <span class="badge badge-danger">Not Verified</span>
+                    {% endif %}
+                  </td>
+                  <td class="text-center">
+                    {% include 'account/user_action_dropdown.html' %}
+                  </td>
+                </tr>
+                {% endfor %}
+                
+              </tfoot>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+
+{% endblock section %}
+{%block script%}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+{% include 'common/datatable_footer.html' %}
+<script>
+  $("#user-types").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  $("#customCheckbox2").on("change", function(e){
+    $("#search-users-form").submit();
+  })
+
+  $("#customCheckbox3").on("change", function(e){
+    $("#search-users-form").submit();
+  })
+
+  $('input[name="signup_date_range"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+          cancelLabel: 'Clear'
+      }
+  });
+
+  $('input[name="signup_date_range"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' / ' + picker.endDate.format('YYYY-MM-DD'));
+  });
+
+  $('input[name="signup_date_range"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+
+
+  $('input[name="lastlogin_date_range"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+          cancelLabel: 'Clear'
+      }
+  });
+
+  $('input[name="lastlogin_date_range"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' / ' + picker.endDate.format('YYYY-MM-DD'));
+  });
+
+  $('input[name="lastlogin_date_range"]').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+  });
+
+  
+
+</script>
+{%endblock%}

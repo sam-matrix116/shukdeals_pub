@@ -1,0 +1,22 @@
+
+    Hello {{user.firstname|default:"User"}},
+    
+    You have successfully redeemed the deal: {{deal.title}}
+    
+    
+    {% if deal.deal_type == 'online' or deal.deal_type == 'online_offline' %}
+    Use the below link to get the rewards.
+    <a href="#">Get the reward</a>
+    {% endif %}
+    
+    {% if deal.deal_type == 'offline' or deal.deal_type == 'online_offline' %}
+        Use the below code at the followed address to get the reward.
+        {% if user.paid_account %}
+            CODE: {{deal.club_member_code}}
+        {% else %}
+            CODE: {{deal.free_member_code}}
+        {% endif %}
+        
+        Address:
+        {{deal.get_location}} 
+    {% endif %}

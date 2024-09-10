@@ -1,0 +1,2361 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-12 11:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: account/api/api_views.py:57 account/api/api_views.py:2836
+msgid "Password is required"
+msgstr "كلمة المرور مطلوبة"
+
+#: account/api/api_views.py:63
+msgid "Confirm Password is required"
+msgstr "تأكيد كلمة المرور مطلوب"
+
+#: account/api/api_views.py:70
+msgid "Password and Confirm password do not match"
+msgstr "كلمة المرور وتأكيد كلمة المرور غير متطابقتين"
+
+#: account/api/api_views.py:77 account/api/api_views.py:911
+msgid "Password must be atleast 8 characters"
+msgstr "يجب أن تكون كلمة المرور على الأقل 8 أحرف"
+
+#: account/api/api_views.py:102
+msgid "This email is already registered with us."
+msgstr "هذا الهاتف موجود بالفعل."
+
+#: account/api/api_views.py:114
+msgid "This phone is already registered with us."
+msgstr "هذا الهاتف موجود بالفعل."
+
+#: account/api/api_views.py:141 account/api/api_views.py:2887
+msgid "Please use below OTP to verify your email."
+msgstr "يرجى استخدام رمز التحقق أدناه للتحقق من بريدك الإلكتروني"
+
+#: account/api/api_views.py:149
+msgid ""
+"You are registered successfully. We have sent a code on your email address "
+"for verification."
+msgstr ""
+"لقد تم تسجيلك بنجاح. لقد أرسلنا رمزًا إلى عنوان بريدك الإلكتروني للتحقق."
+
+#: account/api/api_views.py:154 account/api/api_views.py:637
+#: account/api/api_views.py:688 account/api/api_views.py:727
+#: account/api/api_views.py:776 account/api/api_views.py:2900
+msgid "Something Went Wrong while sending OTP to {}, Please Try Again Later!"
+msgstr ""
+
+#: account/api/api_views.py:185
+msgid "Phone is required."
+msgstr "البريد الإلكتروني / الهاتف مطلوب."
+
+#: account/api/api_views.py:193 account/api/api_views.py:273
+msgid "This phone is not registered"
+msgstr "هذا الهاتف غير موجود."
+
+#: account/api/api_views.py:201 account/api/api_views.py:1777
+msgid ""
+"Your account is pending for approval from the backend team. Please wait "
+"until it's verified."
+msgstr ""
+"حسابك في انتظار الموافقة من فريق الخلفية. يرجى الانتظار حتى يتم التحقق منه."
+
+#: account/api/api_views.py:209
+msgid "This phone is already verified.Redirecting to landing page."
+msgstr "تم التحقق من هذا الهاتف بالفعل. جارٍ إعادة التوجيه إلى الصفحة المقصودة."
+
+#: account/api/api_views.py:217 account/api/api_views.py:322
+msgid "Invalid New Phone."
+msgstr "هاتف جديد غير صالح."
+
+#: account/api/api_views.py:228 account/api/api_views.py:333
+msgid "This phone already exist."
+msgstr "هذا الهاتف موجود بالفعل."
+
+#: account/api/api_views.py:236 account/api/api_views.py:349
+msgid "Some error in sending sms."
+msgstr "بعض الأخطاء في إرسال الرسائل القصيرة."
+
+#: account/api/api_views.py:247
+msgid "OTP sent to your phone {}. Please verify."
+msgstr ""
+
+#: account/api/api_views.py:264 account/api/api_views.py:372
+msgid "OTP and Phone is required"
+msgstr "رمز التحقق ورقم الهاتف مطلوبان."
+
+#: account/api/api_views.py:284 account/api/api_views.py:383
+#: account/api/api_views.py:434
+msgid "Not Valid Code or Expired, Request a New One"
+msgstr "لا يوجد رمز صالح أو انتهت صلاحيته، يرجى طلب رمز جديد."
+
+#: account/api/api_views.py:299 account/api/api_views.py:402
+msgid "Phone Verified Successfully."
+msgstr "تم التحقق من الهاتف بنجاح."
+
+#: account/api/api_views.py:313
+msgid ""
+"This is your already registered and verified number. Enter a different "
+"number to update."
+msgstr ""
+"هذا هو رقمك المسجل بالفعل والذي تم التحقق منه. أدخل رقمًا مختلفًا للتحديث."
+
+#: account/api/api_views.py:359
+msgid "OTP sent to your phone. Please verify."
+msgstr "تم إرسال رمز التحقق إلى هاتفك. يرجى التحقق."
+
+#: account/api/api_views.py:416
+msgid "OTP and Email is required"
+msgstr "رمز التحقق والبريد الإلكتروني مطلوبان."
+
+#: account/api/api_views.py:425
+msgid "Invalid Email"
+msgstr "بريد إلكتروني غير صالح."
+
+#: account/api/api_views.py:453
+msgid "Email verified successfully."
+msgstr "تم التحقق من البريد الإلكتروني بنجاح."
+
+#: account/api/api_views.py:474 account/api/api_views.py:656
+msgid "This email does not exists."
+msgstr "هذا البريد الإلكتروني غير موجود."
+
+#: account/api/api_views.py:482 account/api/api_views.py:663
+msgid "This phone does not exists."
+msgstr "هذا الهاتف غير موجود."
+
+#: account/api/api_views.py:489
+msgid "Email is not verified."
+msgstr "البريد الإلكتروني غير متحقق."
+
+#: account/api/api_views.py:499
+msgid "Phone is not verified."
+msgstr "الهاتف غير متحقق."
+
+#: account/api/api_views.py:514
+msgid "Please select plan to proceed."
+msgstr "الرجاء تحديد الخطة للمتابعة."
+
+#: account/api/api_views.py:523
+msgid "Account not Approved by admin. Please contact administrator."
+msgstr "الحساب غير موافق عليه من قبل المشرف. يرجى التواصل مع المسؤول."
+
+#: account/api/api_views.py:525
+msgid "Your account is deactivated by the admin. Please contact administrator."
+msgstr "تم تعطيل حسابك من قبل المشرف. يرجى التواصل مع المسؤول."
+
+#: account/api/api_views.py:527
+msgid "Account is deleted. Please contact administrator."
+msgstr "تم حذف الحساب. يرجى التواصل مع المسؤول."
+
+#: account/api/api_views.py:529 account/api/serializers.py:200
+#: account/api/serializers.py:211
+msgid "Wrong Credentials!"
+msgstr "بيانات الاعتماد غير صحيحة!"
+
+#: account/api/api_views.py:533
+msgid "Email/Phone is required"
+msgstr "البريد الإلكتروني / الهاتف مطلوب."
+
+#: account/api/api_views.py:575
+msgid "refresh_token field is required!"
+msgstr "مطلوب حقل رمز التحديث!"
+
+#: account/api/api_views.py:584 account/api/api_views.py:590
+msgid "Token is invalid or expired"
+msgstr "الرمز غير صالح أو منتهي الصلاحية"
+
+#: account/api/api_views.py:605
+msgid "You have successfully logged out!"
+msgstr "لقد قمت بتسجيل الخروج بنجاح!"
+
+#: account/api/api_views.py:615 account/api/api_views.py:700
+#: account/api/api_views.py:797
+msgid "Email is Required!"
+msgstr "البريد الإلكتروني مطلوب!"
+
+#: account/api/api_views.py:619 account/api/api_views.py:711
+msgid "No Account Found!"
+msgstr "لا يوجد حساب!"
+
+#: account/api/api_views.py:622
+msgid "User is Not Active, Activate your account first!"
+msgstr "المستخدم غير نشط، قم بتفعيل حسابك أولاً!"
+
+#: account/api/api_views.py:635 account/api/api_views.py:686
+#: account/api/api_views.py:725 account/api/api_views.py:773
+msgid "Check your email for confirmation Code!"
+msgstr "تحقق من بريدك الإلكتروني للحصول على رمز التأكيد!"
+
+#: account/api/api_views.py:650
+msgid "Email/Phone is Required!"
+msgstr "البريد الإلكتروني / الهاتف مطلوب!"
+
+#: account/api/api_views.py:666
+msgid "Email is not verified, verify your email first!"
+msgstr "البريد الإلكتروني غير متحقق، قم بتحقق بريدك الإلكتروني أولاً!"
+
+#: account/api/api_views.py:669
+msgid "Phone is not verified, verify your phone first!"
+msgstr "إذا لم يتم التحقق من الهاتف، قم بتحقق هاتفك أولاً!"
+
+#: account/api/api_views.py:703
+msgid "Usage is Required. Register/Forgot"
+msgstr "الاستخدام مطلوب. تسجيل / نسيت"
+
+#: account/api/api_views.py:706 account/api/api_views.py:744
+msgid "Invalid Usage"
+msgstr "استخدام غير صالح"
+
+#: account/api/api_views.py:721 account/api/api_views.py:766
+msgid "Please use below OTP to verify your account"
+msgstr "يرجى استخدام رمز التحقق أدناه للتحقق من بريدك الإلكتروني"
+
+#: account/api/api_views.py:738
+msgid "New email is Required!"
+msgstr "البريد الإلكتروني الجديد مطلوب"
+
+#: account/api/api_views.py:741
+msgid "Usage is Required. Change Email"
+msgstr "الاستخدام مطلوب. تسجيل / نسيت"
+
+#: account/api/api_views.py:754
+msgid "This email already exist."
+msgstr "هذا الهاتف موجود بالفعل."
+
+#: account/api/api_views.py:789
+msgid "Code is Required!"
+msgstr "الرمز مطلوب!"
+
+#: account/api/api_views.py:804
+msgid "Email not Found!"
+msgstr "البريد الإلكتروني غير موجود!"
+
+#: account/api/api_views.py:809 account/api/api_views.py:2937
+msgid "Invalid Code"
+msgstr "رمز غير صالح"
+
+#: account/api/api_views.py:815 account/api/api_views.py:877
+#: account/api/api_views.py:894
+msgid "Code Expired, Request a New One!"
+msgstr "انتهت صلاحية الرمز، اطلب واحدًا جديدًا!"
+
+#: account/api/api_views.py:828
+msgid "Account has been verified successfully"
+msgstr "تم التحقق من الحساب بنجاح"
+
+#: account/api/api_views.py:836
+msgid "Wrong Confirmation Code!"
+msgstr "رمز التأكيد خاطئ!"
+
+#: account/api/api_views.py:859
+msgid "code and email is not there."
+msgstr "لا يوجد رمز ولا بريد إلكتروني."
+
+#: account/api/api_views.py:868
+msgid "Email is Invalid."
+msgstr "البريد الإلكتروني غير صالح."
+
+#: account/api/api_views.py:884
+msgid "Wrong confirmation code"
+msgstr "رمز التأكيد خاطئ"
+
+#: account/api/api_views.py:904
+msgid "Both Fields are required!"
+msgstr "كلا الحقلين مطلوبين!"
+
+#: account/api/api_views.py:915
+msgid "Passwords do not match"
+msgstr "كلمات المرور غير متطابقة"
+
+#: account/api/api_views.py:921
+msgid "Password has been set!"
+msgstr "تم تعيين كلمة المرور بنجاح!"
+
+#: account/api/api_views.py:936
+msgid "Wrong old Password"
+msgstr "كلمة المرور القديمة خاطئة"
+
+#: account/api/api_views.py:942
+msgid "Password has been successfully changed!"
+msgstr "تم تغيير كلمة المرور بنجاح!"
+
+#: account/api/api_views.py:988
+msgid "Invalid business category"
+msgstr "فئة العمل غير صالحة"
+
+#: account/api/api_views.py:996
+msgid "Your business category is already set to '{}'. You cannot change it."
+msgstr ""
+
+#: account/api/api_views.py:1055
+msgid "Profile Updated Successfully"
+msgstr "تم تحديث الملف الشخصي بنجاح"
+
+#: account/api/api_views.py:1060
+msgid "Some error"
+msgstr "حدث خطأ ما"
+
+#: account/api/api_views.py:1127
+msgid "You cannot create family member"
+msgstr "لا يمكنك إنشاء عضو عائلة"
+
+#: account/api/api_views.py:1163
+msgid "Family Member Added Successfully"
+msgstr "تمت إضافة عضو العائلة بنجاح"
+
+#: account/api/api_views.py:1173
+msgid "Family Member Updated Successfully"
+msgstr "تم تحديث عضو العائلة بنجاح"
+
+#: account/api/api_views.py:1191
+msgid "Invalid Family Member"
+msgstr "عضو العائلة غير صالح"
+
+#: account/api/api_views.py:1200
+msgid "Family Member deleted Successfully"
+msgstr "تم حذف عضو العائلة بنجاح"
+
+#: account/api/api_views.py:1224
+msgid "User is already deleted"
+msgstr "تم حذف المستخدم بالفعل"
+
+#: account/api/api_views.py:1231
+msgid "Please send delete reason"
+msgstr "يرجى إرسال السيرة الذاتية"
+
+#: account/api/api_views.py:1240
+msgid "Invalid Reason"
+msgstr "خطة غير صالحة"
+
+#: account/api/api_views.py:1248
+msgid ""
+"You cannot delete your account for the moment as it is used as default Non "
+"Profitable Organization. Please contact admin for deleting your account."
+msgstr ""
+"لا يمكنك حذف حسابك في الوقت الحالي حيث يتم استخدامه كمنظمة غير ربحية "
+"افتراضية. يرجى الاتصال بالمسؤول لحذف حسابك."
+
+#: account/api/api_views.py:1254
+msgid "You cannot delete your account at the moment. Please contact admin."
+msgstr "تم تعطيل حسابك من قبل المشرف. يرجى التواصل مع المسؤول."
+
+#: account/api/api_views.py:1265
+msgid "Account deleted Successfully."
+msgstr "تم حذف الوظيفة بنجاح"
+
+#: account/api/api_views.py:1377
+msgid "Plan is required"
+msgstr "الرجاء تقديم خطة"
+
+#: account/api/api_views.py:1387 account/api/api_views.py:1456
+#: account/api/api_views.py:1521 account/api/api_views.py:1553
+#: account/api/api_views.py:1585 account/api/api_views.py:1627
+#: account/api/api_views.py:1807 account/api/api_views.py:1842
+#: account/api/api_views.py:2109
+msgid "You cannot access this module."
+msgstr "يرجى تفعيل خطتك للوصول إلى هذه الوحدة"
+
+#: account/api/api_views.py:1395 account/api/api_views.py:1464
+#: account/api/api_views.py:1529 account/api/api_views.py:1561
+#: account/api/api_views.py:1593 account/api/api_views.py:1635
+#: account/api/api_views.py:1768 account/api/api_views.py:1815
+#: account/api/api_views.py:1850 account/api/api_views.py:2117
+msgid "You cannot access this module"
+msgstr "يرجى تفعيل خطتك للوصول إلى هذه الوحدة"
+
+#: account/api/api_views.py:1404
+msgid "Invalid Plan"
+msgstr "خطة غير صالحة"
+
+#: account/api/api_views.py:1411
+msgid "This plan is not for current user type"
+msgstr "هذه الخطة ليست لنوع المستخدم الحالي"
+
+#: account/api/api_views.py:1430
+msgid "Plan activated successfully"
+msgstr "تم تفعيل الخطة بنجاح"
+
+#: account/api/api_views.py:1470
+msgid "Payment Detail is missing"
+msgstr "تفاصيل الدفع مفقودة"
+
+#: account/api/api_views.py:1479
+msgid "Payment Detail is Invalid"
+msgstr "تفاصيل الدفع غير صالحة"
+
+#: account/api/api_views.py:1505
+msgid "Payment gateway issue in stripe"
+msgstr "تفاصيل الدفع مفقودة"
+
+#: account/api/api_views.py:1658 account/api/api_views.py:2061
+msgid "Invalid payment method."
+msgstr "طريقة الدفع غير صالحة"
+
+#: account/api/api_views.py:1670 account/api/api_views.py:2073
+msgid "This payment method is marked default successfully."
+msgstr "تم إنشاء المقال الإخباري بنجاح"
+
+#: account/api/api_views.py:1681
+msgid "Please send payment method to delete"
+msgstr "الرجاء إرسال تفاصيل الدفع"
+
+#: account/api/api_views.py:1692 account/api/api_views.py:2200
+msgid "Invalid payment method"
+msgstr "طريقة الدفع غير صالحة"
+
+#: account/api/api_views.py:1698
+msgid "You cannot delete the default payment method."
+msgstr "لا يمكنك إنشاء عضو عائلة"
+
+#: account/api/api_views.py:1711 account/api/api_views.py:2093
+msgid "Payment method deleted successfully."
+msgstr "تم حذف الصفقة بنجاح"
+
+#: account/api/api_views.py:1735
+msgid "Checkout session id is missing"
+msgstr "معرف جلسة الخروج غير متوفر"
+
+#: account/api/api_views.py:1745
+msgid "Payment method added successfully"
+msgstr "تم تفعيل الخطة بنجاح"
+
+#: account/api/api_views.py:1759
+msgid "Please send temp token"
+msgstr "يرجى إرسال السيرة الذاتية"
+
+#: account/api/api_views.py:1856 account/api/api_views.py:2123
+msgid "Please send payment detail"
+msgstr "الرجاء إرسال تفاصيل الدفع"
+
+#: account/api/api_views.py:1867 account/api/api_views.py:2134
+msgid "Invalid payment details"
+msgstr "تفاصيل الدفع غير صالحة"
+
+#: account/api/api_views.py:1883 account/api/api_views.py:1954
+#: account/api/api_views.py:2033 account/api/api_views.py:2242
+msgid "Some problem in payment"
+msgstr "مشكلة في عملية الدفع"
+
+#: account/api/api_views.py:1895 account/api/api_views.py:1967
+#: account/api/api_views.py:2151 account/api/api_views.py:2189
+#: account/api/api_views.py:2255
+msgid "Payment Failed"
+msgstr "فشل الدفع"
+
+#: account/api/api_views.py:1900
+msgid "Invalid Token"
+msgstr "الرمز غير صالح"
+
+#: account/api/api_views.py:1908 account/api/api_views.py:1980
+#: account/api/api_views.py:2208
+msgid "For using tranzila, make sure your currency is Israeli Shekels"
+msgstr "لاستخدام \"TRANZILA\"، تأكد من أن عملتك النقدية هي الشيكل الإسرائيلي."
+
+#: account/api/api_views.py:1914 account/api/api_views.py:1986
+#: account/api/api_views.py:2214
+msgid "Please enter card number"
+msgstr "يرجى إدخال رقم البطاقة"
+
+#: account/api/api_views.py:1921 account/api/api_views.py:1993
+#: account/api/api_views.py:2221
+msgid "Please enter expiry month"
+msgstr "يرجى إدخال شهر الانتهاء"
+
+#: account/api/api_views.py:1928 account/api/api_views.py:2000
+#: account/api/api_views.py:2228
+msgid "Please enter expiry year"
+msgstr "يرجى إدخال سنة الانتهاء"
+
+#: account/api/api_views.py:1946 account/api/api_views.py:2016
+msgid "This card already exist."
+msgstr "هذا الهاتف موجود بالفعل."
+
+#: account/api/api_views.py:2046
+msgid "Some problem in adding the new payment method."
+msgstr "مشكلة في إضافة وسيلة دفع جديدة"
+
+#: account/api/api_views.py:2086
+msgid "This payment method does not exist"
+msgstr "هذا الهاتف غير موجود."
+
+#: account/api/api_views.py:2176
+msgid "Payment Successful"
+msgstr "تم الدفع بنجاح"
+
+#: account/api/api_views.py:2398
+msgid "Please send location to add"
+msgstr "يرجى إرسال الموقع للإضافة"
+
+#: account/api/api_views.py:2408
+msgid "Please make payments for adding more locations."
+msgstr "يرجى إجراء المدفوعات لإضافة المزيد من المواقع."
+
+#: account/api/api_views.py:2498 account/api/api_views.py:2645
+msgid "This location does not exist."
+msgstr "هذا الموقع غير موجود."
+
+#: account/api/api_views.py:2515
+msgid "This store manager email already exist."
+msgstr "هذا الهاتف موجود بالفعل."
+
+#: account/api/api_views.py:2530
+msgid "This store manager phone already exist."
+msgstr "هذا الهاتف موجود بالفعل."
+
+#: account/api/api_views.py:2567
+msgid "Please send number of location to add"
+msgstr "يرجى إرسال عدد المواقع للإضافة"
+
+#: account/api/api_views.py:2668
+msgid "Location deleted successfully"
+msgstr "تم حذف الموقع بنجاح"
+
+#: account/api/api_views.py:2715 account/api/api_views.py:2999
+#: account/api/api_views.py:3063
+msgid "This user does not exist."
+msgstr "هذا المستخدم غير موجود."
+
+#: account/api/api_views.py:2737
+msgid "Ngo video added successfully"
+msgstr "تمت إضافة فيديو المنظمة غير الحكومية بنجاح."
+
+#: account/api/api_views.py:2766 account/api/api_views.py:2788
+#: account/api/api_views.py:2815 account/api/api_views.py:3031
+#: account/api/api_views.py:3353
+msgid "This video does not exist."
+msgstr "هذا الفيديو غير موجود."
+
+#: account/api/api_views.py:2800
+msgid "Ngo video updated successfully"
+msgstr "تم تحديث فيديو المنظمة غير الحكومية بنجاح."
+
+#: account/api/api_views.py:2822
+msgid "Ngo video deleted successfully"
+msgstr "تم حذف فيديو المنظمة غير الحكومية بنجاح."
+
+#: account/api/api_views.py:2846
+msgid "Password is correct"
+msgstr "كلمة المرور صحيحة"
+
+#: account/api/api_views.py:2851
+msgid "Password incorrect"
+msgstr "كلمة المرور غير صحيحة"
+
+#: account/api/api_views.py:2865 account/api/api_views.py:2931
+msgid "New Email is required"
+msgstr "البريد الإلكتروني الجديد مطلوب"
+
+#: account/api/api_views.py:2878 account/api/api_views.py:2947
+msgid "This new email is already in use. Send another email"
+msgstr ""
+"هذا البريد الإلكتروني الجديد مستخدم بالفعل. يرجى إرسال بريد إلكتروني آخر."
+
+#: account/api/api_views.py:2895
+msgid ""
+"We have sent a verification code on your new email {}. Check Your Email For "
+"Verification Code!"
+msgstr ""
+"لقد قمنا بإرسال رمز التحقق إلى بريدك الإلكتروني الجديد. تحقق من بريدك "
+"الإلكتروني للحصول على رمز التحقق!"
+
+#: account/api/api_views.py:2905 account/api/api_views.py:2961
+msgid "Please send a valid email"
+msgstr "يرجى إرسال بريد إلكتروني صالح"
+
+#: account/api/api_views.py:2922
+msgid "OTP is required"
+msgstr "رمز OTP مطلوب"
+
+#: account/api/api_views.py:2955
+msgid "Email changed successfully"
+msgstr "تم تغيير البريد الإلكتروني بنجاح"
+
+#: account/api/api_views.py:2983
+msgid "{} for news letter"
+msgstr ""
+
+#: account/api/api_views.py:3073 deals/api/api_views.py:871
+msgid "Review added successfully."
+msgstr "تمت إضافة المراجعة بنجاح"
+
+#: account/api/api_views.py:3080 deals/api/api_views.py:877
+msgid "Already reviewed"
+msgstr "تمت المراجعة بالفعل"
+
+#: account/api/api_views.py:3098 account/api/api_views.py:3516
+#: classifieds/api/api_views.py:321 classifieds/api/api_views.py:350
+#: deals/api/api_views.py:232 deals/api/api_views.py:1052
+msgid "Invalid User"
+msgstr "مستخدم غير صالح"
+
+#: account/api/api_views.py:3151 account/api/api_views.py:3184
+#: deals/api/api_views.py:948 deals/api/api_views.py:983
+msgid "Invalid Review"
+msgstr "مراجعة غير صالحة"
+
+#: account/api/api_views.py:3163 deals/api/api_views.py:962
+msgid "Review marked successfully."
+msgstr "تمت مراجعة العلامة بنجاح."
+
+#: account/api/api_views.py:3169 deals/api/api_views.py:968
+msgid "Already marked"
+msgstr "تم وضع علامة بالفعل."
+
+#: account/api/api_views.py:3196 deals/api/api_views.py:997
+msgid "Review flagged successfully."
+msgstr "تمت مراجعة العلامة بنجاح."
+
+#: account/api/api_views.py:3202 deals/api/api_views.py:1003
+msgid "Already flagged"
+msgstr "تم وضع علامة بالفعل."
+
+#: account/api/api_views.py:3526 classifieds/api/api_views.py:419
+#: deals/api/api_views.py:1516
+msgid "Flagged successfully."
+msgstr "تم وضع علامة بنجاح."
+
+#: account/api/api_views.py:3532 classifieds/api/api_views.py:425
+#: deals/api/api_views.py:1522
+msgid "Already flagged."
+msgstr "تم وضع علامة بالفعل."
+
+#: account/api/api_views.py:3570 account/api/api_views.py:3643
+#: account/api/api_views.py:3685 deals/api/api_views.py:1468
+msgid "The date format seems wrong. Please send date as: 2024-02-01"
+msgstr "تبدو صيغة التاريخ خاطئة. يرجى إرسال التاريخ بصيغة 2024-02-01."
+
+#: account/api/api_views.py:3595
+msgid "Invalid payment."
+msgstr "الدفعة غير صالحة."
+
+#: account/api/api_views.py:3773
+msgid ""
+"Non profitable organizations cannot choose another Non profitable "
+"organizations."
+msgstr "لا يمكن للمنظمات غير الربحية اختيار منظمة غير ربحية أخرى."
+
+#: account/api/api_views.py:3779
+msgid "Please select ngo to update"
+msgstr "الرجاء تحديد الخطة للمتابعة."
+
+#: account/api/api_views.py:3788
+msgid "Invalid Non Profitable Organization"
+msgstr "منظمة غير ربحية غير صالحة"
+
+#: account/api/api_views.py:3796
+msgid "Non Profitable Organization updated successfully"
+msgstr "تم تحديث فيديو المنظمة غير الحكومية بنجاح."
+
+#: account/api/serializers.py:47
+msgid "Please enter proper phone number."
+msgstr "يرجى إدخال رقم الهاتف الصحيح."
+
+#: account/api/serializers.py:57
+msgid "NGO is required."
+msgstr "الجمعية غير متوفرة."
+
+#: account/api/serializers.py:66
+msgid "Please send valid ngo."
+msgstr "يرجى إرسال جمعية صالحة."
+
+#: account/api/serializers.py:76
+msgid "Name is required."
+msgstr "الاسم مطلوب."
+
+#: account/api/serializers.py:83 account/api/serializers.py:99
+msgid "Administrator name is required."
+msgstr "مطلوب اسم المسؤول."
+
+#: account/api/serializers.py:92
+msgid "Business name is required."
+msgstr "مطلوب اسم الشركة."
+
+#: account/api/serializers.py:108
+msgid "First Name is required."
+msgstr "مطلوب الاسم الأول."
+
+#: account/api/serializers.py:115
+msgid "Last Name is required."
+msgstr "مطلوب الاسم الأخير."
+
+#: account/api/serializers.py:123
+msgid "Country is required."
+msgstr "مطلوب البلد."
+
+#: account/api/serializers.py:131
+msgid "Language is required."
+msgstr "اللغة مطلوبة."
+
+#: account/api/serializers.py:139
+msgid "Currency is required."
+msgstr "العملة مطلوبة."
+
+#: account/api/serializers.py:208
+msgid "Account is not verified, Verify it first!"
+msgstr "الحساب غير موثق، يرجى التحقق منه أولاً!"
+
+#: account/api/serializers.py:214
+msgid "Both fields are required!"
+msgstr "كلا الحقلين مطلوبين!"
+
+#: account/api/serializers.py:282
+msgid "current_password is required"
+msgstr "كلمة المرور الحالية مطلوبة."
+
+#: account/api/serializers.py:285
+msgid "new_password is required"
+msgstr "كلمة مرور جديدة مطلوبة."
+
+#: account/api/serializers.py:288
+msgid "confirm_new_password is required"
+msgstr "تأكيد كلمة المرور الجديدة مطلوب."
+
+#: account/api/serializers.py:291
+msgid "Passwords do not match!"
+msgstr "كلمات المرور غير متطابقة!"
+
+#: account/api/serializers.py:294
+msgid "Password must be more then 8 digits long"
+msgstr "يجب أن تكون كلمة المرور أكثر من 8 أرقام."
+
+#: account/api/serializers.py:745 account/api/serializers.py:753
+msgid "This field is required"
+msgstr "كلمة المرور مطلوبة"
+
+#: account/api/serializers.py:771
+msgid ""
+"This email {} is already registered with our system. Please enter a new "
+"email."
+msgstr ""
+"هذا البريد الإلكتروني مسجل بالفعل في نظامنا. يرجى إدخال بريد إلكتروني جديد."
+
+#: account/api/serializers.py:779
+msgid ""
+"This phone {} is already registered with our system. Please enter a new "
+"phone."
+msgstr "هذا الرقم مسجل بالفعل في نظامنا. يرجى إدخال رقم هاتف جديد."
+
+#: account/api/serializers.py:1192
+msgid "Monthly Subscription"
+msgstr "اشتراك شهري"
+
+#: account/api/serializers.py:1194
+msgid "Listing"
+msgstr "قائمة"
+
+#: account/api/serializers.py:1196 deals/models.py:60
+msgid "Weekly Deal"
+msgstr "صفقة أسبوعية"
+
+#: account/api/serializers.py:1198 account/models.py:67
+msgid "Classified"
+msgstr "مُصنف."
+
+#: account/api/serializers.py:1200
+msgid "New Payment Method"
+msgstr "طريقة الدفع الجديدة"
+
+#: account/api/serializers.py:1202 account/models.py:70
+msgid "Location"
+msgstr "الموقع."
+
+#: account/managetranzila.py:144
+msgid "Transaction successful"
+msgstr "عملية ناجحة."
+
+#: account/models.py:35 account/models.py:158
+msgid "Category Name"
+msgstr "اسم الفئة."
+
+#: account/models.py:66
+msgid "Deal"
+msgstr "صفقة."
+
+#: account/models.py:68
+msgid "News"
+msgstr "أخبار."
+
+#: account/models.py:69
+msgid "Job"
+msgstr "وظيفة."
+
+#: account/models.py:88 account/models.py:221
+msgid "Name"
+msgstr "الاسم."
+
+#: account/models.py:166
+msgid "Category Keyword"
+msgstr "الفئة الرئيسية"
+
+#: account/models.py:177
+msgid "Friends"
+msgstr "الأصدقاء"
+
+#: account/models.py:178
+msgid "Family"
+msgstr "العائلة"
+
+#: account/models.py:182
+msgid "Didn't meet expectations"
+msgstr "لم تلبِ توقعاتي"
+
+#: account/models.py:183
+msgid "Too difficult to navigate, download, upload"
+msgstr "صعب جدًا التنقل، التحميل، والرفع"
+
+#: account/models.py:184
+msgid "Too expensive"
+msgstr "غالي جدًا"
+
+#: account/models.py:185
+msgid "Not enough choices"
+msgstr "لا يوجد خيارات كافية"
+
+#: account/models.py:186
+msgid "Rather Not Say"
+msgstr "أفضل عدم القول"
+
+#: account/models.py:202 account/models.py:477
+msgid "Email Address"
+msgstr "عنوان البريد الإلكتروني"
+
+#: account/models.py:203 account/models.py:478 deals/models.py:113
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: account/models.py:209
+msgid "Language"
+msgstr "اللغة"
+
+#: account/models.py:212
+msgid "Profile Pic"
+msgstr "صورة الملف الشخصي"
+
+#: account/models.py:213
+msgid "Cover Picture"
+msgstr "صورة الغلاف"
+
+#: account/models.py:215
+msgid "Paid Account"
+msgstr "يدفع الحساب"
+
+#: account/models.py:217 account/models.py:475
+msgid "Relation"
+msgstr "العلاقة"
+
+#: account/models.py:220
+msgid "About"
+msgstr "حول"
+
+#: account/models.py:222
+msgid "Administrator Name"
+msgstr "اسم المسؤول"
+
+#: account/models.py:223
+msgid "Business Category"
+msgstr "فئة العمل"
+
+#: account/models.py:224
+msgid "Business Contact"
+msgstr "جهة الاتصال بالعمل"
+
+#: account/models.py:225
+msgid "Business Email"
+msgstr "البريد الإلكتروني للعمل"
+
+#: account/models.py:226
+msgid "Website Url"
+msgstr "عنوان الموقع الإلكتروني"
+
+#: account/models.py:227
+msgid "Facebook"
+msgstr "Facebook"
+
+#: account/models.py:228
+msgid "Twitter"
+msgstr "Twitter"
+
+#: account/models.py:229
+msgid "Instagram"
+msgstr "Instagram"
+
+#: account/models.py:230
+msgid "Youtube"
+msgstr "Youtube"
+
+#: account/models.py:238
+msgid "Newsletter Subscribed"
+msgstr "الاشتراك في النشرة الإخبارية"
+
+#: account/models.py:359
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#: account/models.py:360
+msgid "Complete"
+msgstr "اكتمال"
+
+#: account/models.py:361
+msgid "Cancelled"
+msgstr "تم الإلغاء"
+
+#: account/models.py:474
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: account/models.py:476
+msgid "Member Pic"
+msgstr "صورة العضو"
+
+#: account/models.py:492
+msgid "Menu"
+msgstr "القائمة"
+
+#: account/models.py:520
+msgid "Video Title"
+msgstr "عنوان الفيديو"
+
+#: account/models.py:521
+msgid "Video Link"
+msgstr "رابط الفيديو"
+
+#: account/models.py:528
+msgid "Store Managed Email Address"
+msgstr "تخزين عنوان البريد الإلكتروني المُدار"
+
+#: account/models.py:529
+msgid "Store Managed Phone Number"
+msgstr "رقم الهاتف المُدار بالمتجر"
+
+#: account/models.py:530
+msgid "Location Name"
+msgstr "اسم الموقع"
+
+#: account/models.py:533
+msgid "Address"
+msgstr "العنوان"
+
+#: account/models.py:534
+msgid "City"
+msgstr "المدينة"
+
+#: account/models.py:535
+msgid "State"
+msgstr "الولاية"
+
+#: account/models.py:536
+msgid "Country"
+msgstr "البلد"
+
+#: account/models.py:537
+msgid "Zipcode"
+msgstr "الرمز البريدي"
+
+#: account/views.py:543
+msgid "Plan created successfully"
+msgstr "تم تفعيل الخطة بنجاح"
+
+#: account/views.py:557
+msgid "Plan updated successfully"
+msgstr "تم تحديث الصفقة بنجاح"
+
+#: account/views.py:569
+msgid "Plan deleted successfully"
+msgstr "تم حذف الصفقة بنجاح"
+
+#: account/views.py:600
+msgid "Product Price updated successfully"
+msgstr "تم تحديث الصفقة بنجاح"
+
+#: account/views.py:624
+msgid "Delivery partner created successfully"
+msgstr "تم إنشاء الصفقة بنجاح"
+
+#: account/views.py:638
+msgid "Delivery partner updated successfully"
+msgstr "تم تحديث الصفقة بنجاح"
+
+#: account/views.py:822
+msgid "Faq created successfully"
+msgstr "تم إنشاء الصفقة بنجاح"
+
+#: account/views.py:846
+msgid "Faq updated successfully"
+msgstr "تم تحديث الصفقة بنجاح"
+
+#: account/views.py:858
+msgid "Faq deleted successfully"
+msgstr "تم حذف الصفقة بنجاح"
+
+#: account/views.py:875
+msgid "About us created successfully"
+msgstr "تم إنشاء إعلان الوظيفة بنجاح"
+
+#: account/views.py:889
+msgid "About updated successfully"
+msgstr "تم تحديث الوظيفة بنجاح"
+
+#: account/views.py:912
+msgid "About Journey created successfully"
+msgstr "تم إنشاء إعلان الوظيفة بنجاح"
+
+#: account/views.py:926
+msgid "Journey updated successfully"
+msgstr "تم تحديث الوظيفة بنجاح"
+
+#: account/views.py:938
+msgid "Journey deleted successfully"
+msgstr "تم حذف الوظيفة بنجاح"
+
+#: account/views.py:956
+msgid "Team created successfully"
+msgstr "تم إنشاء الصفقة بنجاح"
+
+#: account/views.py:970
+msgid "Team updated successfully"
+msgstr "تم تحديث الصفقة بنجاح"
+
+#: account/views.py:982
+msgid "Team deleted successfully"
+msgstr "تم حذف الصفقة بنجاح"
+
+#: account/views.py:999
+msgid "Terms and conditions created successfully"
+msgstr "تم إنشاء المقال الإخباري بنجاح"
+
+#: account/views.py:1013
+msgid "Terms and conditions updated successfully"
+msgstr "تم تحديث الخبر بنجاح"
+
+#: account/views.py:1042 account/views.py:1060 article/api/api_views.py:83
+#: article/api/api_views.py:108 article/api/api_views.py:130
+msgid "Invalid News"
+msgstr "خبر غير صالح"
+
+#: account/views.py:1048
+msgid "Status Updated Successfully"
+msgstr "تم تحديث الخبر بنجاح"
+
+#: account/views.py:1066
+msgid "News removed from deleted."
+msgstr "الأخبار محذوفة من المحذوفة."
+
+#: account/views.py:1069
+msgid "News deleted successfully"
+msgstr "تم حذف الصفقة بنجاح"
+
+#: account/views.py:1237
+msgid "Privacy policy created successfully"
+msgstr "تم إنشاء الصفقة بنجاح"
+
+#: account/views.py:1251
+msgid "Privacy Policy updated successfully"
+msgstr "تم تحديث الصفقة بنجاح"
+
+#: account/views.py:1321
+msgid "Vendor created successfully"
+msgstr "تم إنشاء الصفقة بنجاح"
+
+#: account/views.py:1335
+msgid "Vendor updated successfully"
+msgstr "تم تحديث الوظيفة بنجاح"
+
+#: account/views.py:1347
+msgid "Vendor deleted successfully"
+msgstr "تم حذف الوظيفة بنجاح"
+
+#: account/views.py:1366
+msgid "Expense created successfully"
+msgstr "تم إنشاء الصفقة بنجاح"
+
+#: account/views.py:1380
+msgid "Expense updated successfully"
+msgstr "تم تحديث الخبر بنجاح"
+
+#: account/views.py:1392
+msgid "Expense deleted successfully"
+msgstr "تم حذف الصفقة بنجاح"
+
+#: article/api/api_views.py:24
+msgid "News article created successfully"
+msgstr "تم إنشاء المقال الإخباري بنجاح"
+
+#: article/api/api_views.py:93
+msgid "News updated successfully"
+msgstr "تم تحديث الخبر بنجاح"
+
+#: article/api/api_views.py:138
+msgid "News delete requested successfully"
+msgstr "تم إرسال طلب حذف الخبر بنجاح"
+
+#: blogs/models.py:23 classifieds/models.py:33 deals/models.py:38
+msgid "Title"
+msgstr "العنوان"
+
+#: blogs/models.py:24
+msgid "Write news and article"
+msgstr "اكتب الأخبار والمقالات"
+
+#: blogs/models.py:25
+msgid "Feature Picture"
+msgstr "صورة مميزة"
+
+#: classifieds/api/api_views.py:45
+msgid "Please upgrade your plan"
+msgstr "يرجى ترقية خطتك"
+
+#: classifieds/api/api_views.py:83 deals/api/api_views.py:102
+#: deals/api/api_views.py:475
+msgid "Image is required"
+msgstr "الصورة مطلوبة"
+
+#: classifieds/api/api_views.py:116
+msgid "Classified created successfully"
+msgstr "تم إنشاء الإعلان بنجاح"
+
+#: classifieds/api/api_views.py:159 classifieds/api/api_views.py:208
+#: classifieds/api/api_views.py:232
+msgid "Invalid classified"
+msgstr "إعلان غير صالح"
+
+#: classifieds/api/api_views.py:193 classifieds/api/api_views.py:249
+msgid "Classified updated successfully"
+msgstr "تم تحديث الإعلان بنجاح"
+
+#: classifieds/api/api_views.py:215
+msgid "Classified deleted successfully"
+msgstr "تم حذف الإعلان بنجاح"
+
+#: classifieds/api/api_views.py:376 classifieds/api/api_views.py:405
+msgid "This classified does not exist."
+msgstr "الإعلان غير موجود"
+
+#: classifieds/api/serializers.py:25 deals/api/serializers.py:227
+#: deals/api/serializers.py:315 jobs/api/serializers.py:30
+msgid "Expiry date should be greater than today"
+msgstr "يجب أن يكون تاريخ الانتهاء أكبر من اليوم"
+
+#: classifieds/models.py:9 deals/models.py:103
+msgid "Monthly"
+msgstr "شهرياً"
+
+#: classifieds/models.py:10
+msgid "Quarterly"
+msgstr "ربع سنوي"
+
+#: classifieds/models.py:11 deals/models.py:104
+msgid "Yearly"
+msgstr "سنوياً"
+
+#: classifieds/models.py:34 deals/models.py:39
+msgid "Description"
+msgstr "الوصف"
+
+#: classifieds/models.py:36
+msgid "Price"
+msgstr "السعر"
+
+#: classifieds/models.py:40
+msgid "Contact Phone"
+msgstr "رقم الاتصال"
+
+#: classifieds/models.py:41
+msgid "Contact Email"
+msgstr "البريد الإلكتروني للاتصال"
+
+#: content/api/api_views.py:86
+msgid "Thank you for the message. We will contact soon."
+msgstr "شكراً على الرسالة. سنتواصل معك قريباً."
+
+#: content/models.py:9
+msgid "Question"
+msgstr "سؤال"
+
+#: deals/api/api_views.py:34
+msgid "You have not activated any plan.Please activate plan to add deal."
+msgstr "لم تقم بتفعيل أي خطة. يرجى تفعيل الخطة لإضافة الصفقة."
+
+#: deals/api/api_views.py:180 deals/api/api_views.py:621
+msgid "Deal created successfully"
+msgstr "تم إنشاء الصفقة بنجاح"
+
+#: deals/api/api_views.py:303
+msgid "Invalid deal"
+msgstr "صفقة غير صالحة"
+
+#: deals/api/api_views.py:315
+msgid "Invalid Location"
+msgstr "موقع غير صالح"
+
+#: deals/api/api_views.py:340
+msgid "Deal updated successfully"
+msgstr "تم تحديث الصفقة بنجاح"
+
+#: deals/api/api_views.py:357 deals/api/api_views.py:394
+#: deals/api/api_views.py:895
+msgid "Invalid Deal"
+msgstr "صفقة غير صالحة"
+
+#: deals/api/api_views.py:407
+msgid "Deal deleted successfully"
+msgstr "تم حذف الصفقة بنجاح"
+
+#: deals/api/api_views.py:483 deals/api/api_views.py:645
+msgid "Business Sub Category is required"
+msgstr "الفئة الفرعية للأعمال مطلوبة"
+
+#: deals/api/api_views.py:497 deals/api/api_views.py:659
+msgid ""
+"For creating Real Estate deal, the business category can be rent,sale or "
+"vacational rental only"
+msgstr ""
+"لإنشاء صفقة عقارية، يمكن أن تكون فئة الأعمال إيجار أو بيع أو إيجار لقضاء "
+"العطلات فقط"
+
+#: deals/api/api_views.py:507 deals/api/api_views.py:518
+#: deals/api/api_views.py:669 deals/api/api_views.py:680
+#: deals/api/serializers.py:191
+msgid "Free member discount type is required"
+msgstr "نوع خصم العضو المجاني مطلوب"
+
+#: deals/api/api_views.py:524 deals/api/api_views.py:686
+msgid "Free member discount value is required"
+msgstr "قيمة خصم العضو المجاني مطلوبة"
+
+#: deals/api/api_views.py:530 deals/api/api_views.py:692
+#: deals/api/serializers.py:201
+msgid "Free member code is required"
+msgstr "رمز العضو المجاني مطلوب"
+
+#: deals/api/api_views.py:536 deals/api/api_views.py:698
+#: deals/api/serializers.py:211
+msgid "Club member discount type is required"
+msgstr "نوع خصم عضو النادي مطلوب"
+
+#: deals/api/api_views.py:542 deals/api/api_views.py:704
+#: deals/api/serializers.py:215
+msgid "Club member discount value is required"
+msgstr "مطلوب قيمة خصم عضو النادي"
+
+#: deals/api/api_views.py:548 deals/api/api_views.py:710
+#: deals/api/serializers.py:219
+msgid "Club member code is required"
+msgstr "مطلوب رمز عضو النادي"
+
+#: deals/api/api_views.py:554 deals/api/api_views.py:716
+msgid "Offer text is required"
+msgstr "نص العرض مطلوب"
+
+#: deals/api/api_views.py:560 deals/api/api_views.py:722
+msgid "Price type is required"
+msgstr "نوع السعر مطلوب"
+
+#: deals/api/api_views.py:637
+msgid "Invalid property deal"
+msgstr "صفقة العقار غير صالحة"
+
+#: deals/api/api_views.py:751
+msgid "Property deal updated successfully"
+msgstr "تم تحديث صفقة العقار بنجاح"
+
+#: deals/api/api_views.py:1340 deals/api/api_views.py:1398
+#: deals/api/api_views.py:1428 deals/api/api_views.py:1501
+msgid "This deal does not exist."
+msgstr "هذه الصفقة غير موجودة"
+
+#: deals/api/api_views.py:1411
+msgid ""
+"Deal redeemed successfully. The redemption details have been sent to your "
+"registered email."
+msgstr ""
+"تم استرداد الصفقة بنجاح. تم إرسال تفاصيل الاسترداد إلى بريدك الإلكتروني "
+"المسجل."
+
+#: deals/api/api_views.py:1540
+msgid "NGO Category"
+msgstr "اسم الفئة."
+
+#: deals/api/api_views.py:1542 deals/api/api_views.py:1556
+#: deals/api/api_views.py:1566 deals/api/api_views.py:1578
+#: deals/api/api_views.py:1595 deals/api/api_views.py:1610
+#: deals/api/api_views.py:1627 deals/api/api_views.py:1665
+#: deals/api/api_views.py:1680 deals/api/api_views.py:1699
+#: deals/api/api_views.py:1720 deals/api/api_views.py:1735
+#: deals/api/api_views.py:1750
+msgid "Distance(Near To Far)"
+msgstr " المسافة (من قريب إلى بعيد)"
+
+#: deals/api/api_views.py:1544 deals/api/api_views.py:1558
+#: deals/api/api_views.py:1568
+msgid "Date Joined(Newest To Oldest)"
+msgstr " تاريخ الانضمام (من الأحدث إلى الأقدم)"
+
+#: deals/api/api_views.py:1547
+msgid "Number of Club Members Associated"
+msgstr " عدد أعضاء النادي المرتبطين"
+
+#: deals/api/api_views.py:1549
+msgid "Number of Businesses Associated"
+msgstr " عدد الشركات المرتبطة"
+
+#: deals/api/api_views.py:1560 deals/api/api_views.py:1570
+#: deals/api/api_views.py:1603 deals/api/api_views.py:1618
+#: deals/api/api_views.py:1631 deals/api/api_views.py:1654
+#: deals/api/api_views.py:1726 deals/api/api_views.py:1741
+#: deals/api/api_views.py:1756
+msgid "Star Rating"
+msgstr " تقييم بالنجوم"
+
+#: deals/api/api_views.py:1576
+msgid "Classified Category"
+msgstr "مُصنف."
+
+#: deals/api/api_views.py:1580 deals/api/api_views.py:1597
+#: deals/api/api_views.py:1612 deals/api/api_views.py:1667
+#: deals/api/api_views.py:1682 deals/api/api_views.py:1701
+#: deals/api/api_views.py:1722 deals/api/api_views.py:1737
+#: deals/api/api_views.py:1752
+msgid "Date Listed (Newest to Oldest)"
+msgstr " تاريخ النشر (من الأحدث إلى الأقدم)"
+
+#: deals/api/api_views.py:1582
+msgid "Hamsa Members"
+msgstr "أعضاء حمسا"
+
+#: deals/api/api_views.py:1584 deals/api/api_views.py:1601
+#: deals/api/api_views.py:1616 deals/api/api_views.py:1648
+#: deals/api/api_views.py:1705
+msgid "Price Range (Minimum / Maximum)"
+msgstr " نطاق السعر (الحد الأدنى / الحد الأقصى)"
+
+#: deals/api/api_views.py:1586
+msgid "Condition (New - Used)"
+msgstr " الحالة (جديد / مستخدم)"
+
+#: deals/api/api_views.py:1593
+msgid "Product Category"
+msgstr "فئة العمل"
+
+#: deals/api/api_views.py:1599 deals/api/api_views.py:1614
+#: deals/api/api_views.py:1629 deals/api/api_views.py:1646
+#: deals/api/api_views.py:1669 deals/api/api_views.py:1684
+#: deals/api/api_views.py:1703 deals/api/api_views.py:1724
+#: deals/api/api_views.py:1739 deals/api/api_views.py:1754
+msgid "Hamsa Business"
+msgstr "عمل حمسا"
+
+#: deals/api/api_views.py:1608
+msgid "Service Category"
+msgstr "فئة العمل"
+
+#: deals/api/api_views.py:1619
+msgid "Provider Type"
+msgstr "نوع مقدم الخدمة"
+
+#: deals/api/api_views.py:1625 deals/api/api_views.py:1642
+msgid "Restaurant Category"
+msgstr "فئة العمل"
+
+#: deals/api/api_views.py:1632
+msgid "Delivery Service"
+msgstr " خدمة توصيل"
+
+#: deals/api/api_views.py:1634
+msgid "Reservation/Walkin"
+msgstr " الحجز / دخول فوري"
+
+#: deals/api/api_views.py:1636 deals/api/api_views.py:1657
+#: deals/api/api_views.py:1727 deals/api/api_views.py:1742
+#: deals/api/api_views.py:1757
+msgid "Deal by Discount"
+msgstr " صفقة حسب التخفيض"
+
+#: deals/api/api_views.py:1644
+msgid "Name Of Business"
+msgstr " اسم العمل"
+
+#: deals/api/api_views.py:1650 deals/api/api_views.py:1691
+#: deals/api/api_views.py:1712
+msgid "Expiration Date"
+msgstr " تاريخ الانتهاء"
+
+#: deals/api/api_views.py:1652
+msgid "Number Of Travellers"
+msgstr " عدد المسافرين"
+
+#: deals/api/api_views.py:1655
+msgid "Property Class"
+msgstr " فئة العقار"
+
+#: deals/api/api_views.py:1663
+msgid "Rent Category"
+msgstr "فئة العمل"
+
+#: deals/api/api_views.py:1671 deals/api/api_views.py:1686
+#: deals/api/api_views.py:1707
+msgid "Number Of Bedrooms"
+msgstr "عدد الغرف"
+
+#: deals/api/api_views.py:1673 deals/api/api_views.py:1688
+#: deals/api/api_views.py:1709
+msgid "No Of Bathroom"
+msgstr " عدد الحمامات"
+
+#: deals/api/api_views.py:1675 deals/api/api_views.py:1690
+#: deals/api/api_views.py:1711
+msgid "SQ FT"
+msgstr " قدم مربع"
+
+#: deals/api/api_views.py:1697
+msgid "Sale Category"
+msgstr "فئة العمل"
+
+#: deals/api/api_views.py:1718
+msgid "Venue Category"
+msgstr "فئة العمل"
+
+#: deals/api/api_views.py:1733
+msgid "Sports Category"
+msgstr "فئة العمل"
+
+#: deals/api/api_views.py:1748
+msgid "Movie Category"
+msgstr "فئة العمل"
+
+#: deals/api/serializers.py:186
+msgid "Actual price is required"
+msgstr "السعر الفعلي مطلوب"
+
+#: deals/api/serializers.py:196
+msgid "free_member_discount_value is required"
+msgstr "قيمة خصم العضو المجاني مطلوبة"
+
+#: deals/api/serializers.py:207 deals/api/serializers.py:307
+#: jobs/api/serializers.py:22
+msgid "Expiry date is required"
+msgstr "تاريخ الانتهاء مطلوب"
+
+#: deals/api/serializers.py:233
+msgid ""
+"Online deal not supported. Please select online supported to add online "
+"deals."
+msgstr ""
+"الصفقة عبر الإنترنت غير مدعومة. يرجى تحديد الدعم عبر الإنترنت لإضافة الصفقات "
+"عبر الإنترنت."
+
+#: deals/api/serializers.py:239
+msgid "Redemption link is required."
+msgstr "رابط الخلاص مطلوب."
+
+#: deals/models.py:13
+msgid "Fixed Amount"
+msgstr "يدفع الحساب"
+
+#: deals/models.py:14
+msgid "Percentage Off"
+msgstr ""
+
+#: deals/models.py:18
+msgid "Online"
+msgstr ""
+
+#: deals/models.py:19
+msgid "Offline"
+msgstr ""
+
+#: deals/models.py:20
+msgid "Online Offline"
+msgstr ""
+
+#: deals/models.py:40
+msgid "Actual Price"
+msgstr "السعر الفعلي"
+
+#: deals/models.py:46
+msgid "Deal Type"
+msgstr "نوع الصفقة"
+
+#: deals/models.py:52 deals/models.py:56
+msgid "Discount Type"
+msgstr "نوع الخصم"
+
+#: deals/models.py:53 deals/models.py:57
+msgid "Off Value"
+msgstr "قيمة الخصم"
+
+#: deals/models.py:54 deals/models.py:58
+msgid "Coupon/Deal Code"
+msgstr "رمز الكوبون / الصفقة"
+
+#: deals/models.py:93
+msgid "Apartment"
+msgstr "شقة"
+
+#: deals/models.py:94
+msgid "House"
+msgstr "منزل"
+
+#: deals/models.py:95
+msgid "Hotel"
+msgstr "فندق"
+
+#: deals/models.py:96
+msgid "Guest House"
+msgstr "بيت الضيافة"
+
+#: deals/models.py:97
+msgid "Hostel/PG"
+msgstr "نزل / بي جي"
+
+#: deals/models.py:98
+msgid "Farmhouse"
+msgstr "مزرعة"
+
+#: deals/models.py:99
+msgid "Houseboat"
+msgstr "قارب منزل"
+
+#: deals/models.py:114
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: deals/models.py:128
+msgid "Paid"
+msgstr ""
+
+#: deals/models.py:129
+msgid "Failed"
+msgstr "فشل الدفع"
+
+#: dictionary.py:3
+msgid "Member added to favourites."
+msgstr "العضو أُضيف إلى المفضلة."
+
+#: dictionary.py:4
+msgid "Business added to favourites."
+msgstr "الشركة أُضيفت إلى المفضلة."
+
+#: dictionary.py:5
+msgid "Non Profitable Organization added to favourites."
+msgstr "تمت إضافة المنظمة الغير ربحية إلى المفضلة."
+
+#: dictionary.py:6
+msgid "News Agency added to favourites."
+msgstr "وكالة الأنباء أُضيفت إلى المفضلة."
+
+#: dictionary.py:7
+msgid "Member removed from favourites."
+msgstr "تمت إزالة العضو من المفضلة."
+
+#: dictionary.py:8
+msgid "Business removed from favourites."
+msgstr "تمت إزالة الشركة من المفضلة."
+
+#: dictionary.py:9
+msgid "Non Profitable Organization removed from favourites."
+msgstr "تمت إزالة المنظمة الغير ربحية من المفضلة."
+
+#: dictionary.py:10
+msgid "News Agency removed from favourites."
+msgstr "تمت إزالة وكالة الأنباء من المفضلة."
+
+#: dictionary.py:11
+msgid "Deal added to favourite deals"
+msgstr "تمت إضافة الصفقة إلى الصفقات المفضلة."
+
+#: dictionary.py:12
+msgid "Deal removed from favourite deals"
+msgstr "تمت إزالة الصفقة من الصفقات المفضلة."
+
+#: dictionary.py:13
+msgid "Classified added to favourite classifieds"
+msgstr "تمت إضافة الإعلان إلى الإعلانات المفضلة."
+
+#: dictionary.py:14
+msgid "Classified removed from favourite classifieds"
+msgstr "تمت إزالة الإعلان من الإعلانات المفضلة."
+
+#: dictionary.py:15
+msgid "Video added to favourite videos"
+msgstr "تمت إضافة الفيديو إلى مقاطع الفيديو المفضلة."
+
+#: dictionary.py:16
+msgid "Video removed from favourite videos"
+msgstr "تمت إزالة الفيديو من مقاطع الفيديو المفضلة."
+
+#: dictionary.py:17
+msgid "Video liked successfully"
+msgstr "تمت معجب بالفيديو بنجاح"
+
+#: dictionary.py:18
+msgid "Video unliked successfully"
+msgstr "تم إلغاء الإعجاب بالفيديو بنجاح"
+
+#: jobs/api/api_views.py:25
+msgid "Job posting created successfully"
+msgstr "تم إنشاء إعلان الوظيفة بنجاح"
+
+#: jobs/api/api_views.py:81 jobs/api/api_views.py:106 jobs/api/api_views.py:133
+#: jobs/api/api_views.py:170 jobs/api/api_views.py:249
+#: jobs/api/api_views.py:302 jobs/api/api_views.py:328
+msgid "Invalid Job"
+msgstr "وظيفة غير صالحة"
+
+#: jobs/api/api_views.py:91
+msgid "Job updated successfully"
+msgstr "تم تحديث الوظيفة بنجاح"
+
+#: jobs/api/api_views.py:140
+msgid "Job deleted successfully"
+msgstr "تم حذف الوظيفة بنجاح"
+
+#: jobs/api/api_views.py:181
+msgid "You have already applied to this job"
+msgstr "لقد قمت بالفعل بتقديم طلب لهذه الوظيفة"
+
+#: jobs/api/api_views.py:187
+msgid "Please send resume"
+msgstr "يرجى إرسال السيرة الذاتية"
+
+#: jobs/api/api_views.py:203
+msgid "Invalid resume"
+msgstr "سيرة ذاتية غير صالحة"
+
+#: jobs/api/api_views.py:220
+msgid "Your job application is saved successfully"
+msgstr "تم حفظ طلب الوظيفة الخاص بك بنجاح"
+
+#: jobs/api/api_views.py:234
+msgid "Month is required"
+msgstr "الشهر مطلوب"
+
+#: jobs/api/api_views.py:241
+msgid "Year is required"
+msgstr "السنة مطلوبة"
+
+#: jobs/api/api_views.py:336
+msgid "Invalid Application"
+msgstr "طلب غير صالح"
+
+#: jobs/api/api_views.py:344
+msgid "Application deleted successfully"
+msgstr "تم حذف التطبيق بنجاح"
+
+#: jobs/api/api_views.py:359
+msgid "This Job does not exist."
+msgstr "هذه الوظيفة غير موجودة"
+
+#: jobs/api/api_views.py:371
+msgid "Job {} favourite."
+msgstr ""
+
+#: jobs/models.py:29
+msgid "Job Title"
+msgstr "مسمى وظيفي"
+
+#: jobs/models.py:30
+msgid "Job Description"
+msgstr "المسمى الوظيفي"
+
+#: jobs/models.py:31
+msgid "Roles and Responsibilities"
+msgstr "الادوار والمسؤوليات"
+
+#: jobs/models.py:32
+msgid "Job Type"
+msgstr "نوع الوظيفة"
+
+#: jobs/models.py:35
+msgid "Salary Type"
+msgstr "نوع الراتب"
+
+#: shuktv/settings.py:135
+msgid "English"
+msgstr "الإنجليزية"
+
+#: shuktv/settings.py:136
+msgid "Spanish"
+msgstr "الإسبانية"
+
+#: shuktv/settings.py:137
+msgid "French"
+msgstr "الفرنسية"
+
+#: shuktv/settings.py:138
+msgid "Hebrew"
+msgstr "العبرية"
+
+#: shuktv/settings.py:139
+msgid "Russian"
+msgstr "الروسية"
+
+#: shuktv/settings.py:140
+msgid "Arabic"
+msgstr "العربية"
+
+#: shuktv/settings.py:141
+msgid "Portuguese"
+msgstr "البرتغالية"
+
+#: shuktv/settings.py:142
+msgid "German"
+msgstr "الألمانية"
+
+#: shuktv/utils/customPermissionClass.py:39
+msgid "Please activate your plan to access this module"
+msgstr "يرجى تفعيل خطتك للوصول إلى هذه الوحدة"
+
+#: templates/account/hello.html:16
+msgid "hello"
+msgstr "مرحبًا"
+
+#~ msgid "Deal {} favourite deals"
+#~ msgstr "صفقة الصفقات المفضلة"
+
+#~ msgid "Aborted!"
+#~ msgstr "تم الإجهاض!"
+
+#~ msgid "Show this message and exit."
+#~ msgstr "تظهر هذه الرسالة والخروج."
+
+#~ msgid "Options"
+#~ msgstr "خيارات"
+
+#~ msgid "DeprecationWarning: The command {name!r} is deprecated."
+#~ msgstr "تحذير إهمال: تم إهمال الأمر {name!r}."
+
+#~ msgid "Commands"
+#~ msgstr "الأوامر"
+
+#~ msgid "Missing command."
+#~ msgstr "أمر مفقود"
+
+#~ msgid "No such command {name!r}."
+#~ msgstr "لا يوجد مثل هذا الأمر {name!r}."
+
+#~ msgid "Value must be an iterable."
+#~ msgstr "يجب أن تكون القيمة قابلة للتكرار."
+
+#~ msgid "(dynamic)"
+#~ msgstr "(متحرك)"
+
+#~ msgid "required"
+#~ msgstr "مطلوب"
+
+#~ msgid "Show the version and exit."
+#~ msgstr "إظهار الإصدار والخروج."
+
+#~ msgid "Missing argument"
+#~ msgstr "حجة مفقودة"
+
+#~ msgid "Missing option"
+#~ msgstr "خيار مفقود"
+
+#~ msgid "Missing parameter"
+#~ msgstr "المعلمة المفقودة"
+
+#~ msgid "unknown error"
+#~ msgstr "خطأ غير معروف"
+
+#~ msgid "Shell completion is not supported for Bash versions older than 4.4."
+#~ msgstr "إكمال Shell غير مدعوم لإصدارات Bash الأقدم من 4.4."
+
+#~ msgid "Couldn't detect Bash version, shell completion is not supported."
+#~ msgstr "تعذر اكتشاف إصدار Bash، وإكمال الصدفة غير مدعوم."
+
+#~ msgid "Repeat for confirmation"
+#~ msgstr "كرر للتأكيد"
+
+#~ msgid "Error: The value you entered was invalid."
+#~ msgstr "خطأ: القيمة التي أدخلتها غير صالحة."
+
+#~ msgid "Error: The two entered values do not match."
+#~ msgstr "خطأ: القيمتان المدخلتان غير متطابقتين."
+
+#~ msgid "Error: invalid input"
+#~ msgstr "خطأ: إدخال غير صالح"
+
+#~ msgid "Press any key to continue..."
+#~ msgstr "اضغط على أى زر للاستمرار..."
+
+#~ msgid "file"
+#~ msgstr "ملف"
+
+#~ msgid "directory"
+#~ msgstr "الدليل"
+
+#~ msgid "path"
+#~ msgstr "طريق"
+
+#~ msgid "Messages"
+#~ msgstr "رسائل"
+
+#~ msgid "Site Maps"
+#~ msgstr "خرائط الموقع"
+
+#~ msgid "Static Files"
+#~ msgstr "الملفات الثابتة"
+
+#~ msgid "Syndication"
+#~ msgstr "خلاصات"
+
+#~ msgid "That page number is not an integer"
+#~ msgstr "رقم الصفحة هذا ليس عددًا صحيحًا"
+
+#~ msgid "That page number is less than 1"
+#~ msgstr "رقم الصفحة هذا أقل من 1"
+
+#~ msgid "That page contains no results"
+#~ msgstr "هذه الصفحة لا تحتوي على أي نتائج"
+
+#~ msgid "Enter a valid value."
+#~ msgstr "إدخال قيمة صالحة."
+
+#~ msgid "Enter a valid URL."
+#~ msgstr "أدخل عنوان URL صالحًا."
+
+#~ msgid "Enter a valid integer."
+#~ msgstr "أدخل عددًا صحيحًا صالحًا."
+
+#~ msgid "Enter a valid email address."
+#~ msgstr "أدخل عنوان بريد إلكتروني صالح."
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of letters, numbers, underscores or "
+#~ "hyphens."
+#~ msgstr ""
+#~ "أدخل \"رمزًا ثابتًا\" صالحًا يتكون من أحرف أو أرقام أو شرطات سفلية أو واصلات."
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of Unicode letters, numbers, underscores, "
+#~ "or hyphens."
+#~ msgstr ""
+#~ "أدخل \"رمزًا ثابتًا\" صالحًا يتكون من أحرف أو أرقام أو شرطات سفلية أو واصلات."
+
+#~ msgid "Enter a valid IPv4 address."
+#~ msgstr "أدخل عنوان IPv4 صالحًا."
+
+#~ msgid "Enter a valid IPv6 address."
+#~ msgstr "أدخل عنوان IPv6 صالحًا."
+
+#~ msgid "Enter a valid IPv4 or IPv6 address."
+#~ msgstr "أدخل عنوان IPv4 أو IPv6 صالحًا."
+
+#~ msgid "Enter only digits separated by commas."
+#~ msgstr "أدخل فقط أرقامًا مفصولة بفواصل."
+
+#~ msgid "Enter a number."
+#~ msgstr "أدخل رقما."
+
+#~ msgid "Null characters are not allowed."
+#~ msgstr "غير مسموح بالأحرف الفارغة."
+
+#~ msgid "and"
+#~ msgstr "و"
+
+#~ msgid "This field cannot be null."
+#~ msgstr "لا يمكن أن يكون هذا الحقل فارغًا."
+
+#~ msgid "This field cannot be blank."
+#~ msgstr "هذا الحقل لا يمكن أن يكون فارغا."
+
+#~ msgid "Boolean (Either True or False)"
+#~ msgstr "منطقية (سواء كانت صحيحة أو خاطئة)"
+
+#~ msgid "String (unlimited)"
+#~ msgstr "سلسلة (غير محدودة)"
+
+#~ msgid "Comma-separated integers"
+#~ msgstr "أعداد صحيحة مفصولة بفواصل"
+
+#~ msgid "Date (without time)"
+#~ msgstr "التاريخ (بدون وقت)"
+
+#~ msgid "Date (with time)"
+#~ msgstr "التاريخ (مع الوقت)"
+
+#~ msgid "Decimal number"
+#~ msgstr "عدد عشري"
+
+#~ msgid "Duration"
+#~ msgstr "مدة"
+
+#~ msgid "Email address"
+#~ msgstr "عنوان البريد الإلكتروني"
+
+#~ msgid "File path"
+#~ msgstr "مسار الملف"
+
+#~ msgid "Floating point number"
+#~ msgstr "رقم النقطة العائمة"
+
+#~ msgid "Integer"
+#~ msgstr "عدد صحيح"
+
+#~ msgid "Big (8 byte) integer"
+#~ msgstr "عدد صحيح كبير (8 بايت)."
+
+#~ msgid "Small integer"
+#~ msgstr "عدد صحيح صغير"
+
+#~ msgid "IPv4 address"
+#~ msgstr "عنوان IPv4"
+
+#~ msgid "IP address"
+#~ msgstr "عنوان IP"
+
+#~ msgid "Boolean (Either True, False or None)"
+#~ msgstr "منطقية (إما صحيح أو خطأ أو لا شيء)"
+
+#~ msgid "Positive big integer"
+#~ msgstr "عدد صحيح كبير موجب"
+
+#~ msgid "Positive integer"
+#~ msgstr "عدد صحيح موجب"
+
+#~ msgid "Positive small integer"
+#~ msgstr "عدد صحيح صغير موجب"
+
+#~ msgid "Text"
+#~ msgstr "نص"
+
+#~ msgid "Time"
+#~ msgstr "وقت"
+
+#~ msgid "URL"
+#~ msgstr "عنوان"
+
+#~ msgid "Raw binary data"
+#~ msgstr "البيانات الثنائية الخام"
+
+#~ msgid "Universally unique identifier"
+#~ msgstr "معرف فريد عالميًا"
+
+#~ msgid "File"
+#~ msgstr "ملف"
+
+#~ msgid "Image"
+#~ msgstr "صورة"
+
+#~ msgid "A JSON object"
+#~ msgstr "كائن JSON"
+
+#~ msgid "Value must be valid JSON."
+#~ msgstr "يجب أن تكون القيمة صالحة JSON."
+
+#~ msgid "Foreign Key (type determined by related field)"
+#~ msgstr "المفتاح الخارجي (النوع المحدد حسب الحقل ذي الصلة)"
+
+#~ msgid "One-to-one relationship"
+#~ msgstr "علاقة فردية"
+
+#~ msgid "Many-to-many relationship"
+#~ msgstr "علاقة كثير إلى كثير"
+
+#~ msgid ":?.!"
+#~ msgstr ":؟.!"
+
+#~| msgid "Password is required"
+#~ msgid "This field is required."
+#~ msgstr "كلمة المرور مطلوبة"
+
+#~ msgid "Enter a whole number."
+#~ msgstr "أدخل رقمًا صحيحًا."
+
+#~ msgid "Enter a valid date."
+#~ msgstr "أدخل تاريخًا صالحًا."
+
+#~ msgid "Enter a valid time."
+#~ msgstr "أدخل وقتًا صالحًا."
+
+#~ msgid "Enter a valid date/time."
+#~ msgstr "أدخل تاريخًا/وقتًا صالحًا."
+
+#~ msgid "Enter a valid duration."
+#~ msgstr "أدخل مدة صالحة."
+
+#~ msgid "No file was submitted. Check the encoding type on the form."
+#~ msgstr "لم يتم تقديم أي ملف. التحقق من نوع الترميز في النموذج."
+
+#~ msgid "No file was submitted."
+#~ msgstr "لم يتم تقديم أي ملف."
+
+#~ msgid "The submitted file is empty."
+#~ msgstr "الملف المقدم فارغ."
+
+#~ msgid "Please either submit a file or check the clear checkbox, not both."
+#~ msgstr "يرجى إما إرسال ملف أو تحديد خانة الاختيار الواضحة، وليس كليهما."
+
+#~ msgid ""
+#~ "Upload a valid image. The file you uploaded was either not an image or a "
+#~ "corrupted image."
+#~ msgstr ""
+#~ "قم بتحميل صورة صالحة. الملف الذي قمت بتحميله لم يكن صورة أو صورة تالفة."
+
+#~ msgid "Enter a list of values."
+#~ msgstr "أدخل قائمة القيم."
+
+#~ msgid "Enter a complete value."
+#~ msgstr "أدخل قيمة كاملة."
+
+#~ msgid "Enter a valid UUID."
+#~ msgstr "أدخل UUID صالحًا."
+
+#~ msgid "Enter a valid JSON."
+#~ msgstr "أدخل JSON صالحًا."
+
+#~ msgid ":"
+#~ msgstr ":"
+
+#~ msgid "Order"
+#~ msgstr "طلب"
+
+#~ msgid "Delete"
+#~ msgstr "يمسح"
+
+#~ msgid "Please correct the duplicate values below."
+#~ msgstr "الرجاء تصحيح القيم المكررة أدناه."
+
+#~ msgid "The inline value did not match the parent instance."
+#~ msgstr "لم تتطابق القيمة المضمنة مع المثيل الأصلي."
+
+#~ msgid ""
+#~ "Select a valid choice. That choice is not one of the available choices."
+#~ msgstr "حدد خيارًا صالحًا. وهذا الاختيار ليس من الخيارات المتاحة."
+
+#~ msgid "Clear"
+#~ msgstr "واضح"
+
+#~ msgid "Currently"
+#~ msgstr "حالياً"
+
+#~ msgid "Change"
+#~ msgstr "يتغير"
+
+#~ msgid "Unknown"
+#~ msgstr "مجهول"
+
+#~ msgid "Yes"
+#~ msgstr "نعم"
+
+#~ msgid "No"
+#~ msgstr "لا"
+
+#~ msgid "yes,no,maybe"
+#~ msgstr "نعم، لا، ربما"
+
+#~ msgid "p.m."
+#~ msgstr "مساءً"
+
+#~ msgid "a.m."
+#~ msgstr "أكون."
+
+#~ msgid "PM"
+#~ msgstr "مساءً"
+
+#~ msgid "AM"
+#~ msgstr "أكون"
+
+#~ msgid "midnight"
+#~ msgstr "منتصف الليل"
+
+#~ msgid "noon"
+#~ msgstr "وقت الظهيرة"
+
+#~ msgid "Monday"
+#~ msgstr "الاثنين"
+
+#~ msgid "Tuesday"
+#~ msgstr "يوم الثلاثاء"
+
+#~ msgid "Wednesday"
+#~ msgstr "الأربعاء"
+
+#~ msgid "Thursday"
+#~ msgstr "يوم الخميس"
+
+#~ msgid "Friday"
+#~ msgstr "جمعة"
+
+#~ msgid "Saturday"
+#~ msgstr "السبت"
+
+#~ msgid "Sunday"
+#~ msgstr "الأحد"
+
+#~ msgid "Mon"
+#~ msgstr "الاثنين"
+
+#~ msgid "Tue"
+#~ msgstr "الثلاثاء"
+
+#~ msgid "Wed"
+#~ msgstr "تزوج"
+
+#~ msgid "Thu"
+#~ msgstr "الخميس"
+
+#~ msgid "Fri"
+#~ msgstr "الجمعة"
+
+#~ msgid "Sat"
+#~ msgstr "قعد"
+
+#~ msgid "Sun"
+#~ msgstr "شمس"
+
+#~ msgid "January"
+#~ msgstr "يناير"
+
+#~ msgid "February"
+#~ msgstr "شهر فبراير"
+
+#~ msgid "March"
+#~ msgstr "يمشي"
+
+#~ msgid "April"
+#~ msgstr "أبريل"
+
+#~ msgid "May"
+#~ msgstr "يمكن"
+
+#~ msgid "June"
+#~ msgstr "يونيو"
+
+#~ msgid "July"
+#~ msgstr "يوليو"
+
+#~ msgid "August"
+#~ msgstr "أغسطس"
+
+#~ msgid "September"
+#~ msgstr "سبتمبر"
+
+#~ msgid "October"
+#~ msgstr "اكتوبر"
+
+#~ msgid "November"
+#~ msgstr "شهر نوفمبر"
+
+#~ msgid "December"
+#~ msgstr "ديسمبر"
+
+#~ msgid "jan"
+#~ msgstr "يناير"
+
+#~ msgid "feb"
+#~ msgstr "فبراير"
+
+#~ msgid "mar"
+#~ msgstr "مار"
+
+#~ msgid "apr"
+#~ msgstr "أبريل"
+
+#~ msgid "may"
+#~ msgstr "يمكن"
+
+#~ msgid "jun"
+#~ msgstr "يونيو"
+
+#~ msgid "jul"
+#~ msgstr "يوليو"
+
+#~ msgid "aug"
+#~ msgstr "أغسطس"
+
+#~ msgid "sep"
+#~ msgstr "سبتمبر"
+
+#~ msgid "oct"
+#~ msgstr "أكتوبر"
+
+#~ msgid "nov"
+#~ msgstr "نوفمبر"
+
+#~ msgid "dec"
+#~ msgstr "ديسمبر"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Jan."
+#~ msgstr "يناير"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Feb."
+#~ msgstr "فبراير"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "March"
+#~ msgstr "يمشي"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "April"
+#~ msgstr "أبريل"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "May"
+#~ msgstr "يمكن"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "June"
+#~ msgstr "يونيو"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "July"
+#~ msgstr "يوليو"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Aug."
+#~ msgstr "أغسطس"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Sept."
+#~ msgstr "سبتمبر."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Oct."
+#~ msgstr "أكتوبر"
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Nov."
+#~ msgstr "نوفمبر."
+
+#~ msgctxt "abbrev. month"
+#~ msgid "Dec."
+#~ msgstr "ديسمبر."
+
+#~ msgctxt "alt. month"
+#~ msgid "January"
+#~ msgstr "يناير"
+
+#~ msgctxt "alt. month"
+#~ msgid "February"
+#~ msgstr "شهر فبراير"
+
+#~ msgctxt "alt. month"
+#~ msgid "March"
+#~ msgstr "يمشي"
+
+#~ msgctxt "alt. month"
+#~ msgid "April"
+#~ msgstr "أبريل"
+
+#~ msgctxt "alt. month"
+#~ msgid "May"
+#~ msgstr "يمكن"
+
+#~ msgctxt "alt. month"
+#~ msgid "June"
+#~ msgstr "يونيو"
+
+#~ msgctxt "alt. month"
+#~ msgid "July"
+#~ msgstr "يوليو"
+
+#~ msgctxt "alt. month"
+#~ msgid "August"
+#~ msgstr "أغسطس"
+
+#~ msgctxt "alt. month"
+#~ msgid "September"
+#~ msgstr "سبتمبر"
+
+#~ msgctxt "alt. month"
+#~ msgid "October"
+#~ msgstr "اكتوبر"
+
+#~ msgctxt "alt. month"
+#~ msgid "November"
+#~ msgstr "شهر نوفمبر"
+
+#~ msgctxt "alt. month"
+#~ msgid "December"
+#~ msgstr "ديسمبر"
+
+#~ msgid "This is not a valid IPv6 address."
+#~ msgstr "هذا ليس عنوان IPv6 صالحًا."
+
+#~ msgid "or"
+#~ msgstr "أو"
+
+#~ msgid ", "
+#~ msgstr ","
+
+#~ msgid "Forbidden"
+#~ msgstr "مُحرَّم"
+
+#~ msgid "CSRF verification failed. Request aborted."
+#~ msgstr "فشل التحقق من CSRF. تم إحباط الطلب."
+
+#~ msgid ""
+#~ "You are seeing this message because this HTTPS site requires a “Referer "
+#~ "header” to be sent by your web browser, but none was sent. This header is "
+#~ "required for security reasons, to ensure that your browser is not being "
+#~ "hijacked by third parties."
+#~ msgstr ""
+#~ "تظهر لك هذه الرسالة لأن موقع HTTPS هذا يتطلب إرسال \"رأس المرجع\" بواسطة "
+#~ "متصفح الويب الخاص بك، ولكن لم يتم إرسال أي شيء. هذا الرأس مطلوب لأسباب "
+#~ "أمنية، لضمان عدم اختراق متصفحك من قبل أطراف ثالثة."
+
+#~ msgid ""
+#~ "If you have configured your browser to disable “Referer” headers, please "
+#~ "re-enable them, at least for this site, or for HTTPS connections, or for "
+#~ "“same-origin” requests."
+#~ msgstr ""
+#~ "إذا قمت بتكوين متصفحك لتعطيل رؤوس \"المرجع\"، فيرجى إعادة تمكينها، على "
+#~ "الأقل لهذا الموقع، أو لاتصالات HTTPS، أو لطلبات \"نفس المصدر\"."
+
+#~ msgid "More information is available with DEBUG=True."
+#~ msgstr "يتوفر مزيد من المعلومات مع ديبوغ = ترو."
+
+#~ msgid "No year specified"
+#~ msgstr "لم يتم تحديد سنة"
+
+#~ msgid "Date out of range"
+#~ msgstr "التاريخ خارج النطاق"
+
+#~ msgid "No month specified"
+#~ msgstr "لم يتم تحديد شهر"
+
+#~ msgid "No day specified"
+#~ msgstr "لم يتم تحديد يوم"
+
+#~ msgid "No week specified"
+#~ msgstr "لم يتم تحديد اسبوع"
+
+#~ msgid "Django Documentation"
+#~ msgstr "توثيق جانغو"
+
+#~ msgid "Topics, references, &amp; how-to’s"
+#~ msgstr "المواضيع والمراجع &amp; كيف"
+
+#~ msgid "Tutorial: A Polling App"
+#~ msgstr "البرنامج التعليمي: تطبيق الاقتراع"
+
+#~ msgid "Get started with Django"
+#~ msgstr "ابدأ مع جانغو"
+
+#~ msgid "Django Community"
+#~ msgstr "مجتمع جانغو"
+
+#~ msgid "Connect, get help, or contribute"
+#~ msgstr "تواصل أو احصل على المساعدة أو ساهم"
+
+#~| msgid "Password is required"
+#~ msgid "Password is"
+#~ msgstr "كلمة المرور مطلوبة"

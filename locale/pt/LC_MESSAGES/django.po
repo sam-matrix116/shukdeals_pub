@@ -1,0 +1,1761 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-12 11:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: account/api/api_views.py:57 account/api/api_views.py:2836
+msgid "Password is required"
+msgstr "Senha é obrigatória"
+
+#: account/api/api_views.py:63
+msgid "Confirm Password is required"
+msgstr "Confirme a senha é obrigatório"
+
+#: account/api/api_views.py:70
+msgid "Password and Confirm password do not match"
+msgstr "Senha e Confirmação de senha não correspondem"
+
+#: account/api/api_views.py:77 account/api/api_views.py:911
+msgid "Password must be atleast 8 characters"
+msgstr "A senha deve ter pelo menos 8 caracteres"
+
+#: account/api/api_views.py:102
+msgid "This email is already registered with us."
+msgstr "Este {} '{}' já está registrado conosco."
+
+#: account/api/api_views.py:114
+msgid "This phone is already registered with us."
+msgstr "Este {} '{}' já está registrado conosco."
+
+#: account/api/api_views.py:141 account/api/api_views.py:2887
+msgid "Please use below OTP to verify your email."
+msgstr "Por favor, use o OTP abaixo para verificar seu e-mail."
+
+#: account/api/api_views.py:149
+msgid ""
+"You are registered successfully. We have sent a code on your email address "
+"for verification."
+msgstr ""
+"Você foi registrado com sucesso. Enviamos um código para o seu endereço de e-"
+"mail para verificação."
+
+#: account/api/api_views.py:154 account/api/api_views.py:637
+#: account/api/api_views.py:688 account/api/api_views.py:727
+#: account/api/api_views.py:776 account/api/api_views.py:2900
+msgid "Something Went Wrong while sending OTP to {}, Please Try Again Later!"
+msgstr ""
+"Algo deu errado ao enviar o OTP para {}, por favor, tente novamente mais "
+"tarde!"
+
+#: account/api/api_views.py:185
+msgid "Phone is required."
+msgstr "E-mail/Telefone é obrigatório."
+
+#: account/api/api_views.py:193 account/api/api_views.py:273
+msgid "This phone is not registered"
+msgstr "Este telefone não está registrado."
+
+#: account/api/api_views.py:201 account/api/api_views.py:1777
+msgid ""
+"Your account is pending for approval from the backend team. Please wait "
+"until it's verified."
+msgstr ""
+"Sua conta está pendente de aprovação da equipe de backend. Por favor, "
+"aguarde até que seja verificado."
+
+#: account/api/api_views.py:209
+msgid "This phone is already verified.Redirecting to landing page."
+msgstr ""
+"Este telefone já está verificado. Redirecionando para a página inicial."
+
+#: account/api/api_views.py:217 account/api/api_views.py:322
+msgid "Invalid New Phone."
+msgstr "Novo telefone inválido."
+
+#: account/api/api_views.py:228 account/api/api_views.py:333
+msgid "This phone already exist."
+msgstr "Este telefone já existe."
+
+#: account/api/api_views.py:236 account/api/api_views.py:349
+msgid "Some error in sending sms."
+msgstr "Erro ao enviar SMS."
+
+#: account/api/api_views.py:247
+msgid "OTP sent to your phone {}. Please verify."
+msgstr "OTP enviado para o seu telefone {}. Por favor, verifique."
+
+#: account/api/api_views.py:264 account/api/api_views.py:372
+msgid "OTP and Phone is required"
+msgstr "OTP e telefone são obrigatórios."
+
+#: account/api/api_views.py:284 account/api/api_views.py:383
+#: account/api/api_views.py:434
+msgid "Not Valid Code or Expired, Request a New One"
+msgstr "Código inválido ou expirado. Solicite um novo."
+
+#: account/api/api_views.py:299 account/api/api_views.py:402
+msgid "Phone Verified Successfully."
+msgstr "Telefone verificado com sucesso."
+
+#: account/api/api_views.py:313
+msgid ""
+"This is your already registered and verified number. Enter a different "
+"number to update."
+msgstr ""
+"Este é o seu número já registrado e verificado. Insira um número diferente "
+"para atualizar."
+
+#: account/api/api_views.py:359
+msgid "OTP sent to your phone. Please verify."
+msgstr "OTP enviado para o seu telefone. Por favor, verifique."
+
+#: account/api/api_views.py:416
+msgid "OTP and Email is required"
+msgstr "OTP e e-mail são obrigatórios."
+
+#: account/api/api_views.py:425
+msgid "Invalid Email"
+msgstr "E-mail inválido."
+
+#: account/api/api_views.py:453
+msgid "Email verified successfully."
+msgstr "E-mail verificado com sucesso."
+
+#: account/api/api_views.py:474 account/api/api_views.py:656
+msgid "This email does not exists."
+msgstr "Este e-mail não existe."
+
+#: account/api/api_views.py:482 account/api/api_views.py:663
+msgid "This phone does not exists."
+msgstr "Este telefone não existe."
+
+#: account/api/api_views.py:489
+msgid "Email is not verified."
+msgstr "E-mail não verificado."
+
+#: account/api/api_views.py:499
+msgid "Phone is not verified."
+msgstr "Telefone não verificado."
+
+#: account/api/api_views.py:514
+msgid "Please select plan to proceed."
+msgstr "Por favor, selecione um plano para continuar."
+
+#: account/api/api_views.py:523
+msgid "Account not Approved by admin. Please contact administrator."
+msgstr ""
+"Conta não aprovada pelo administrador. Por favor, entre em contato com o "
+"administrador."
+
+#: account/api/api_views.py:525
+msgid "Your account is deactivated by the admin. Please contact administrator."
+msgstr ""
+"Sua conta foi desativada pelo administrador. Por favor, entre em contato com "
+"o administrador."
+
+#: account/api/api_views.py:527
+msgid "Account is deleted. Please contact administrator."
+msgstr "Conta excluída. Por favor, entre em contato com o administrador."
+
+#: account/api/api_views.py:529 account/api/serializers.py:200
+#: account/api/serializers.py:211
+msgid "Wrong Credentials!"
+msgstr "Credenciais incorretas!"
+
+#: account/api/api_views.py:533
+msgid "Email/Phone is required"
+msgstr "E-mail/Telefone é obrigatório."
+
+#: account/api/api_views.py:575
+msgid "refresh_token field is required!"
+msgstr "O campo refresh_token é obrigatório!"
+
+#: account/api/api_views.py:584 account/api/api_views.py:590
+msgid "Token is invalid or expired"
+msgstr "Token inválido ou expirado."
+
+#: account/api/api_views.py:605
+msgid "You have successfully logged out!"
+msgstr "Você saiu com sucesso!"
+
+#: account/api/api_views.py:615 account/api/api_views.py:700
+#: account/api/api_views.py:797
+msgid "Email is Required!"
+msgstr "E-mail é obrigatório!"
+
+#: account/api/api_views.py:619 account/api/api_views.py:711
+msgid "No Account Found!"
+msgstr "Nenhuma conta encontrada!"
+
+#: account/api/api_views.py:622
+msgid "User is Not Active, Activate your account first!"
+msgstr "Usuário não está ativo. Ative sua conta primeiro!"
+
+#: account/api/api_views.py:635 account/api/api_views.py:686
+#: account/api/api_views.py:725 account/api/api_views.py:773
+msgid "Check your email for confirmation Code!"
+msgstr "Verifique seu e-mail para o código de confirmação!"
+
+#: account/api/api_views.py:650
+msgid "Email/Phone is Required!"
+msgstr "E-mail/Telefone é obrigatório!"
+
+#: account/api/api_views.py:666
+msgid "Email is not verified, verify your email first!"
+msgstr "E-mail não verificado. Verifique seu e-mail primeiro!"
+
+#: account/api/api_views.py:669
+msgid "Phone is not verified, verify your phone first!"
+msgstr "Telefone não verificado. Verifique seu telefone primeiro!"
+
+#: account/api/api_views.py:703
+msgid "Usage is Required. Register/Forgot"
+msgstr "O uso é obrigatório. Registrar/Esqueceu"
+
+#: account/api/api_views.py:706 account/api/api_views.py:744
+msgid "Invalid Usage"
+msgstr "Uso inválido"
+
+#: account/api/api_views.py:721 account/api/api_views.py:766
+msgid "Please use below OTP to verify your account"
+msgstr "Por favor, use o OTP abaixo para verificar sua conta"
+
+#: account/api/api_views.py:738
+msgid "New email is Required!"
+msgstr "Novo e-mail é obrigatório!"
+
+#: account/api/api_views.py:741
+msgid "Usage is Required. Change Email"
+msgstr "O uso é obrigatório. Alterar e-mail"
+
+#: account/api/api_views.py:754
+msgid "This email already exist."
+msgstr "Este e-mail já existe."
+
+#: account/api/api_views.py:789
+msgid "Code is Required!"
+msgstr "Código é obrigatório!"
+
+#: account/api/api_views.py:804
+msgid "Email not Found!"
+msgstr "E-mail não encontrado!"
+
+#: account/api/api_views.py:809 account/api/api_views.py:2937
+msgid "Invalid Code"
+msgstr "Código inválido"
+
+#: account/api/api_views.py:815 account/api/api_views.py:877
+#: account/api/api_views.py:894
+msgid "Code Expired, Request a New One!"
+msgstr "Código expirado, solicite um novo!"
+
+#: account/api/api_views.py:828
+msgid "Account has been verified successfully"
+msgstr "Conta foi verificada com sucesso."
+
+#: account/api/api_views.py:836
+msgid "Wrong Confirmation Code!"
+msgstr "Código de confirmação incorreto!"
+
+#: account/api/api_views.py:859
+msgid "code and email is not there."
+msgstr "Código e e-mail não estão presentes."
+
+#: account/api/api_views.py:868
+msgid "Email is Invalid."
+msgstr "E-mail é inválido."
+
+#: account/api/api_views.py:884
+msgid "Wrong confirmation code"
+msgstr "Código de confirmação incorreto!"
+
+#: account/api/api_views.py:904
+msgid "Both Fields are required!"
+msgstr "Ambos os campos são obrigatórios!"
+
+#: account/api/api_views.py:915
+msgid "Passwords do not match"
+msgstr "Senhas não coincidem."
+
+#: account/api/api_views.py:921
+msgid "Password has been set!"
+msgstr "Senha foi definida!"
+
+#: account/api/api_views.py:936
+msgid "Wrong old Password"
+msgstr "Senha antiga incorreta."
+
+#: account/api/api_views.py:942
+msgid "Password has been successfully changed!"
+msgstr "Senha foi alterada com sucesso!"
+
+#: account/api/api_views.py:988
+msgid "Invalid business category"
+msgstr "Categoria comercial inválida."
+
+#: account/api/api_views.py:996
+msgid "Your business category is already set to '{}'. You cannot change it."
+msgstr ""
+"Sua categoria comercial já está definida como '{}'. Você não pode alterá-la."
+
+#: account/api/api_views.py:1055
+msgid "Profile Updated Successfully"
+msgstr "Perfil atualizado com sucesso."
+
+#: account/api/api_views.py:1060
+msgid "Some error"
+msgstr "Algum erro."
+
+#: account/api/api_views.py:1127
+msgid "You cannot create family member"
+msgstr "Você não pode criar um membro da família."
+
+#: account/api/api_views.py:1163
+msgid "Family Member Added Successfully"
+msgstr "Membro da família adicionado com sucesso."
+
+#: account/api/api_views.py:1173
+msgid "Family Member Updated Successfully"
+msgstr "Membro da família atualizado com sucesso."
+
+#: account/api/api_views.py:1191
+msgid "Invalid Family Member"
+msgstr "Membro da família inválido."
+
+#: account/api/api_views.py:1200
+msgid "Family Member deleted Successfully"
+msgstr "Membro da família excluído com sucesso."
+
+#: account/api/api_views.py:1224
+msgid "User is already deleted"
+msgstr "O usuário já foi excluído"
+
+#: account/api/api_views.py:1231
+msgid "Please send delete reason"
+msgstr "Por favor, envie o currículo"
+
+#: account/api/api_views.py:1240
+msgid "Invalid Reason"
+msgstr "Plano inválido."
+
+#: account/api/api_views.py:1248
+msgid ""
+"You cannot delete your account for the moment as it is used as default Non "
+"Profitable Organization. Please contact admin for deleting your account."
+msgstr ""
+"Você não pode excluir sua conta no momento, pois ela é usada como a "
+"Organização sem Fins Lucrativos padrão. Entre em contato com o administrador "
+"para excluir sua conta."
+
+#: account/api/api_views.py:1254
+msgid "You cannot delete your account at the moment. Please contact admin."
+msgstr ""
+"Sua conta foi desativada pelo administrador. Por favor, entre em contato com "
+"o administrador."
+
+#: account/api/api_views.py:1265
+msgid "Account deleted Successfully."
+msgstr "Jornada excluída com sucesso."
+
+#: account/api/api_views.py:1377
+msgid "Plan is required"
+msgstr "Plano é obrigatório."
+
+#: account/api/api_views.py:1387 account/api/api_views.py:1456
+#: account/api/api_views.py:1521 account/api/api_views.py:1553
+#: account/api/api_views.py:1585 account/api/api_views.py:1627
+#: account/api/api_views.py:1807 account/api/api_views.py:1842
+#: account/api/api_views.py:2109
+msgid "You cannot access this module."
+msgstr "Ative seu plano para acessar este módulo"
+
+#: account/api/api_views.py:1395 account/api/api_views.py:1464
+#: account/api/api_views.py:1529 account/api/api_views.py:1561
+#: account/api/api_views.py:1593 account/api/api_views.py:1635
+#: account/api/api_views.py:1768 account/api/api_views.py:1815
+#: account/api/api_views.py:1850 account/api/api_views.py:2117
+msgid "You cannot access this module"
+msgstr "Ative seu plano para acessar este módulo"
+
+#: account/api/api_views.py:1404
+msgid "Invalid Plan"
+msgstr "Plano inválido."
+
+#: account/api/api_views.py:1411
+msgid "This plan is not for current user type"
+msgstr "Este plano não é para o tipo de usuário atual."
+
+#: account/api/api_views.py:1430
+msgid "Plan activated successfully"
+msgstr "Plano ativado com sucesso."
+
+#: account/api/api_views.py:1470
+msgid "Payment Detail is missing"
+msgstr "Detalhe do pagamento está faltando."
+
+#: account/api/api_views.py:1479
+msgid "Payment Detail is Invalid"
+msgstr "Detalhe do pagamento é inválido."
+
+#: account/api/api_views.py:1505
+msgid "Payment gateway issue in stripe"
+msgstr "Detalhe do pagamento está faltando."
+
+#: account/api/api_views.py:1658 account/api/api_views.py:2061
+msgid "Invalid payment method."
+msgstr "Método de pagamento inválido."
+
+#: account/api/api_views.py:1670 account/api/api_views.py:2073
+msgid "This payment method is marked default successfully."
+msgstr "Termos e condições criados com sucesso."
+
+#: account/api/api_views.py:1681
+msgid "Please send payment method to delete"
+msgstr "Por favor, envie detalhes do pagamento."
+
+#: account/api/api_views.py:1692 account/api/api_views.py:2200
+msgid "Invalid payment method"
+msgstr "Método de pagamento inválido."
+
+#: account/api/api_views.py:1698
+msgid "You cannot delete the default payment method."
+msgstr "Você não pode criar um membro da família."
+
+#: account/api/api_views.py:1711 account/api/api_views.py:2093
+msgid "Payment method deleted successfully."
+msgstr "Plano excluído com sucesso."
+
+#: account/api/api_views.py:1735
+msgid "Checkout session id is missing"
+msgstr "O ID da sessão de checkout está ausente"
+
+#: account/api/api_views.py:1745
+msgid "Payment method added successfully"
+msgstr "Plano criado com sucesso."
+
+#: account/api/api_views.py:1759
+msgid "Please send temp token"
+msgstr "Por favor, envie o currículo"
+
+#: account/api/api_views.py:1856 account/api/api_views.py:2123
+msgid "Please send payment detail"
+msgstr "Por favor, envie detalhes do pagamento."
+
+#: account/api/api_views.py:1867 account/api/api_views.py:2134
+msgid "Invalid payment details"
+msgstr "Detalhes do pagamento inválidos."
+
+#: account/api/api_views.py:1883 account/api/api_views.py:1954
+#: account/api/api_views.py:2033 account/api/api_views.py:2242
+msgid "Some problem in payment"
+msgstr "Algum problema no pagamento."
+
+#: account/api/api_views.py:1895 account/api/api_views.py:1967
+#: account/api/api_views.py:2151 account/api/api_views.py:2189
+#: account/api/api_views.py:2255
+msgid "Payment Failed"
+msgstr "Pagamento falhou."
+
+#: account/api/api_views.py:1900
+msgid "Invalid Token"
+msgstr "Token inválido."
+
+#: account/api/api_views.py:1908 account/api/api_views.py:1980
+#: account/api/api_views.py:2208
+msgid "For using tranzila, make sure your currency is Israeli Shekels"
+msgstr ""
+"Para usar tranzila, certifique-se de que sua moeda seja Shekels israelenses."
+
+#: account/api/api_views.py:1914 account/api/api_views.py:1986
+#: account/api/api_views.py:2214
+msgid "Please enter card number"
+msgstr "Por favor, insira o número do cartão."
+
+#: account/api/api_views.py:1921 account/api/api_views.py:1993
+#: account/api/api_views.py:2221
+msgid "Please enter expiry month"
+msgstr "Por favor, insira o mês de expiração."
+
+#: account/api/api_views.py:1928 account/api/api_views.py:2000
+#: account/api/api_views.py:2228
+msgid "Please enter expiry year"
+msgstr "Por favor, insira o ano de expiração."
+
+#: account/api/api_views.py:1946 account/api/api_views.py:2016
+msgid "This card already exist."
+msgstr "Este e-mail já existe."
+
+#: account/api/api_views.py:2046
+msgid "Some problem in adding the new payment method."
+msgstr "Problema ao adicionar o novo método de pagamento."
+
+#: account/api/api_views.py:2086
+msgid "This payment method does not exist"
+msgstr "Este telefone não existe."
+
+#: account/api/api_views.py:2176
+msgid "Payment Successful"
+msgstr "Pagamento bem-sucedido."
+
+#: account/api/api_views.py:2398
+msgid "Please send location to add"
+msgstr "Por favor, envie a localização para adicionar."
+
+#: account/api/api_views.py:2408
+msgid "Please make payments for adding more locations."
+msgstr "Por favor, faça pagamentos para adicionar mais locais."
+
+#: account/api/api_views.py:2498 account/api/api_views.py:2645
+msgid "This location does not exist."
+msgstr "Esta localização não existe."
+
+#: account/api/api_views.py:2515
+msgid "This store manager email already exist."
+msgstr "Este e-mail do gerente da loja já existe."
+
+#: account/api/api_views.py:2530
+msgid "This store manager phone already exist."
+msgstr "Este telefone do gerente da loja já existe."
+
+#: account/api/api_views.py:2567
+msgid "Please send number of location to add"
+msgstr "Por favor, envie o número de locais para adicionar."
+
+#: account/api/api_views.py:2668
+msgid "Location deleted successfully"
+msgstr "Local excluído com sucesso."
+
+#: account/api/api_views.py:2715 account/api/api_views.py:2999
+#: account/api/api_views.py:3063
+msgid "This user does not exist."
+msgstr "Este usuário não existe."
+
+#: account/api/api_views.py:2737
+msgid "Ngo video added successfully"
+msgstr "Vídeo da ONG adicionado com sucesso."
+
+#: account/api/api_views.py:2766 account/api/api_views.py:2788
+#: account/api/api_views.py:2815 account/api/api_views.py:3031
+#: account/api/api_views.py:3353
+msgid "This video does not exist."
+msgstr "Este vídeo não existe."
+
+#: account/api/api_views.py:2800
+msgid "Ngo video updated successfully"
+msgstr "Vídeo da ONG atualizado com sucesso."
+
+#: account/api/api_views.py:2822
+msgid "Ngo video deleted successfully"
+msgstr "Vídeo da ONG excluído com sucesso."
+
+#: account/api/api_views.py:2846
+msgid "Password is correct"
+msgstr "Senha está correta."
+
+#: account/api/api_views.py:2851
+msgid "Password incorrect"
+msgstr "Senha incorreta."
+
+#: account/api/api_views.py:2865 account/api/api_views.py:2931
+msgid "New Email is required"
+msgstr "Novo e-mail é obrigatório!"
+
+#: account/api/api_views.py:2878 account/api/api_views.py:2947
+msgid "This new email is already in use. Send another email"
+msgstr "Este novo e-mail já está em uso. Envie outro e-mail."
+
+#: account/api/api_views.py:2895
+msgid ""
+"We have sent a verification code on your new email {}. Check Your Email For "
+"Verification Code!"
+msgstr ""
+"Enviamos um código de verificação para o seu novo e-mail {}. Verifique seu e-"
+"mail para o código de verificação."
+
+#: account/api/api_views.py:2905 account/api/api_views.py:2961
+msgid "Please send a valid email"
+msgstr "Por favor, envie um e-mail válido."
+
+#: account/api/api_views.py:2922
+msgid "OTP is required"
+msgstr "OTP é obrigatório."
+
+#: account/api/api_views.py:2955
+msgid "Email changed successfully"
+msgstr "E-mail alterado com sucesso."
+
+#: account/api/api_views.py:2983
+msgid "{} for news letter"
+msgstr "{} para boletim informativo."
+
+#: account/api/api_views.py:3073 deals/api/api_views.py:871
+msgid "Review added successfully."
+msgstr "Avaliação adicionada com sucesso."
+
+#: account/api/api_views.py:3080 deals/api/api_views.py:877
+msgid "Already reviewed"
+msgstr "Já avaliado."
+
+#: account/api/api_views.py:3098 account/api/api_views.py:3516
+#: classifieds/api/api_views.py:321 classifieds/api/api_views.py:350
+#: deals/api/api_views.py:232 deals/api/api_views.py:1052
+msgid "Invalid User"
+msgstr "Usuário inválido."
+
+#: account/api/api_views.py:3151 account/api/api_views.py:3184
+#: deals/api/api_views.py:948 deals/api/api_views.py:983
+msgid "Invalid Review"
+msgstr "Avaliação inválida."
+
+#: account/api/api_views.py:3163 deals/api/api_views.py:962
+msgid "Review marked successfully."
+msgstr "Avaliação marcada com sucesso."
+
+#: account/api/api_views.py:3169 deals/api/api_views.py:968
+msgid "Already marked"
+msgstr "Já marcado."
+
+#: account/api/api_views.py:3196 deals/api/api_views.py:997
+msgid "Review flagged successfully."
+msgstr "Avaliação marcada com sucesso."
+
+#: account/api/api_views.py:3202 deals/api/api_views.py:1003
+msgid "Already flagged"
+msgstr "Já marcado."
+
+#: account/api/api_views.py:3526 classifieds/api/api_views.py:419
+#: deals/api/api_views.py:1516
+msgid "Flagged successfully."
+msgstr "Marcado com sucesso."
+
+#: account/api/api_views.py:3532 classifieds/api/api_views.py:425
+#: deals/api/api_views.py:1522
+msgid "Already flagged."
+msgstr "Já marcado."
+
+#: account/api/api_views.py:3570 account/api/api_views.py:3643
+#: account/api/api_views.py:3685 deals/api/api_views.py:1468
+msgid "The date format seems wrong. Please send date as: 2024-02-01"
+msgstr ""
+"O formato da data parece estar incorreto. Por favor, envie a data como: "
+"2024-02-01."
+
+#: account/api/api_views.py:3595
+msgid "Invalid payment."
+msgstr "Pagamento inválido."
+
+#: account/api/api_views.py:3773
+msgid ""
+"Non profitable organizations cannot choose another Non profitable "
+"organizations."
+msgstr ""
+"Organizações sem fins lucrativos não podem escolher outras organizações sem "
+"fins lucrativos."
+
+#: account/api/api_views.py:3779
+msgid "Please select ngo to update"
+msgstr "Por favor, selecione um plano para continuar."
+
+#: account/api/api_views.py:3788
+msgid "Invalid Non Profitable Organization"
+msgstr "Organização sem fins lucrativos inválida"
+
+#: account/api/api_views.py:3796
+msgid "Non Profitable Organization updated successfully"
+msgstr "Vídeo da ONG atualizado com sucesso."
+
+#: account/api/serializers.py:47
+msgid "Please enter proper phone number."
+msgstr "Por favor, insira um número de telefone adequado."
+
+#: account/api/serializers.py:57
+msgid "NGO is required."
+msgstr "ONG é obrigatória."
+
+#: account/api/serializers.py:66
+msgid "Please send valid ngo."
+msgstr "Por favor, envie uma ONG válida."
+
+#: account/api/serializers.py:76
+msgid "Name is required."
+msgstr "Nome é obrigatório."
+
+#: account/api/serializers.py:83 account/api/serializers.py:99
+msgid "Administrator name is required."
+msgstr "Nome do administrador é obrigatório."
+
+#: account/api/serializers.py:92
+msgid "Business name is required."
+msgstr "Nome do negócio é obrigatório."
+
+#: account/api/serializers.py:108
+msgid "First Name is required."
+msgstr "Primeiro nome é obrigatório."
+
+#: account/api/serializers.py:115
+msgid "Last Name is required."
+msgstr "Último nome é obrigatório."
+
+#: account/api/serializers.py:123
+msgid "Country is required."
+msgstr "País é obrigatório."
+
+#: account/api/serializers.py:131
+msgid "Language is required."
+msgstr "Idioma é obrigatório."
+
+#: account/api/serializers.py:139
+msgid "Currency is required."
+msgstr "Moeda é obrigatória."
+
+#: account/api/serializers.py:208
+msgid "Account is not verified, Verify it first!"
+msgstr "Conta não está verificada. Verifique primeiro!"
+
+#: account/api/serializers.py:214
+msgid "Both fields are required!"
+msgstr "Ambos os campos são obrigatórios!"
+
+#: account/api/serializers.py:282
+msgid "current_password is required"
+msgstr "Senha atual é obrigatória."
+
+#: account/api/serializers.py:285
+msgid "new_password is required"
+msgstr "Nova senha é obrigatória."
+
+#: account/api/serializers.py:288
+msgid "confirm_new_password is required"
+msgstr "Confirme a nova senha é obrigatória."
+
+#: account/api/serializers.py:291
+msgid "Passwords do not match!"
+msgstr "Senhas não correspondem!"
+
+#: account/api/serializers.py:294
+msgid "Password must be more then 8 digits long"
+msgstr "A senha deve ter mais de 8 dígitos."
+
+#: account/api/serializers.py:745 account/api/serializers.py:753
+msgid "This field is required"
+msgstr "Este campo é obrigatório."
+
+#: account/api/serializers.py:771
+msgid ""
+"This email {} is already registered with our system. Please enter a new "
+"email."
+msgstr ""
+"Este e-mail {} já está registrado em nosso sistema. Por favor, insira um "
+"novo e-mail."
+
+#: account/api/serializers.py:779
+msgid ""
+"This phone {} is already registered with our system. Please enter a new "
+"phone."
+msgstr "Este telefone {} já está registrado em nosso sistema. Por favor"
+
+#: account/api/serializers.py:1192
+msgid "Monthly Subscription"
+msgstr "מינוי חודשי"
+
+#: account/api/serializers.py:1194
+msgid "Listing"
+msgstr "רישום"
+
+#: account/api/serializers.py:1196 deals/models.py:60
+msgid "Weekly Deal"
+msgstr "Oferta Semanal"
+
+#: account/api/serializers.py:1198 account/models.py:67
+msgid "Classified"
+msgstr "Classificado"
+
+#: account/api/serializers.py:1200
+msgid "New Payment Method"
+msgstr "Novo método de pagamento"
+
+#: account/api/serializers.py:1202 account/models.py:70
+msgid "Location"
+msgstr "Localização"
+
+#: account/managetranzila.py:144
+msgid "Transaction successful"
+msgstr "Transação bem-sucedida."
+
+#: account/models.py:35 account/models.py:158
+msgid "Category Name"
+msgstr "Nome da Categoria"
+
+#: account/models.py:66
+msgid "Deal"
+msgstr "Negócio"
+
+#: account/models.py:68
+msgid "News"
+msgstr "Notícias"
+
+#: account/models.py:69
+msgid "Job"
+msgstr "Emprego"
+
+#: account/models.py:88 account/models.py:221
+msgid "Name"
+msgstr "Nome"
+
+#: account/models.py:166
+msgid "Category Keyword"
+msgstr "Palavra-chave da Categoria"
+
+#: account/models.py:177
+msgid "Friends"
+msgstr "Amigos"
+
+#: account/models.py:178
+msgid "Family"
+msgstr "Família"
+
+#: account/models.py:182
+msgid "Didn't meet expectations"
+msgstr "Não atendeu às expectativas"
+
+#: account/models.py:183
+msgid "Too difficult to navigate, download, upload"
+msgstr "Muito difícil de navegar, baixar, carregar"
+
+#: account/models.py:184
+msgid "Too expensive"
+msgstr "Muito caro"
+
+#: account/models.py:185
+msgid "Not enough choices"
+msgstr "Não há escolhas suficientes"
+
+#: account/models.py:186
+msgid "Rather Not Say"
+msgstr "Prefiro não dizer"
+
+#: account/models.py:202 account/models.py:477
+msgid "Email Address"
+msgstr "Endereço de E-mail"
+
+#: account/models.py:203 account/models.py:478 deals/models.py:113
+msgid "Phone Number"
+msgstr "Número de Telefone"
+
+#: account/models.py:209
+msgid "Language"
+msgstr "Idioma"
+
+#: account/models.py:212
+msgid "Profile Pic"
+msgstr "Foto do Perfil"
+
+#: account/models.py:213
+msgid "Cover Picture"
+msgstr "Foto de Capa"
+
+#: account/models.py:215
+msgid "Paid Account"
+msgstr "Conta Paga"
+
+#: account/models.py:217 account/models.py:475
+msgid "Relation"
+msgstr "Relação"
+
+#: account/models.py:220
+msgid "About"
+msgstr "Sobre"
+
+#: account/models.py:222
+msgid "Administrator Name"
+msgstr "Nome do Administrador"
+
+#: account/models.py:223
+msgid "Business Category"
+msgstr "Categoria do Negócio"
+
+#: account/models.py:224
+msgid "Business Contact"
+msgstr "Contato do Negócio"
+
+#: account/models.py:225
+msgid "Business Email"
+msgstr "E-mail do Negócio"
+
+#: account/models.py:226
+msgid "Website Url"
+msgstr "URL do Site"
+
+#: account/models.py:227
+msgid "Facebook"
+msgstr "Facebook"
+
+#: account/models.py:228
+msgid "Twitter"
+msgstr "Twitter"
+
+#: account/models.py:229
+msgid "Instagram"
+msgstr "Instagram"
+
+#: account/models.py:230
+msgid "Youtube"
+msgstr "Youtube"
+
+#: account/models.py:238
+msgid "Newsletter Subscribed"
+msgstr "Assinatura do Boletim Informativo"
+
+#: account/models.py:359
+msgid "Pending"
+msgstr "ממתין"
+
+#: account/models.py:360
+msgid "Complete"
+msgstr "הושלם"
+
+#: account/models.py:361
+msgid "Cancelled"
+msgstr "בוטל"
+
+#: account/models.py:474
+msgid "Full Name"
+msgstr "Nome Completo"
+
+#: account/models.py:476
+msgid "Member Pic"
+msgstr "Foto do Membro"
+
+#: account/models.py:492
+msgid "Menu"
+msgstr "Menu"
+
+#: account/models.py:520
+msgid "Video Title"
+msgstr "Título do Vídeo"
+
+#: account/models.py:521
+msgid "Video Link"
+msgstr "Link do Vídeo"
+
+#: account/models.py:528
+msgid "Store Managed Email Address"
+msgstr "Endereço de E-mail Gerenciado pela Loja"
+
+#: account/models.py:529
+msgid "Store Managed Phone Number"
+msgstr "Número de Telefone Gerenciado pela Loja"
+
+#: account/models.py:530
+msgid "Location Name"
+msgstr "Nome do Local"
+
+#: account/models.py:533
+msgid "Address"
+msgstr "Endereço"
+
+#: account/models.py:534
+msgid "City"
+msgstr "Cidade"
+
+#: account/models.py:535
+msgid "State"
+msgstr "Estado"
+
+#: account/models.py:536
+msgid "Country"
+msgstr "País"
+
+#: account/models.py:537
+msgid "Zipcode"
+msgstr "Código Postal"
+
+#: account/views.py:543
+msgid "Plan created successfully"
+msgstr "Plano criado com sucesso."
+
+#: account/views.py:557
+msgid "Plan updated successfully"
+msgstr "Plano atualizado com sucesso."
+
+#: account/views.py:569
+msgid "Plan deleted successfully"
+msgstr "Plano excluído com sucesso."
+
+#: account/views.py:600
+msgid "Product Price updated successfully"
+msgstr "Preço do produto atualizado com sucesso."
+
+#: account/views.py:624
+msgid "Delivery partner created successfully"
+msgstr "Parceiro de entrega criado com sucesso."
+
+#: account/views.py:638
+msgid "Delivery partner updated successfully"
+msgstr "Parceiro de entrega atualizado com sucesso."
+
+#: account/views.py:822
+msgid "Faq created successfully"
+msgstr "FAQ criado com sucesso."
+
+#: account/views.py:846
+msgid "Faq updated successfully"
+msgstr "FAQ atualizado com sucesso."
+
+#: account/views.py:858
+msgid "Faq deleted successfully"
+msgstr "FAQ excluído com sucesso."
+
+#: account/views.py:875
+msgid "About us created successfully"
+msgstr "Sobre nós criado com sucesso."
+
+#: account/views.py:889
+msgid "About updated successfully"
+msgstr "Sobre atualizado com sucesso."
+
+#: account/views.py:912
+msgid "About Journey created successfully"
+msgstr "Sobre a jornada criada com sucesso."
+
+#: account/views.py:926
+msgid "Journey updated successfully"
+msgstr "Jornada atualizada com sucesso."
+
+#: account/views.py:938
+msgid "Journey deleted successfully"
+msgstr "Jornada excluída com sucesso."
+
+#: account/views.py:956
+msgid "Team created successfully"
+msgstr "Equipe criada com sucesso."
+
+#: account/views.py:970
+msgid "Team updated successfully"
+msgstr "Equipe atualizada com sucesso."
+
+#: account/views.py:982
+msgid "Team deleted successfully"
+msgstr "Equipe excluída com sucesso."
+
+#: account/views.py:999
+msgid "Terms and conditions created successfully"
+msgstr "Termos e condições criados com sucesso."
+
+#: account/views.py:1013
+msgid "Terms and conditions updated successfully"
+msgstr "Termos e condições atualizados com sucesso."
+
+#: account/views.py:1042 account/views.py:1060 article/api/api_views.py:83
+#: article/api/api_views.py:108 article/api/api_views.py:130
+msgid "Invalid News"
+msgstr "Notícias inválidas."
+
+#: account/views.py:1048
+msgid "Status Updated Successfully"
+msgstr "Status atualizado com sucesso."
+
+#: account/views.py:1066
+msgid "News removed from deleted."
+msgstr "Notícias removidas dos excluídos."
+
+#: account/views.py:1069
+msgid "News deleted successfully"
+msgstr "Notícias excluídas com sucesso."
+
+#: account/views.py:1237
+msgid "Privacy policy created successfully"
+msgstr "Política de privacidade criada com sucesso."
+
+#: account/views.py:1251
+msgid "Privacy Policy updated successfully"
+msgstr "Política de privacidade atualizada com sucesso."
+
+#: account/views.py:1321
+msgid "Vendor created successfully"
+msgstr "Fornecedor criado com sucesso."
+
+#: account/views.py:1335
+msgid "Vendor updated successfully"
+msgstr "Fornecedor atualizado com sucesso."
+
+#: account/views.py:1347
+msgid "Vendor deleted successfully"
+msgstr "Fornecedor excluído com sucesso."
+
+#: account/views.py:1366
+msgid "Expense created successfully"
+msgstr "Despesa criada com sucesso."
+
+#: account/views.py:1380
+msgid "Expense updated successfully"
+msgstr "Despesa atualizada com sucesso."
+
+#: account/views.py:1392
+msgid "Expense deleted successfully"
+msgstr "Despesa excluída com sucesso."
+
+#: article/api/api_views.py:24
+msgid "News article created successfully"
+msgstr "Artigo de notícias criado com sucesso."
+
+#: article/api/api_views.py:93
+msgid "News updated successfully"
+msgstr "Notícias atualizadas com sucesso."
+
+#: article/api/api_views.py:138
+msgid "News delete requested successfully"
+msgstr "Solicitação de exclusão de notícias realizada com sucesso."
+
+#: blogs/models.py:23 classifieds/models.py:33 deals/models.py:38
+msgid "Title"
+msgstr "Título"
+
+#: blogs/models.py:24
+msgid "Write news and article"
+msgstr "Escreva notícias e artigos."
+
+#: blogs/models.py:25
+msgid "Feature Picture"
+msgstr "Imagem de destaque."
+
+#: classifieds/api/api_views.py:45
+msgid "Please upgrade your plan"
+msgstr "Por favor, faça upgrade do seu plano."
+
+#: classifieds/api/api_views.py:83 deals/api/api_views.py:102
+#: deals/api/api_views.py:475
+msgid "Image is required"
+msgstr "A imagem é obrigatória."
+
+#: classifieds/api/api_views.py:116
+msgid "Classified created successfully"
+msgstr "Classificado criado com sucesso."
+
+#: classifieds/api/api_views.py:159 classifieds/api/api_views.py:208
+#: classifieds/api/api_views.py:232
+msgid "Invalid classified"
+msgstr "Classificado inválido."
+
+#: classifieds/api/api_views.py:193 classifieds/api/api_views.py:249
+msgid "Classified updated successfully"
+msgstr "Classificado atualizado com sucesso."
+
+#: classifieds/api/api_views.py:215
+msgid "Classified deleted successfully"
+msgstr "Classificado excluído com sucesso."
+
+#: classifieds/api/api_views.py:376 classifieds/api/api_views.py:405
+msgid "This classified does not exist."
+msgstr "Este classificado não existe."
+
+#: classifieds/api/serializers.py:25 deals/api/serializers.py:227
+#: deals/api/serializers.py:315 jobs/api/serializers.py:30
+msgid "Expiry date should be greater than today"
+msgstr "A data de validade deve ser maior que a data atual."
+
+#: classifieds/models.py:9 deals/models.py:103
+msgid "Monthly"
+msgstr "Mensal"
+
+#: classifieds/models.py:10
+msgid "Quarterly"
+msgstr "Trimestral"
+
+#: classifieds/models.py:11 deals/models.py:104
+msgid "Yearly"
+msgstr "Anual"
+
+#: classifieds/models.py:34 deals/models.py:39
+msgid "Description"
+msgstr "Descrição"
+
+#: classifieds/models.py:36
+msgid "Price"
+msgstr "Preço"
+
+#: classifieds/models.py:40
+msgid "Contact Phone"
+msgstr "Telefone para Contato"
+
+#: classifieds/models.py:41
+msgid "Contact Email"
+msgstr "E-mail para Contato"
+
+#: content/api/api_views.py:86
+msgid "Thank you for the message. We will contact soon."
+msgstr "Obrigado pela mensagem. Entraremos em contato em breve."
+
+#: content/models.py:9
+msgid "Question"
+msgstr "Pergunta"
+
+#: deals/api/api_views.py:34
+msgid "You have not activated any plan.Please activate plan to add deal."
+msgstr ""
+"Você não ativou nenhum plano. Ative um plano para adicionar uma oferta."
+
+#: deals/api/api_views.py:180 deals/api/api_views.py:621
+msgid "Deal created successfully"
+msgstr "Oferta criada com sucesso."
+
+#: deals/api/api_views.py:303
+msgid "Invalid deal"
+msgstr "Oferta inválida."
+
+#: deals/api/api_views.py:315
+msgid "Invalid Location"
+msgstr "Localização inválida."
+
+#: deals/api/api_views.py:340
+msgid "Deal updated successfully"
+msgstr "Oferta atualizada com sucesso."
+
+#: deals/api/api_views.py:357 deals/api/api_views.py:394
+#: deals/api/api_views.py:895
+msgid "Invalid Deal"
+msgstr "Oferta inválida."
+
+#: deals/api/api_views.py:407
+msgid "Deal deleted successfully"
+msgstr "Oferta excluída com sucesso."
+
+#: deals/api/api_views.py:483 deals/api/api_views.py:645
+msgid "Business Sub Category is required"
+msgstr "A subcategoria do negócio é obrigatória."
+
+#: deals/api/api_views.py:497 deals/api/api_views.py:659
+msgid ""
+"For creating Real Estate deal, the business category can be rent,sale or "
+"vacational rental only"
+msgstr ""
+"Para criar uma oferta de imóveis, a categoria do negócio pode ser aluguel, "
+"venda ou aluguel de temporada apenas."
+
+#: deals/api/api_views.py:507 deals/api/api_views.py:518
+#: deals/api/api_views.py:669 deals/api/api_views.py:680
+#: deals/api/serializers.py:191
+msgid "Free member discount type is required"
+msgstr "O tipo de desconto para membros grátis é obrigatório."
+
+#: deals/api/api_views.py:524 deals/api/api_views.py:686
+msgid "Free member discount value is required"
+msgstr "O valor do desconto para membros grátis é obrigatório."
+
+#: deals/api/api_views.py:530 deals/api/api_views.py:692
+#: deals/api/serializers.py:201
+msgid "Free member code is required"
+msgstr "O código para membros grátis é obrigatório."
+
+#: deals/api/api_views.py:536 deals/api/api_views.py:698
+#: deals/api/serializers.py:211
+msgid "Club member discount type is required"
+msgstr "O tipo de desconto para membros do clube é obrigatório."
+
+#: deals/api/api_views.py:542 deals/api/api_views.py:704
+#: deals/api/serializers.py:215
+msgid "Club member discount value is required"
+msgstr "O valor do desconto para membros do clube é obrigatório."
+
+#: deals/api/api_views.py:548 deals/api/api_views.py:710
+#: deals/api/serializers.py:219
+msgid "Club member code is required"
+msgstr "O código para membros do clube é obrigatório."
+
+#: deals/api/api_views.py:554 deals/api/api_views.py:716
+msgid "Offer text is required"
+msgstr "O texto da oferta é obrigatório."
+
+#: deals/api/api_views.py:560 deals/api/api_views.py:722
+msgid "Price type is required"
+msgstr "O tipo de preço é obrigatório."
+
+#: deals/api/api_views.py:637
+msgid "Invalid property deal"
+msgstr "Oferta de propriedade inválida."
+
+#: deals/api/api_views.py:751
+msgid "Property deal updated successfully"
+msgstr "Oferta de propriedade atualizada com sucesso."
+
+#: deals/api/api_views.py:1340 deals/api/api_views.py:1398
+#: deals/api/api_views.py:1428 deals/api/api_views.py:1501
+msgid "This deal does not exist."
+msgstr "Esta oferta não existe."
+
+#: deals/api/api_views.py:1411
+msgid ""
+"Deal redeemed successfully. The redemption details have been sent to your "
+"registered email."
+msgstr ""
+"Oferta resgatada com sucesso. Os detalhes do resgate foram enviados para o "
+"seu e-mail registrado."
+
+#: deals/api/api_views.py:1540
+msgid "NGO Category"
+msgstr "Categoria da ONG"
+
+#: deals/api/api_views.py:1542 deals/api/api_views.py:1556
+#: deals/api/api_views.py:1566 deals/api/api_views.py:1578
+#: deals/api/api_views.py:1595 deals/api/api_views.py:1610
+#: deals/api/api_views.py:1627 deals/api/api_views.py:1665
+#: deals/api/api_views.py:1680 deals/api/api_views.py:1699
+#: deals/api/api_views.py:1720 deals/api/api_views.py:1735
+#: deals/api/api_views.py:1750
+msgid "Distance(Near To Far)"
+msgstr "Distancia (Proximo a Distante)"
+
+#: deals/api/api_views.py:1544 deals/api/api_views.py:1558
+#: deals/api/api_views.py:1568
+msgid "Date Joined(Newest To Oldest)"
+msgstr "Data de Adesão (da Mais Recente para a Mais Antiga)"
+
+#: deals/api/api_views.py:1547
+msgid "Number of Club Members Associated"
+msgstr "Número de Membros do Clube Associados"
+
+#: deals/api/api_views.py:1549
+msgid "Number of Businesses Associated"
+msgstr "Número de Negócios Associados"
+
+#: deals/api/api_views.py:1560 deals/api/api_views.py:1570
+#: deals/api/api_views.py:1603 deals/api/api_views.py:1618
+#: deals/api/api_views.py:1631 deals/api/api_views.py:1654
+#: deals/api/api_views.py:1726 deals/api/api_views.py:1741
+#: deals/api/api_views.py:1756
+msgid "Star Rating"
+msgstr "Avaliacao Estelar"
+
+#: deals/api/api_views.py:1576
+msgid "Classified Category"
+msgstr "Categoria do Classificado"
+
+#: deals/api/api_views.py:1580 deals/api/api_views.py:1597
+#: deals/api/api_views.py:1612 deals/api/api_views.py:1667
+#: deals/api/api_views.py:1682 deals/api/api_views.py:1701
+#: deals/api/api_views.py:1722 deals/api/api_views.py:1737
+#: deals/api/api_views.py:1752
+msgid "Date Listed (Newest to Oldest)"
+msgstr "Data de Listagem (Mais Recente Para Mais Antiga)"
+
+#: deals/api/api_views.py:1582
+msgid "Hamsa Members"
+msgstr "Membros da Hamsa"
+
+#: deals/api/api_views.py:1584 deals/api/api_views.py:1601
+#: deals/api/api_views.py:1616 deals/api/api_views.py:1648
+#: deals/api/api_views.py:1705
+msgid "Price Range (Minimum / Maximum)"
+msgstr "Faixa de Preço (Mínimo / Máximo)"
+
+#: deals/api/api_views.py:1586
+msgid "Condition (New - Used)"
+msgstr "Condição (Novo - Usado)"
+
+#: deals/api/api_views.py:1593
+msgid "Product Category"
+msgstr "Categoria do Produto"
+
+#: deals/api/api_views.py:1599 deals/api/api_views.py:1614
+#: deals/api/api_views.py:1629 deals/api/api_views.py:1646
+#: deals/api/api_views.py:1669 deals/api/api_views.py:1684
+#: deals/api/api_views.py:1703 deals/api/api_views.py:1724
+#: deals/api/api_views.py:1739 deals/api/api_views.py:1754
+msgid "Hamsa Business"
+msgstr "Negócios da Hamsa"
+
+#: deals/api/api_views.py:1608
+msgid "Service Category"
+msgstr "Categoria de Serviço"
+
+#: deals/api/api_views.py:1619
+msgid "Provider Type"
+msgstr "Tipo de Provedor"
+
+#: deals/api/api_views.py:1625 deals/api/api_views.py:1642
+msgid "Restaurant Category"
+msgstr "Categoria de Restaurante"
+
+#: deals/api/api_views.py:1632
+msgid "Delivery Service"
+msgstr "Serviço de Entrega"
+
+#: deals/api/api_views.py:1634
+msgid "Reservation/Walkin"
+msgstr "Reserva/Entrada"
+
+#: deals/api/api_views.py:1636 deals/api/api_views.py:1657
+#: deals/api/api_views.py:1727 deals/api/api_views.py:1742
+#: deals/api/api_views.py:1757
+msgid "Deal by Discount"
+msgstr "Oferta por Desconto"
+
+#: deals/api/api_views.py:1644
+msgid "Name Of Business"
+msgstr "Nome do Negócio"
+
+#: deals/api/api_views.py:1650 deals/api/api_views.py:1691
+#: deals/api/api_views.py:1712
+msgid "Expiration Date"
+msgstr "Data de Expiração"
+
+#: deals/api/api_views.py:1652
+msgid "Number Of Travellers"
+msgstr "Número de Viajantes"
+
+#: deals/api/api_views.py:1655
+msgid "Property Class"
+msgstr "Classe da Propriedade"
+
+#: deals/api/api_views.py:1663
+msgid "Rent Category"
+msgstr "Categoria de Aluguel"
+
+#: deals/api/api_views.py:1671 deals/api/api_views.py:1686
+#: deals/api/api_views.py:1707
+msgid "Number Of Bedrooms"
+msgstr "Número de Quartos"
+
+#: deals/api/api_views.py:1673 deals/api/api_views.py:1688
+#: deals/api/api_views.py:1709
+msgid "No Of Bathroom"
+msgstr "Número de Banheiros"
+
+#: deals/api/api_views.py:1675 deals/api/api_views.py:1690
+#: deals/api/api_views.py:1711
+msgid "SQ FT"
+msgstr "Pés Quadrados"
+
+#: deals/api/api_views.py:1697
+msgid "Sale Category"
+msgstr "Categoria de Venda"
+
+#: deals/api/api_views.py:1718
+msgid "Venue Category"
+msgstr "Categoria de Local"
+
+#: deals/api/api_views.py:1733
+msgid "Sports Category"
+msgstr "Categoria de Esportes"
+
+#: deals/api/api_views.py:1748
+msgid "Movie Category"
+msgstr "Categoria de Filmes"
+
+#: deals/api/serializers.py:186
+msgid "Actual price is required"
+msgstr "O preço real é obrigatório"
+
+#: deals/api/serializers.py:196
+msgid "free_member_discount_value is required"
+msgstr "O valor do desconto para membros grátis é obrigatório"
+
+#: deals/api/serializers.py:207 deals/api/serializers.py:307
+#: jobs/api/serializers.py:22
+msgid "Expiry date is required"
+msgstr "A data de expiração é obrigatória"
+
+#: deals/api/serializers.py:233
+msgid ""
+"Online deal not supported. Please select online supported to add online "
+"deals."
+msgstr ""
+"Oferta online não suportada. Selecione suporte online para adicionar ofertas "
+"online."
+
+#: deals/api/serializers.py:239
+msgid "Redemption link is required."
+msgstr "O link de resgate é obrigatório."
+
+#: deals/models.py:13
+msgid "Fixed Amount"
+msgstr "Conta Paga"
+
+#: deals/models.py:14
+msgid "Percentage Off"
+msgstr ""
+
+#: deals/models.py:18
+msgid "Online"
+msgstr ""
+
+#: deals/models.py:19
+msgid "Offline"
+msgstr ""
+
+#: deals/models.py:20
+msgid "Online Offline"
+msgstr ""
+
+#: deals/models.py:40
+msgid "Actual Price"
+msgstr "Preço Real"
+
+#: deals/models.py:46
+msgid "Deal Type"
+msgstr "Tipo de Oferta"
+
+#: deals/models.py:52 deals/models.py:56
+msgid "Discount Type"
+msgstr "Tipo de Desconto"
+
+#: deals/models.py:53 deals/models.py:57
+msgid "Off Value"
+msgstr "Valor de Desconto"
+
+#: deals/models.py:54 deals/models.py:58
+msgid "Coupon/Deal Code"
+msgstr "Cupom/Código da Oferta"
+
+#: deals/models.py:93
+msgid "Apartment"
+msgstr "Apartamento"
+
+#: deals/models.py:94
+msgid "House"
+msgstr "Casa"
+
+#: deals/models.py:95
+msgid "Hotel"
+msgstr "Hotel"
+
+#: deals/models.py:96
+msgid "Guest House"
+msgstr "Casa de Hóspedes"
+
+#: deals/models.py:97
+msgid "Hostel/PG"
+msgstr "Albergue/Pensão"
+
+#: deals/models.py:98
+msgid "Farmhouse"
+msgstr "Quinta"
+
+#: deals/models.py:99
+msgid "Houseboat"
+msgstr "Casa Flutuante"
+
+#: deals/models.py:114
+msgid "Email"
+msgstr "E-mail"
+
+#: deals/models.py:128
+msgid "Paid"
+msgstr ""
+
+#: deals/models.py:129
+msgid "Failed"
+msgstr "Pagamento falhou."
+
+#: dictionary.py:3
+msgid "Member added to favourites."
+msgstr "Membro adicionado aos favoritos."
+
+#: dictionary.py:4
+msgid "Business added to favourites."
+msgstr "Negócio adicionado aos favoritos."
+
+#: dictionary.py:5
+msgid "Non Profitable Organization added to favourites."
+msgstr "Organização sem fins lucrativos adicionada aos favoritos."
+
+#: dictionary.py:6
+msgid "News Agency added to favourites."
+msgstr "Agência de notícias adicionada aos favoritos."
+
+#: dictionary.py:7
+msgid "Member removed from favourites."
+msgstr "Membro removido dos favoritos."
+
+#: dictionary.py:8
+msgid "Business removed from favourites."
+msgstr "Negócio removido dos favoritos."
+
+#: dictionary.py:9
+msgid "Non Profitable Organization removed from favourites."
+msgstr "Organização sem fins lucrativos removida dos favoritos."
+
+#: dictionary.py:10
+msgid "News Agency removed from favourites."
+msgstr "Agência de notícias removida dos favoritos."
+
+#: dictionary.py:11
+msgid "Deal added to favourite deals"
+msgstr "Negócio adicionado aos negócios favoritos."
+
+#: dictionary.py:12
+msgid "Deal removed from favourite deals"
+msgstr "Negócio removido dos negócios favoritos."
+
+#: dictionary.py:13
+msgid "Classified added to favourite classifieds"
+msgstr "Classificado adicionado aos classificados favoritos."
+
+#: dictionary.py:14
+msgid "Classified removed from favourite classifieds"
+msgstr "Classificado removido dos classificados favoritos."
+
+#: dictionary.py:15
+msgid "Video added to favourite videos"
+msgstr "Vídeo adicionado aos vídeos favoritos."
+
+#: dictionary.py:16
+msgid "Video removed from favourite videos"
+msgstr "Vídeo removido dos vídeos favoritos"
+
+#: dictionary.py:17
+msgid "Video liked successfully"
+msgstr "Vídeo curtido com sucesso"
+
+#: dictionary.py:18
+msgid "Video unliked successfully"
+msgstr "Vídeo descurtido com sucesso"
+
+#: jobs/api/api_views.py:25
+msgid "Job posting created successfully"
+msgstr "Anúncio de emprego criado com sucesso"
+
+#: jobs/api/api_views.py:81 jobs/api/api_views.py:106 jobs/api/api_views.py:133
+#: jobs/api/api_views.py:170 jobs/api/api_views.py:249
+#: jobs/api/api_views.py:302 jobs/api/api_views.py:328
+msgid "Invalid Job"
+msgstr "Emprego inválido"
+
+#: jobs/api/api_views.py:91
+msgid "Job updated successfully"
+msgstr "Emprego atualizado com sucesso"
+
+#: jobs/api/api_views.py:140
+msgid "Job deleted successfully"
+msgstr "Emprego excluído com sucesso"
+
+#: jobs/api/api_views.py:181
+msgid "You have already applied to this job"
+msgstr "Você já se candidatou a este emprego"
+
+#: jobs/api/api_views.py:187
+msgid "Please send resume"
+msgstr "Por favor, envie o currículo"
+
+#: jobs/api/api_views.py:203
+msgid "Invalid resume"
+msgstr "Currículo inválido"
+
+#: jobs/api/api_views.py:220
+msgid "Your job application is saved successfully"
+msgstr "Sua candidatura a emprego foi salva com sucesso"
+
+#: jobs/api/api_views.py:234
+msgid "Month is required"
+msgstr "O mês é obrigatório"
+
+#: jobs/api/api_views.py:241
+msgid "Year is required"
+msgstr "O ano é obrigatório"
+
+#: jobs/api/api_views.py:336
+msgid "Invalid Application"
+msgstr "Candidatura inválida"
+
+#: jobs/api/api_views.py:344
+msgid "Application deleted successfully"
+msgstr "Candidatura excluída com sucesso"
+
+#: jobs/api/api_views.py:359
+msgid "This Job does not exist."
+msgstr "Este emprego não existe"
+
+#: jobs/api/api_views.py:371
+msgid "Job {} favourite."
+msgstr "Emprego {} favorito."
+
+#: jobs/models.py:29
+msgid "Job Title"
+msgstr "Título do Emprego"
+
+#: jobs/models.py:30
+msgid "Job Description"
+msgstr "Descrição do Emprego"
+
+#: jobs/models.py:31
+msgid "Roles and Responsibilities"
+msgstr "Funções e Responsabilidades"
+
+#: jobs/models.py:32
+msgid "Job Type"
+msgstr "Tipo de Emprego"
+
+#: jobs/models.py:35
+msgid "Salary Type"
+msgstr "Tipo de Salário"
+
+#: shuktv/settings.py:135
+msgid "English"
+msgstr "Inglês"
+
+#: shuktv/settings.py:136
+msgid "Spanish"
+msgstr "Espanhol"
+
+#: shuktv/settings.py:137
+msgid "French"
+msgstr "Francês"
+
+#: shuktv/settings.py:138
+msgid "Hebrew"
+msgstr "Hebraico"
+
+#: shuktv/settings.py:139
+msgid "Russian"
+msgstr "Russo"
+
+#: shuktv/settings.py:140
+msgid "Arabic"
+msgstr "Árabe"
+
+#: shuktv/settings.py:141
+msgid "Portuguese"
+msgstr "Português"
+
+#: shuktv/settings.py:142
+msgid "German"
+msgstr "Alemão"
+
+#: shuktv/utils/customPermissionClass.py:39
+msgid "Please activate your plan to access this module"
+msgstr "Ative seu plano para acessar este módulo"
+
+#: templates/account/hello.html:16
+msgid "hello"
+msgstr "olá"
+
+#~ msgid "Video {} favourite videos"
+#~ msgstr "Vídeo {} vídeos favoritos."
+
+#~ msgid "Classified {} favourite classifieds"
+#~ msgstr "Classificado {} favorito."
+
+#~ msgid "Deal {} favourite deals"
+#~ msgstr "Oferta {} de ofertas favoritas."
+
+#~ msgid "{} {} favourites."
+#~ msgstr "{} {} favoritos."
+
+#~ msgid "Wrong confirmation code."
+#~ msgstr "Código de confirmação incorreto."
+
+#~ msgid "New email is required."
+#~ msgstr "Novo e-mail é obrigatório."

@@ -1,0 +1,119 @@
+{% extends 'common/base.html' %}
+{% load static %}
+{% block css %}
+{% include 'common/datatable_header.html' %}
+{% endblock %}
+{% block section %}
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <form method="get" id="search-users-form">
+    <div class="row mb-2">
+      
+      <div class="col-sm-12">
+        <h1 class="m-0">{{page_name|default:""}}</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        {% include 'common/table_messages.html' %}
+      </div><!-- /.col -->
+    </div> 
+    <div class="row mb-2"> 
+      
+      <div class="col-sm-2 mt-2">
+        <div class="form-group clearfix">
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="paid"  id="radioPrimary1" value="yes" {%if request.GET.paid and request.GET.paid == 'yes'%}checked{%endif%}>
+            <label for="radioPrimary1">Paid</label>
+          </div>
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="paid" id="radioPrimary2" value="no" {%if request.GET.paid and request.GET.paid == 'no'%}checked{%endif%}>
+            <label for="radioPrimary2">Free</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-3 mt-2">
+        <div class="form-group clearfix">
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="verified"  id="radioPrimary3" value="yes" {%if request.GET.verified and request.GET.verified == 'yes'%}checked{%endif%}>
+            <label for="radioPrimary3">Verified</label>
+          </div>
+          <div class="icheck-primary d-inline">
+            <input type="radio" name="verified" id="radioPrimary4" value="no" {%if request.GET.verified and request.GET.verified == 'no'%}checked{%endif%}>
+            <label for="radioPrimary4">Not Verified</label>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="col-sm-2">
+        <input type="submit" value="Search" class="btn btn-success">
+        <a href="{% url 'member_accounts' %}" class="btn btn-success"><i class="fa fa-sync-alt"></i><a>
+      </div>
+    
+      <div class="col-sm-4">
+        <!--CREATE BTN HERE-->
+     
+      </div><!-- /.col -->
+    
+    </div><!-- /.row -->
+  </form>
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="members-datatable" class="table table-bordered table-striped">
+              
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+{% endblock section %}
+{%block script%}
+{% include 'common/datatable_footer.html' %}
+<script>
+  $("#user-types").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  $("#customCheckbox2").on("change", function(e){
+    $("#search-users-form").submit();
+  })
+
+  $("#customCheckbox3").on("change", function(e){
+    $("#search-users-form").submit();
+  });
+
+  $('#members-datatable').dataTable( {
+    ajax: '{{ request.path }}?datatables=1',
+    serverSide: true,
+    columns: [
+        { data: "id", title: "Id" },
+        { data: "email" , title: "Email" },
+        { data: "phone" , title: "Phone" },
+        { data: "name" , title: "Name" },
+        { data: "id" , title: "Action" },
+    ]
+})
+
+
+  
+</script>
+{%endblock%}
